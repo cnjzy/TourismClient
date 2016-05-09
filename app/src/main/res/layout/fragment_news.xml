@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.tourism.app.widget.view.ChildViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="136dp" />
+
+        <com.tourism.app.widget.view.PointWidget
+            android:id="@+id/view_pager_ponit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_pager"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-15dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/news_name_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/global_padding_small"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/sp_14" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:background="@color/line_color" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_padding_small"
+        android:layout_marginTop="@dimen/global_line_size"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_padding_mid"
+        android:background="@color/bg_gray" />
+
+    <LinearLayout
+        android:id="@+id/weather_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/global_padding_mid"
+        android:layout_weight="1"
+        android:background="@drawable/bg_weather"
+        android:minHeight="153dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/weather_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/global_padding_little"
+                android:text="北京，北京"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:id="@+id/weather_wendu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/global_padding_little"
+                android:text="多云   2~16°"
+                android:textColor="@color/text_white"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:background="@color/transparent_gray"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/weather_kongqi_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/global_padding_little"
+                android:text="空气质量：优良    PM2.5：1.0"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/sp_14" />
+            
+            <TextView
+                android:id="@+id/weather_xianxing_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/global_padding_little"
+                android:text="今日尾号限行：2和5"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

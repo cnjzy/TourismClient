@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_navigation" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:padding="@dimen/global_padding_small" >
+
+        <ImageView
+            android:id="@+id/user_icon_iv"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginRight="@dimen/global_padding_little"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_circle_blue" />
+
+        <TextView
+            android:id="@+id/user_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/global_padding_little"
+            android:layout_toRightOf="@+id/user_icon_iv"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="老蒋"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_13" />
+
+        <ImageView
+            android:id="@+id/user_gender_iv"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="@dimen/global_padding_little"
+            android:layout_marginRight="@dimen/global_padding_little"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/user_name_tv"
+            android:scaleType="fitXY"
+            android:src="@drawable/ico_nan" />
+
+        <TextView
+            android:id="@+id/user_notepad_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name_tv"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/user_icon_iv"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="0篇游记"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_13" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/global_padding_little" >
+
+        <RadioButton
+            android:id="@+id/user_gl_rb"
+            style="@style/navigation_radio_button_style"
+            android:checked="true"
+            android:drawableTop="@drawable/radio_user_gl"
+            android:text="攻略" />
+
+        <ImageView
+            android:layout_width="@dimen/global_line_size"
+            android:layout_height="37dp"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/user_sc_rb"
+            style="@style/navigation_radio_button_style"
+            android:drawableTop="@drawable/ico_sc_d"
+            android:text="收藏" />
+
+        <ImageView
+            android:layout_width="@dimen/global_line_size"
+            android:layout_height="37dp"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/user_xh_rb"
+            style="@style/navigation_radio_button_style"
+            android:drawableTop="@drawable/ico_xh_d"
+            android:text="喜欢" />
+
+        <ImageView
+            android:layout_width="@dimen/global_line_size"
+            android:layout_height="37dp"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/user_gd_rb"
+            style="@style/navigation_radio_button_style"
+            android:drawableTop="@drawable/ico_gd_d"
+            android:text="更多" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/user_down_arrow_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/ico_sj" />
+    </LinearLayout>
+
+    <FrameLayout 
+    	android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/content"
+    ></FrameLayout>
+</LinearLayout>

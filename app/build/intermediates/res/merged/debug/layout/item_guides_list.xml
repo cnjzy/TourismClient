@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="187dp"
+        android:layout_marginLeft="@dimen/global_padding_small"
+        android:layout_marginRight="@dimen/global_padding_small"
+        android:layout_marginTop="@dimen/global_padding_small" >
+
+        <ImageView
+            android:id="@+id/item_icon_iv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/btn_gray_round"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/item_city_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_padding_mid2"
+            android:layout_marginTop="@dimen/global_padding_mid"
+            android:text="上海"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/item_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_city_tv"
+            android:layout_marginLeft="@dimen/global_padding_mid2"
+            android:layout_marginTop="@dimen/global_padding_little"
+            android:text="0天/0图"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/sp_11" />
+
+        <LinearLayout
+            android:id="@+id/item_sync_ll"
+            android:layout_width="62dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/global_padding_mid2"
+            android:layout_marginTop="@dimen/global_padding_mid"
+            android:background="@drawable/bg_half_red"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/item_sync_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_sync"
+                android:drawablePadding="2dp"
+                android:gravity="center"
+                android:text="未同步"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/sp_11" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/global_padding_little" >
+
+        <TextView
+            android:id="@+id/item_pv_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_padding_small"
+            android:drawableLeft="@drawable/ico_yj"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="100"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/sp_11" />
+
+        <TextView
+            android:id="@+id/item_follow_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:drawableLeft="@drawable/icon_follow"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="100"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/sp_11" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:layout_marginLeft="@dimen/global_padding_small"
+        android:layout_marginRight="@dimen/global_padding_small"
+        android:background="@color/line_color" />
+
+</LinearLayout>

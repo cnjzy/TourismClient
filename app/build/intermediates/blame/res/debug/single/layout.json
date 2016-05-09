@@ -1,0 +1,334 @@
+[
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/custom_alert_dialog.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/custom_alert_dialog.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_guides_gallery_image.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_gallery_image.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_guides_add_noted.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_add_noted.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/view_brand_info_header.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_brand_info_header.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_event_category.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_event_category.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_guides_location_sort.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_location_sort.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_search.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_search.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/dialog_tip.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_tip.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/slidingmenumain.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/slidingmenumain.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_user_id_auth.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_id_auth.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_brand_info_list.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_brand_info_list.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/view_refresh_header.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_refresh_header.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_guides_add.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_add.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/view_event_user.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_event_user.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_user.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_guides_setting_cover.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_setting_cover.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_guides_location_sort.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_location_sort.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/fragment_user_follow.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_user_follow.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_guides_location_search.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_location_search.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/view_view_pager.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_view_pager.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_guides_image.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_image.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/view_navigation.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_navigation.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_user_regester_verify_code.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_regester_verify_code.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_brand_info.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_brand_info.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/dialog_date.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_date.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_collection_list.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_collection_list.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/dialog_guides_list.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_guides_list.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/menu_brand_user.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/menu_brand_user.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_setting.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_setting.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/dialog_category_signed_up.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_category_signed_up.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/pop_home_menu.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/pop_home_menu.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/alert_dialog_menu_list_layout_special.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/alert_dialog_menu_list_layout_special.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/list_is_null.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/list_is_null.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/fragment_brand.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_brand.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_event_info.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_event_info.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/xlistview_header.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/xlistview_header.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/fragment_news.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_news.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_user_follow_temp.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_user_follow_temp.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/alert_dialog_menu_layout.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/alert_dialog_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/fragment_pool_friend.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_pool_friend.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_guides_gallery.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_gallery.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/alert_dialog_menu_list_layout.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/alert_dialog_menu_list_layout.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_guide.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guide.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_guides_add_info.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_add_info.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_brand_feedback.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_brand_feedback.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_pager_image.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_pager_image.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_brand_list.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_brand_list.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/dialog_category_make.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_category_make.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_guides_cover.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_cover.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/fragment_user_collection.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_user_collection.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/dialog_guides_image_action.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_guides_image_action.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/view_navigation_guides.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_navigation_guides.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_user_verify_phone.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_verify_phone.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_user_login.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_login.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_user_info.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_info.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_user_register.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_register.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_guides_setting.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_setting.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/view_list_footer_qr_code.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_list_footer_qr_code.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/dialog_network_error.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_network_error.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/alert_dialog_menu_list_layout_title.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/alert_dialog_menu_list_layout_title.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_search_list.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_search_list.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/xlistview_footer.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/xlistview_footer.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_user_nickname.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_nickname.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_guides_gallery.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_gallery.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_guides_list.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_list.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/fragment_user_guides.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_user_guides.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/custom_loading_dialog.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/custom_loading_dialog.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/view_refresh_footer.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_refresh_footer.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_news_list.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_news_list.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/alert_dialog_menu_list_layout_cancel.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/alert_dialog_menu_list_layout_cancel.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/view_guides_add_reply.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_guides_add_reply.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_user_gender.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_gender.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_web.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_web.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/select_pic_layout.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/select_pic_layout.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_feedback.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_feedback.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_user_avatar.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_avatar.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/view_navigation_text.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_navigation_text.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/view_guide_three.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_guide_three.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/item_guides_location.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_location.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/menu_brand_service.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/menu_brand_service.xml"
+    },
+    {
+        "merged": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/res/merged/debug/layout/activity_guides_gallery_image.xml",
+        "source": "/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_gallery_image.xml"
+    }
+]

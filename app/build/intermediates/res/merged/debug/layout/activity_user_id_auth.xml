@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_user"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_navigation" />
+
+    <RadioGroup
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:padding="@dimen/global_padding_small"
+    	android:layout_marginTop="@dimen/global_padding_mid2"
+    	android:layout_marginBottom="@dimen/global_padding_mid2"
+    >
+        <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="账号类型"
+        	android:textColor="@color/text_black"
+        	android:textSize="@dimen/sp_12"
+        />
+        
+        <RadioButton 
+        	android:id="@+id/acction_type_person_rb"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="个人"
+        	android:textColor="@color/text_black"
+        	android:textSize="@dimen/sp_12"
+        	android:button="@null"
+        	android:drawableLeft="@drawable/radio_account_type"
+        	android:layout_marginLeft="@dimen/global_padding_mid"
+        	android:drawablePadding="@dimen/global_padding_little"
+        	android:checked="true"
+        />
+        
+        <RadioButton 
+        	android:id="@+id/acction_type_business_rb"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="企业"
+        	android:textColor="@color/text_black"
+        	android:textSize="@dimen/sp_12"
+        	android:button="@null"
+        	android:drawableLeft="@drawable/radio_account_type"
+        	android:layout_marginLeft="@dimen/global_padding_mid"
+        	android:drawablePadding="@dimen/global_padding_little"
+        />
+    </RadioGroup>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/global_padding_small"
+        android:layout_marginTop="@dimen/global_padding_small"
+        android:text="@string/user_upload_idcard"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/sp_12" />
+
+    <ImageView
+        android:id="@+id/user_auth_idcard_img_iv"
+        android:layout_width="fill_parent"
+        android:layout_height="195dp"
+        android:layout_marginLeft="@dimen/global_padding_small"
+        android:layout_marginRight="@dimen/global_padding_small"
+        android:layout_marginTop="@dimen/global_padding_small"
+        android:background="@drawable/bg_white_round"
+        android:scaleType="center"
+        android:src="@drawable/btn_img_add" />
+
+    <com.tourism.app.widget.view.CustomButton
+        android:id="@+id/user_auth_submit_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="@dimen/global_padding_small"
+        android:layout_marginRight="@dimen/global_padding_small"
+        android:layout_marginTop="@dimen/global_padding_mid2"
+        android:background="@drawable/btn_blue2_round"
+        android:onClick="onClick"
+        android:text="@string/user_auth_submit"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>

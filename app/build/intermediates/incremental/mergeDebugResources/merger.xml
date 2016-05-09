@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="24.0.0-alpha1$Generated" generated="true"><source path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/res"/></dataSet><dataSet config="main$Generated" generated="true"><source path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res"/><source path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/generated/res/rs/debug"/><source path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/generated/res/resValues/debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/debug/res"/></dataSet><dataSet config="24.0.0-alpha1" generated-set="24.0.0-alpha1$Generated"><source path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha1/res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res"><file name="activity_left_in" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/activity_left_in.xml" qualifiers="" type="anim"/><file name="activity_left_out" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/activity_left_out.xml" qualifiers="" type="anim"/><file name="activity_right_in" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/activity_right_in.xml" qualifiers="" type="anim"/><file name="activity_right_out" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/activity_right_out.xml" qualifiers="" type="anim"/><file name="bottom_in" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/bottom_in.xml" qualifiers="" type="anim"/><file name="bottom_out" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/bottom_out.xml" qualifiers="" type="anim"/><file name="flipper_bottom_in" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/flipper_bottom_in.xml" qualifiers="" type="anim"/><file name="flipper_top_out" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/flipper_top_out.xml" qualifiers="" type="anim"/><file name="fragment_slide_left_in" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/fragment_slide_left_in.xml" qualifiers="" type="anim"/><file name="fragment_slide_left_out" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/fragment_slide_left_out.xml" qualifiers="" type="anim"/><file name="fragment_slide_right_in" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/fragment_slide_right_in.xml" qualifiers="" type="anim"/><file name="fragment_slide_right_out" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/fragment_slide_right_out.xml" qualifiers="" type="anim"/><file name="location_loading_rotate" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/location_loading_rotate.xml" qualifiers="" type="anim"/><file name="push_up_in" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/push_up_in.xml" qualifiers="" type="anim"/><file name="push_up_out" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/push_up_out.xml" qualifiers="" type="anim"/><file name="shop_car_scale" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/shop_car_scale.xml" qualifiers="" type="anim"/><file name="top_in" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/top_in.xml" qualifiers="" type="anim"/><file name="top_out" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/top_out.xml" qualifiers="" type="anim"/><file name="view_alpha_hide" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/view_alpha_hide.xml" qualifiers="" type="anim"/><file name="view_alpha_show" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/anim/view_alpha_show.xml" qualifiers="" type="anim"/><file name="event_tab_text_color" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/color/event_tab_text_color.xml" qualifiers="" type="color"/><file name="mm_btn_text" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/color/mm_btn_text.xml" qualifiers="" type="color"/><file name="mm_style_one_btn_text" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/color/mm_style_one_btn_text.xml" qualifiers="" type="color"/><file name="mm_style_two_btn_text" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/color/mm_style_two_btn_text.xml" qualifiers="" type="color"/><file name="navigation_text_color" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/color/navigation_text_color.xml" qualifiers="" type="color"/><file name="bg_circle_blue" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/bg_circle_blue.xml" qualifiers="" type="drawable"/><file name="bg_circle_white" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/bg_circle_white.xml" qualifiers="" type="drawable"/><file name="bg_gray_gray_guides" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/bg_gray_gray_guides.xml" qualifiers="" type="drawable"/><file name="bg_gray_guides" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/bg_gray_guides.xml" qualifiers="" type="drawable"/><file name="bg_half_red" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/bg_half_red.xml" qualifiers="" type="drawable"/><file name="bg_red_round" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/bg_red_round.xml" qualifiers="" type="drawable"/><file name="bg_white_gray" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/bg_white_gray.xml" qualifiers="" type="drawable"/><file name="bg_white_gray_guides" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/bg_white_gray_guides.xml" qualifiers="" type="drawable"/><file name="bg_white_round" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/bg_white_round.xml" qualifiers="" type="drawable"/><file name="btn_blue2_round" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_blue2_round.xml" qualifiers="" type="drawable"/><file name="btn_blue_round" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_blue_round.xml" qualifiers="" type="drawable"/><file name="btn_date_cancel" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_date_cancel.xml" qualifiers="" type="drawable"/><file name="btn_date_submit" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_date_submit.xml" qualifiers="" type="drawable"/><file name="btn_gray_round" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_gray_round.xml" qualifiers="" type="drawable"/><file name="btn_green2_round" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_green2_round.xml" qualifiers="" type="drawable"/><file name="btn_green_round" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_green_round.xml" qualifiers="" type="drawable"/><file name="btn_red_round" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_red_round.xml" qualifiers="" type="drawable"/><file name="btn_style_alert_dialog_button" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_style_alert_dialog_button.xml" qualifiers="" type="drawable"/><file name="btn_style_alert_dialog_cancel" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_style_alert_dialog_cancel.xml" qualifiers="" type="drawable"/><file name="btn_style_alert_dialog_special" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_style_alert_dialog_special.xml" qualifiers="" type="drawable"/><file name="btn_style_one" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_style_one.xml" qualifiers="" type="drawable"/><file name="btn_tran_selector" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_tran_selector.xml" qualifiers="" type="drawable"/><file name="btn_white_selector" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/btn_white_selector.xml" qualifiers="" type="drawable"/><file name="event_tab_bg_color" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/event_tab_bg_color.xml" qualifiers="" type="drawable"/><file name="line_bg" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/line_bg.xml" qualifiers="" type="drawable"/><file name="loading_bg" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/loading_bg.xml" qualifiers="" type="drawable"/><file name="loading_close_button_selector" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/loading_close_button_selector.xml" qualifiers="" type="drawable"/><file name="loading_progress_bg_17" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/loading_progress_bg_17.xml" qualifiers="" type="drawable"/><file name="loading_progress_bg_90" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/loading_progress_bg_90.xml" qualifiers="" type="drawable"/><file name="point_selector" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/point_selector.xml" qualifiers="" type="drawable"/><file name="radio_account_type" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/radio_account_type.xml" qualifiers="" type="drawable"/><file name="radio_guides_location_tab_bg" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/radio_guides_location_tab_bg.xml" qualifiers="" type="drawable"/><file name="radio_tab_left" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/radio_tab_left.xml" qualifiers="" type="drawable"/><file name="radio_tab_right" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/radio_tab_right.xml" qualifiers="" type="drawable"/><file name="radio_user_gd" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/radio_user_gd.xml" qualifiers="" type="drawable"/><file name="radio_user_gender" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/radio_user_gender.xml" qualifiers="" type="drawable"/><file name="radio_user_gl" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/radio_user_gl.xml" qualifiers="" type="drawable"/><file name="radio_user_sc" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/radio_user_sc.xml" qualifiers="" type="drawable"/><file name="radio_user_xh" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/radio_user_xh.xml" qualifiers="" type="drawable"/><file name="radio_yes_or_no" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/radio_yes_or_no.xml" qualifiers="" type="drawable"/><file name="shadow" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/shadow.xml" qualifiers="" type="drawable"/><file name="shadowright" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/shadowright.xml" qualifiers="" type="drawable"/><file name="takeout_icon_round_all" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/takeout_icon_round_all.xml" qualifiers="" type="drawable"/><file name="takeout_icon_round_fu" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/takeout_icon_round_fu.xml" qualifiers="" type="drawable"/><file name="takeout_icon_round_juan" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/takeout_icon_round_juan.xml" qualifiers="" type="drawable"/><file name="umeng_socialize_qq_off" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/umeng_socialize_qq_off.png" qualifiers="" type="drawable"/><file name="umeng_socialize_qq_on" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/umeng_socialize_qq_on.png" qualifiers="" type="drawable"/><file name="umeng_socialize_qzone_off" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/umeng_socialize_qzone_off.png" qualifiers="" type="drawable"/><file name="umeng_socialize_qzone_on" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/umeng_socialize_qzone_on.png" qualifiers="" type="drawable"/><file name="umeng_socialize_wechat" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/umeng_socialize_wechat.png" qualifiers="" type="drawable"/><file name="umeng_socialize_wechat_gray" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/umeng_socialize_wechat_gray.png" qualifiers="" type="drawable"/><file name="umeng_socialize_wxcircle" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/umeng_socialize_wxcircle.png" qualifiers="" type="drawable"/><file name="umeng_socialize_wxcircle_gray" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/umeng_socialize_wxcircle_gray.png" qualifiers="" type="drawable"/><file name="wheel_bg" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/wheel_bg.xml" qualifiers="" type="drawable"/><file name="wheel_val" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable/wheel_val.xml" qualifiers="" type="drawable"/><file name="btn_close_small" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_close_small.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_date_cancel_default" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_date_cancel_default.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_date_cancel_pressed" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_date_cancel_pressed.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_date_submit_default" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_date_submit_default.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_date_submit_pressed" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_date_submit_pressed.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_style_alert_dialog_background" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_style_alert_dialog_background.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_style_alert_dialog_button_normal" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_style_alert_dialog_button_normal.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_style_alert_dialog_button_pressed" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_style_alert_dialog_button_pressed.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_style_alert_dialog_cancel_normal" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_style_alert_dialog_cancel_normal.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_style_alert_dialog_special_normal" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_style_alert_dialog_special_normal.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_style_alert_dialog_special_pressed" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_style_alert_dialog_special_pressed.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_style_one_disabled" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_style_one_disabled.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_style_one_focused" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_style_one_focused.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_style_one_normal" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_style_one_normal.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="btn_style_one_pressed" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/btn_style_one_pressed.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="date_bg" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/date_bg.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_contacts_index_backgroud_sprd" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/ic_contacts_index_backgroud_sprd.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_pulltorefresh_arrow" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/ic_pulltorefresh_arrow.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_pulltorefresh_arrow_up" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/ic_pulltorefresh_arrow_up.png" qualifiers="hdpi-v4" type="drawable"/><file name="loading_background" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/loading_background.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="loading_del_common" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/loading_del_common.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="loading_del_pressed" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/loading_del_pressed.9.png" qualifiers="hdpi-v4" type="drawable"/><file name="loading_progress_17" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/loading_progress_17.png" qualifiers="hdpi-v4" type="drawable"/><file name="loading_progress_90" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/loading_progress_90.png" qualifiers="hdpi-v4" type="drawable"/><file name="mm_trans" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/mm_trans.png" qualifiers="hdpi-v4" type="drawable"/><file name="pay_3rd_wx" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/pay_3rd_wx.png" qualifiers="hdpi-v4" type="drawable"/><file name="pay_3rd_zfb" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/pay_3rd_zfb.png" qualifiers="hdpi-v4" type="drawable"/><file name="point_grayl" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/point_grayl.png" qualifiers="hdpi-v4" type="drawable"/><file name="point_red" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/point_red.png" qualifiers="hdpi-v4" type="drawable"/><file name="xlistview_arrow" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-hdpi/xlistview_arrow.png" qualifiers="hdpi-v4" type="drawable"/><file name="bg_avatar_default" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/bg_avatar_default.png" qualifiers="xhdpi-v4" type="drawable"/><file name="bg_brand_header" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/bg_brand_header.png" qualifiers="xhdpi-v4" type="drawable"/><file name="bg_weather" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/bg_weather.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_arrow" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_arrow.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_back" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_back.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_brand_more_content" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_brand_more_content.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_brand_more_service" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_brand_more_service.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_check_select" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_check_select.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_close" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_close.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_img_add" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_img_add.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_jl" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_jl.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_jr" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_jr.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_lxd_d" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_lxd_d.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_more" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_more.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_search" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_search.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_sina" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_sina.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_user" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_user.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_user_more" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_user_more.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_weixin" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_weixin.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_wz" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_wz.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_xq" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_xq.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btn_xz_d" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btn_xz_d.png" qualifiers="xhdpi-v4" type="drawable"/><file name="btu_tj" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/btu_tj.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_back" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_back.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_back_d" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_back_d.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_bg" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_bg.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_bq" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_bq.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_cg" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_cg.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_cz" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_cz.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_gd_d" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_gd_d.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_gd_e" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_gd_e.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_gl_d" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_gl_d.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_gl_e" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_gl_e.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_jd" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_jd.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_jr" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_jr.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_meishi" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_meishi.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_miaoshu" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_miaoshu.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_more_d_more" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_more_d_more.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_nan" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_nan.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_nv" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_nv.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_ok" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_ok.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_preservation" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_preservation.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_preview_d" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_preview_d.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_sc_d" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_sc_d.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_sc_e" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_sc_e.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_sj" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_sj.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_tb" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_tb.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_tishi" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_tishi.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_wx" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_wx.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_wxz" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_wxz.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_xh_d" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_xh_d.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_xh_e" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_xh_e.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_xz" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_xz.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_xz_green" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_xz_green.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_yj" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_yj.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_zhandian" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_zhandian.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ico_zhusu" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/ico_zhusu.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_brand_advice" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_brand_advice.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_brand_home" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_brand_home.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_brand_tmail" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_brand_tmail.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_brand_tv" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_brand_tv.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_brand_weixin" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_brand_weixin.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_collection" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_collection.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_down" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_down.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_follow" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_follow.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_is_auth" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_is_auth.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_list_empty" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_list_empty.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_new" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_new.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_not_auth" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_not_auth.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_phone" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_phone.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_reply" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_reply.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_share" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_share.png" qualifiers="xhdpi-v4" type="drawable"/><file name="icon_sync" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/icon_sync.png" qualifiers="xhdpi-v4" type="drawable"/><file name="img_default_bannber" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/img_default_bannber.png" qualifiers="xhdpi-v4" type="drawable"/><file name="img_default_horizon" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/img_default_horizon.png" qualifiers="xhdpi-v4" type="drawable"/><file name="splash" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/drawable-xhdpi/splash.png" qualifiers="xhdpi-v4" type="drawable"/><file name="activity_brand_feedback" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_brand_feedback.xml" qualifiers="" type="layout"/><file name="activity_brand_info" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_brand_info.xml" qualifiers="" type="layout"/><file name="activity_event_category" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_event_category.xml" qualifiers="" type="layout"/><file name="activity_event_info" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_event_info.xml" qualifiers="" type="layout"/><file name="activity_feedback" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_feedback.xml" qualifiers="" type="layout"/><file name="activity_guide" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guide.xml" qualifiers="" type="layout"/><file name="activity_guides_add" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_add.xml" qualifiers="" type="layout"/><file name="activity_guides_add_info" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_add_info.xml" qualifiers="" type="layout"/><file name="activity_guides_add_noted" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_add_noted.xml" qualifiers="" type="layout"/><file name="activity_guides_gallery" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_gallery.xml" qualifiers="" type="layout"/><file name="activity_guides_gallery_image" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_gallery_image.xml" qualifiers="" type="layout"/><file name="activity_guides_image" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_image.xml" qualifiers="" type="layout"/><file name="activity_guides_location_search" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_location_search.xml" qualifiers="" type="layout"/><file name="activity_guides_setting" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_setting.xml" qualifiers="" type="layout"/><file name="activity_guides_setting_cover" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_setting_cover.xml" qualifiers="" type="layout"/><file name="activity_main" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_main.xml" qualifiers="" type="layout"/><file name="activity_search" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_search.xml" qualifiers="" type="layout"/><file name="activity_setting" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_setting.xml" qualifiers="" type="layout"/><file name="activity_splash" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_splash.xml" qualifiers="" type="layout"/><file name="activity_user" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user.xml" qualifiers="" type="layout"/><file name="activity_user_avatar" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_avatar.xml" qualifiers="" type="layout"/><file name="activity_user_gender" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_gender.xml" qualifiers="" type="layout"/><file name="activity_user_id_auth" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_id_auth.xml" qualifiers="" type="layout"/><file name="activity_user_info" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_info.xml" qualifiers="" type="layout"/><file name="activity_user_login" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_login.xml" qualifiers="" type="layout"/><file name="activity_user_nickname" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_nickname.xml" qualifiers="" type="layout"/><file name="activity_user_regester_verify_code" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_regester_verify_code.xml" qualifiers="" type="layout"/><file name="activity_user_register" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_register.xml" qualifiers="" type="layout"/><file name="activity_user_verify_phone" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_user_verify_phone.xml" qualifiers="" type="layout"/><file name="activity_web" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_web.xml" qualifiers="" type="layout"/><file name="alert_dialog_menu_layout" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/alert_dialog_menu_layout.xml" qualifiers="" type="layout"/><file name="alert_dialog_menu_list_layout" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/alert_dialog_menu_list_layout.xml" qualifiers="" type="layout"/><file name="alert_dialog_menu_list_layout_cancel" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/alert_dialog_menu_list_layout_cancel.xml" qualifiers="" type="layout"/><file name="alert_dialog_menu_list_layout_special" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/alert_dialog_menu_list_layout_special.xml" qualifiers="" type="layout"/><file name="alert_dialog_menu_list_layout_title" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/alert_dialog_menu_list_layout_title.xml" qualifiers="" type="layout"/><file name="custom_alert_dialog" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/custom_alert_dialog.xml" qualifiers="" type="layout"/><file name="custom_loading_dialog" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/custom_loading_dialog.xml" qualifiers="" type="layout"/><file name="dialog_category_make" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_category_make.xml" qualifiers="" type="layout"/><file name="dialog_category_signed_up" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_category_signed_up.xml" qualifiers="" type="layout"/><file name="dialog_date" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_date.xml" qualifiers="" type="layout"/><file name="dialog_guides_image_action" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_guides_image_action.xml" qualifiers="" type="layout"/><file name="dialog_guides_list" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_guides_list.xml" qualifiers="" type="layout"/><file name="dialog_network_error" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_network_error.xml" qualifiers="" type="layout"/><file name="dialog_tip" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/dialog_tip.xml" qualifiers="" type="layout"/><file name="fragment_brand" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_brand.xml" qualifiers="" type="layout"/><file name="fragment_news" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_news.xml" qualifiers="" type="layout"/><file name="fragment_pool_friend" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_pool_friend.xml" qualifiers="" type="layout"/><file name="fragment_user_collection" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_user_collection.xml" qualifiers="" type="layout"/><file name="fragment_user_follow" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_user_follow.xml" qualifiers="" type="layout"/><file name="fragment_user_guides" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/fragment_user_guides.xml" qualifiers="" type="layout"/><file name="item_brand_info_list" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_brand_info_list.xml" qualifiers="" type="layout"/><file name="item_brand_list" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_brand_list.xml" qualifiers="" type="layout"/><file name="item_collection_list" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_collection_list.xml" qualifiers="" type="layout"/><file name="item_guides_cover" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_cover.xml" qualifiers="" type="layout"/><file name="item_guides_gallery" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_gallery.xml" qualifiers="" type="layout"/><file name="item_guides_gallery_image" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_gallery_image.xml" qualifiers="" type="layout"/><file name="item_guides_list" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_list.xml" qualifiers="" type="layout"/><file name="item_guides_location" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_location.xml" qualifiers="" type="layout"/><file name="item_guides_location_sort" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_guides_location_sort.xml" qualifiers="" type="layout"/><file name="item_news_list" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_news_list.xml" qualifiers="" type="layout"/><file name="item_pager_image" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_pager_image.xml" qualifiers="" type="layout"/><file name="item_search_list" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_search_list.xml" qualifiers="" type="layout"/><file name="item_user_follow_temp" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/item_user_follow_temp.xml" qualifiers="" type="layout"/><file name="list_is_null" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/list_is_null.xml" qualifiers="" type="layout"/><file name="menu_brand_service" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/menu_brand_service.xml" qualifiers="" type="layout"/><file name="menu_brand_user" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/menu_brand_user.xml" qualifiers="" type="layout"/><file name="pop_home_menu" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/pop_home_menu.xml" qualifiers="" type="layout"/><file name="select_pic_layout" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/select_pic_layout.xml" qualifiers="" type="layout"/><file name="slidingmenumain" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/slidingmenumain.xml" qualifiers="" type="layout"/><file name="view_brand_info_header" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_brand_info_header.xml" qualifiers="" type="layout"/><file name="view_event_user" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_event_user.xml" qualifiers="" type="layout"/><file name="view_guide_three" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_guide_three.xml" qualifiers="" type="layout"/><file name="view_guides_add_reply" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_guides_add_reply.xml" qualifiers="" type="layout"/><file name="view_list_footer_qr_code" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_list_footer_qr_code.xml" qualifiers="" type="layout"/><file name="view_navigation" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_navigation.xml" qualifiers="" type="layout"/><file name="view_navigation_guides" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_navigation_guides.xml" qualifiers="" type="layout"/><file name="view_navigation_text" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_navigation_text.xml" qualifiers="" type="layout"/><file name="view_refresh_footer" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_refresh_footer.xml" qualifiers="" type="layout"/><file name="view_refresh_header" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_refresh_header.xml" qualifiers="" type="layout"/><file name="view_view_pager" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/view_view_pager.xml" qualifiers="" type="layout"/><file name="xlistview_footer" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/xlistview_footer.xml" qualifiers="" type="layout"/><file name="xlistview_header" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/xlistview_header.xml" qualifiers="" type="layout"/><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values/attrs.xml" qualifiers=""><declare-styleable name="Themes">
+        <attr format="reference" name="numberProgressBarStyle"/>
+    </declare-styleable><declare-styleable name="SuperProgressWheel">   
+        <attr format="color" name="roundColor"/>  
+        <attr format="color" name="roundProgressColor"/>  
+        <attr format="dimension" name="roundWidth"/>  
+        <attr format="color" name="textColor"/>    
+        <attr format="dimension" name="textSize"/>   
+        <attr format="integer" name="maxProgress"/>
+    </declare-styleable><declare-styleable name="NumberProgressBar">
+        <attr format="integer" name="progress"/>
+        <attr format="integer" name="max"/>
+        <attr format="color" name="progress_unreached_color"/>
+        <attr format="color" name="progress_reached_color"/>
+        <attr format="dimension" name="progress_reached_bar_height"/>
+        <attr format="dimension" name="progress_unreached_bar_height"/>
+        <attr format="dimension" name="progress_text_size"/>
+        <attr format="color" name="progress_text_color"/>
+        <attr format="dimension" name="progress_text_offset"/>
+        <attr format="enum" name="progress_text_visibility">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable><declare-styleable name="MultiDirectionSlidingDrawer">
+        <attr format="reference" name="handle"/>
+        <attr format="reference" name="content"/>
+        <attr name="direction"/>
+        <attr format="dimension" name="bottomOffset"/>
+        <attr format="dimension" name="topOffset"/>
+        <attr format="boolean" name="allowSingleTap"/>
+        <attr format="boolean" name="animateOnClick"/>
+    </declare-styleable><attr name="direction">
+        <enum name="rightToLeft" value="0"/>
+        <enum name="bottomToTop" value="1"/>
+        <enum name="leftToRight" value="2"/>
+        <enum name="topToBottom" value="3"/>
+    </attr><declare-styleable name="CircleImageView">
+        <attr format="dimension" name="border_width"/>
+        <attr format="color" name="border_color"/>
+    </declare-styleable></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values/colors.xml" qualifiers=""><color name="button_gray">#c8c8c8</color><color name="title">#009BE1</color><color name="line_color">#A0A0A0</color><color name="background">#EEEEEE</color><color name="bg_white">#FFFFFF</color><color name="background_user">#EBF0F5</color><color name="guides_tab_color_def">#EBEBEB</color><color name="title_brand">#003B90</color><color name="transparent_gray2">#3C000000</color><color name="text_gray">#999999</color><color name="tab_color_default">#FFFFFF</color><color name="text_white">#FFFFFF</color><color name="tab_color_selected">#C9C9CA</color><color name="text_green">#06C1AE</color><color name="bg_gray">#E5E5E5</color><color name="text_gray_light">#707070</color><color name="transparent_gray">#50000000</color><color name="text_orange">#FFA500</color><color name="transparent_white">#5AFFFFFF</color><color name="transparent">#00000000</color><color name="text_red">#FD5B37</color><color name="bg_black">#000000</color><color name="text_black">#333333</color><color name="text_blue">#009BE1</color></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values/dimens.xml" qualifiers=""><dimen name="content_padding_left">60dp</dimen><dimen name="dialog_list_item_text_size">18sp</dimen><dimen name="slidingmenu_offset">60dp</dimen><integer name="num_cols">1</integer><dimen name="brand_banner_height">136dp</dimen><dimen name="main_tab_font_size">10sp</dimen><dimen name="blade_text_size">14dp</dimen><dimen name="BasicTextSize">15dp</dimen><dimen name="box_padding">7dp</dimen><dimen name="sp_20">20sp</dimen><dimen name="sp_21">21sp</dimen><dimen name="list_padding">10dp</dimen><dimen name="custom_title_text_size">@dimen/sp_16</dimen><dimen name="sp_24">24sp</dimen><dimen name="sp_22">22sp</dimen><dimen name="sp_14">14sp</dimen><dimen name="TitleTextSize">18dp</dimen><dimen name="sp_13">13sp</dimen><dimen name="sp_12">12sp</dimen><dimen name="dialog_list_item_height">51dp</dimen><dimen name="sp_11">11sp</dimen><dimen name="sp_10">10sp</dimen><dimen name="global_padding_mid">10dp</dimen><dimen name="global_line_size">0.66dp</dimen><dimen name="global_padding_mid2">15dp</dimen><dimen name="global_listview_line_size">1dp</dimen><dimen name="sp_19">19sp</dimen><dimen name="sp_18">18sp</dimen><dimen name="network_txt_icon_margin_top">20.0dip</dimen><dimen name="sp_17">17sp</dimen><dimen name="global_padding_little">5dp</dimen><dimen name="LargeTextSize">16dp</dimen><dimen name="sp_16">16sp</dimen><dimen name="sp_15">15sp</dimen><dimen name="sp_9">9sp</dimen><dimen name="shadow_width">15dp</dimen><dimen name="global_padding_small">8dp</dimen><dimen name="navigation_height">42dp</dimen><dimen name="menu_height">43dp</dimen><dimen name="network_showtip_txt_size">15.0sp</dimen></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values/slidingmenu_attrs.xml" qualifiers=""><declare-styleable name="SlidingMenu">
+        <attr name="mode">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+        <attr format="reference" name="viewAbove"/>
+        <attr format="reference" name="viewBehind"/>
+        <attr format="dimension" name="behindOffset"/>
+        <attr format="dimension" name="behindWidth"/>
+        <attr format="float" name="behindScrollScale"/>
+        <attr name="touchModeAbove">
+            <enum name="margin" value="0"/>
+            <enum name="fullscreen" value="1"/>
+            <enum name="none" value="2"/>
+        </attr>
+        <attr name="touchModeBehind">
+            <enum name="margin" value="0"/>
+            <enum name="fullscreen" value="1"/>
+            <enum name="none" value="2"/>
+        </attr>
+        <attr format="reference" name="shadowDrawable"/>
+        <attr format="dimension" name="shadowWidth"/>
+        <attr format="boolean" name="fadeEnabled"/>
+        <attr format="float" name="fadeDegree"/>
+        <attr format="boolean" name="selectorEnabled"/>
+        <attr format="reference" name="selectorDrawable"/>
+    </declare-styleable></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values/slidingmenu_ids.xml" qualifiers=""><item name="selected_view" type="id"/></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values/strings.xml" qualifiers=""><string name="toast_verify_code_is_success">验证码发送成功</string><string name="brand_service_phone">服务热线</string><string name="ptr_last_updated">Updated: %1$s</string><string name="loading_titile">加载中</string><string name="time_title_hint">温馨提示</string><string name="feedback_user_hint">请输入姓名</string><string name="brand_show_info">查看详情</string><string name="xlistview_header_hint_ready">松开刷新数据</string><string name="setting_logout">退出登录</string><string name="pull_to_refresh_refreshing_label">刷新\u2026</string><string name="user_auth_name_hint">请输入真实姓名</string><string name="btn_update">更新</string><string name="not_network_cancel">取消</string><string name="not_network_content">请开启网络连接，\n以便获取周围餐厅信息</string><string name="paying">支付中</string><string name="user_register_verify_code_title_hint">我们已发送了验证码到您的手机</string><string name="login_password_hint">请输入密码</string><string name="news_info_title">新闻详情</string><string name="brand_online_advice">在线咨询</string><string name="brand_make_maintenance">预约保养</string><string name="setting_title">设置</string><string name="brand_info_pc">官方网站</string><string name="toast_user_name_is_empty">用户名不能为空</string><string name="setting_cache_size">%sM</string><string name="xlistview_header_hint_normal">下拉刷新</string><string name="ptr_refreshing">Refreshing</string><string name="getting_prepayid">正在获取预支付订单...</string><string name="user_auth">实名认证</string><string name="gender_female">女士</string><string name="user_nickname">昵称</string><string name="regiter_name_hint">请输入手机号码</string><string formatted="false" name="pay_result_callback_msg">微信支付结果：%s</string><string name="toast_verify_code_is_empty">验证码不能为空</string><string name="user_setting_gender">性别</string><string name="not_network_submit">开启</string><string name="user_register_verify_code_title">注册码验证</string><string name="xlistview_header_last_time">上次更新时间：</string><string name="user_setting_logout">退出登录</string><string name="feedback_submit">确认</string><string name="login_user_hint">请输入手机或邮箱</string><string name="toast_user_password_is_empty">密码输入错误，请输入大于6为的字母或数字</string><string name="app_name">远行家</string><string name="pay_by_wx">客户端签名微信支付</string><string name="pull_to_refresh_footer_pull_label">上拉加载更多</string><string name="toast_send_success">发送成功</string><string name="dialog_date_title">日期</string><string name="user_setting_avatar">头像</string><string name="service_phone">123456888</string><string name="gender_male">先生</string><string name="get_access_token_succ">获取access token成功</string><string name="pull_to_refresh_footer_release_label">松开后加载</string><string name="user_upload_idcard">上传图片（身份证/营业执照）</string><string name="app_tip">提示</string><string name="feedback_title">在线咨询</string><string name="btn_delete">删除</string><string name="user_setting_title">设置个人资料</string><string name="loading_content">正在载入...</string><string name="regiter_title">注册</string><string name="brand_make_test_drive">预约试驾</string><string name="brand_info_home">首页</string><string name="login_title">登录</string><string-array name="month_item">
+        <item>1月</item>
+        <item>2月</item>
+        <item>3月</item>
+        <item>4月</item>
+        <item>5月</item>
+        <item>6月</item>
+        <item>7月</item>
+        <item>8月</item>
+        <item>9月</item>
+        <item>10月</item>
+        <item>11月</item>
+        <item>12月</item>
+    </string-array><string name="toast_vo_is_empty">获取信息失败，请重试</string><string name="ptr_release_to_refresh">Release to refresh</string><string name="food_change_msg">菜品信息有变动，请留意你的购物车</string><string name="ptr_pull_to_refresh">Pull to refresh</string><string name="user_register_verify_code_hint">请输入验证码</string><string name="setting_clear_cache">清除浏览缓存</string><string name="xlistview_header_hint_loading">正在加载...</string><string name="input_reqkey">输入reqkey</string><string name="feedback_content_hint">请输入您的咨询问题</string><string name="btn_submit">确定</string><string name="pull_to_refresh_release_label">松开后刷新</string><string formatted="false" name="get_prepayid_fail">获取prepayid失败，原因%s</string><string name="user_setting_verify_phone">验证手机号</string><string name="user_auth_idcard_number_hint">请输入真实身份证号</string><string name="forget_password">忘记密码？</string><string name="brand_near_distributor">附近经销商</string><string name="user_auth_submit">提交</string><string name="pay_by_wxap">服务器端签名微信支付</string><string name="input_sign">输入sign</string><string name="xlistview_footer_hint_ready">松开载入更多</string><string name="login_other_hint">您还可以选择下列方式登录</string><string name="not_network_title">网络未连接</string><string name="feedback_phone_hint">请输入电话</string><string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string><string name="user_setting_nickname">昵称</string><string name="check_pay">检查微信版本是否支持支付</string><string name="news_top1">头条新闻：%s</string><string name="pull_to_refresh_pull_label">下拉刷新</string><string name="get_prepayid_succ">获取prepayid成功</string><string name="brand_info_weixin">官方微信</string><string name="btn_cancel">取消</string><string name="brand_info_tmail">天猫商城</string><string name="user_setting_verify_user">实名认证</string><string formatted="false" name="get_access_token_fail">获取access token失败，原因%s</string><string name="input_package_value">输入package value</string><string name="user_setting_account_name">登录账号</string><string name="pull_to_refresh_update_at">上次刷新：%s</string><string name="not_network_title2">无网络连接</string><string name="user_register_next">下一步</string><string name="user_get_verify_code">获取验证码</string><string name="getting_access_token">正在加载中...</string><string name="xlistview_footer_hint_normal">查看更多</string></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values/styles.xml" qualifiers=""><style name="DataSheetAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/push_up_in</item>
+        <item name="android:windowExitAnimation">@anim/push_up_out</item>
+    </style><style name="custom_dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+    </style><style name="MMLineActionButton" parent="@style/MMLineButton">
+        <item name="android:background">@drawable/btn_style_one</item>
+        <item name="android:textColor">@color/mm_style_one_btn_text</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDy">1.2</item>
+        <item name="android:shadowDx">1.2</item>
+        <item name="android:shadowRadius">1</item>
+    </style><style name="custom_dialog_right_animstyle">
+        <item name="android:windowEnterAnimation">@anim/activity_right_in</item>
+        <item name="android:windowExitAnimation">@anim/activity_right_out</item>
+    </style><style name="navigation_radio_button_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:textColor">@color/navigation_text_color</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:paddingLeft">0dp</item>
+    </style><style name="MMButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/mm_btn_text</item>
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:minWidth">40dp</item>
+    </style><style name="MMLineButton" parent="@style/MMButton">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/mm_style_two_btn_text</item>
+    </style></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values/themes.xml" qualifiers=""><style name="MMTheme.DataSheet" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@drawable/mm_trans</item>
+        <item name="android:windowBackground">@drawable/mm_trans</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/DataSheetAnimation</item>
+    </style><style name="MMTheme.DataSheet2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@drawable/mm_trans</item>
+        <item name="android:windowBackground">@drawable/mm_trans</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/DataSheetAnimation</item>
+        <item name="android:backgroundDimAmount">0.8</item><!-- 灰度 -->
+    </style></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values/xlistview_attrs.xml" qualifiers=""><attr format="reference" name="absListViewStyle"/><declare-styleable name="ViewGroup">
+
+        <!--
+             Defines whether changes in layout (caused by adding and removing items) should
+             cause a LayoutTransition to run. When this flag is set to true, a default
+             LayoutTransition object will be set on the ViewGroup container and default
+             animations will run when these layout changes occur.
+        -->
+        <attr format="boolean" name="animateLayoutChanges"/>
+        <!--
+             Defines whether a child is limited to draw inside of its bounds or not.
+             This is useful with animations that scale the size of the children to more
+             than 100% for instance. In such a case, this property should be set to false
+             to allow the children to draw outside of their bounds. The default value of
+             this property is true.
+        -->
+        <attr format="boolean" name="clipChildren"/>
+        <!--
+             Defines whether the ViewGroup will clip its drawing surface so as to exclude
+             the padding area. This property is set to true by default.
+        -->
+        <attr format="boolean" name="clipToPadding"/>
+        <!--
+             Defines the layout animation to use the first time the ViewGroup is laid out.
+             Layout animations can also be started manually after the first layout.
+        -->
+        <attr format="reference" name="layoutAnimation"/>
+        <!--
+             Defines whether layout animations should create a drawing cache for their
+             children. Enabling the animation cache consumes more memory and requires
+             a longer initialization but provides better performance. The animation
+             cache is enabled by default.
+        -->
+        <attr format="boolean" name="animationCache"/>
+        <!--
+             Defines the persistence of the drawing cache. The drawing cache might be
+             enabled by a ViewGroup for all its children in specific situations (for
+             instance during a scrolling.) This property lets you persist the cache
+             in memory after its initial usage. Persisting the cache consumes more
+             memory but may prevent frequent garbage collection is the cache is created
+             over and over again. By default the persistence is set to scrolling.
+        -->
+        <attr name="persistentDrawingCache">
+
+            <!-- The drawing cache is not persisted after use. -->
+            <flag name="none" value="0x0"/>
+            <!-- The drawing cache is persisted after a layout animation. -->
+            <flag name="animation" value="0x1"/>
+            <!-- The drawing cache is persisted after a scroll. -->
+            <flag name="scrolling" value="0x2"/>
+            <!-- The drawing cache is always persisted. -->
+            <flag name="all" value="0x3"/>
+        </attr>
+        <!--
+             Defines whether the ViewGroup should always draw its children using their
+             drawing cache or not. The default value is true.
+        -->
+        <attr format="boolean" name="alwaysDrawnWithCache"/>
+        <!--
+             Sets whether this ViewGroup's drawable states also include
+             its children's drawable states.  This is used, for example, to
+             make a group appear to be focused when its child EditText or button
+             is focused.
+        -->
+        <attr format="boolean" name="addStatesFromChildren"/>
+
+        <!--
+             Defines the relationship between the ViewGroup and its descendants
+             when looking for a View to take focus.
+        -->
+        <attr name="descendantFocusability">
+
+            <!-- The ViewGroup will get focus before any of its descendants. -->
+            <enum name="beforeDescendants" value="0"/>
+            <!-- The ViewGroup will get focus only if none of its descendants want it. -->
+            <enum name="afterDescendants" value="1"/>
+            <!-- The ViewGroup will block its descendants from receiving focus. -->
+            <enum name="blocksDescendants" value="2"/>
+        </attr>
+
+        <!--
+             Sets whether this ViewGroup should split MotionEvents
+             to separate child views during touch event dispatch.
+             If false (default), touch events will be dispatched to
+             the child view where the first pointer went down until
+             the last pointer goes up.
+             If true, touch events may be dispatched to multiple children.
+             MotionEvents for each pointer will be dispatched to the child
+             view where the initial ACTION_DOWN event happened.
+             See {@link android.view.ViewGroup#setMotionEventSplittingEnabled(boolean)}
+             for more information.
+        -->
+        <attr format="boolean" name="splitMotionEvents"/>
+    </declare-styleable><declare-styleable name="View">
+
+        <!--
+             Supply an identifier name for this view, to later retrieve it
+             with {@link android.view.View#findViewById View.findViewById()} or
+             {@link android.app.Activity#findViewById Activity.findViewById()}.
+             This must be a
+             resource reference; typically you set this using the
+             <code>@+</code> syntax to create a new ID resources.
+             For example: <code>android:id="@+id/my_id"</code> which
+             allows you to later retrieve the view
+             with <code>findViewById(R.id.my_id)</code>.
+        -->
+        <attr format="reference" name="id"/>
+
+        <!--
+             Supply a tag for this view containing a String, to be retrieved
+             later with {@link android.view.View#getTag View.getTag()} or
+             searched for with {@link android.view.View#findViewWithTag
+             View.findViewWithTag()}.  It is generally preferable to use
+             IDs (through the android:id attribute) instead of tags because
+             they are faster and allow for compile-time type checking.
+        -->
+        <attr format="string" name="tag"/>
+
+        <!-- The initial horizontal scroll offset, in pixels. -->
+        <attr format="dimension" name="scrollX"/>
+
+        <!-- The initial vertical scroll offset, in pixels. -->
+        <attr format="dimension" name="scrollY"/>
+
+        <!--
+             A drawable to use as the background.  This can be either a reference
+             to a full drawable resource (such as a PNG image, 9-patch,
+             XML state list description, etc), or a solid color such as "#ff000000"
+            (black).
+        -->
+
+
+        <!-- <attr name="background" format="reference|color" /> -->
+
+
+        <!--
+             Sets the padding, in pixels, of all four edges.  Padding is defined as
+             space between the edges of the view and the view's content. A views size
+             will include it's padding.  If a {@link android.R.attr#background}
+             is provided, the padding will initially be set to that (0 if the
+             drawable does not have padding).  Explicitly setting a padding value
+             will override the corresponding padding found in the background.
+        -->
+        <attr format="dimension" name="padding"/>
+        <!-- Sets the padding, in pixels, of the left edge; see {@link android.R.attr#padding}. -->
+        <attr format="dimension" name="paddingLeft"/>
+        <!-- Sets the padding, in pixels, of the top edge; see {@link android.R.attr#padding}. -->
+        <attr format="dimension" name="paddingTop"/>
+        <!-- Sets the padding, in pixels, of the right edge; see {@link android.R.attr#padding}. -->
+        <attr format="dimension" name="paddingRight"/>
+        <!-- Sets the padding, in pixels, of the bottom edge; see {@link android.R.attr#padding}. -->
+        <attr format="dimension" name="paddingBottom"/>
+        <!-- Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}. -->
+        <attr format="dimension" name="paddingStart"/>
+        <!-- Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}. -->
+        <attr format="dimension" name="paddingEnd"/>
+
+        <!--
+             Boolean that controls whether a view can take focus.  By default the user can not
+             move focus to a view; by setting this attribute to true the view is
+             allowed to take focus.  This value does not impact the behavior of
+             directly calling {@link android.view.View#requestFocus}, which will
+             always request focus regardless of this view.  It only impacts where
+             focus navigation will try to move focus.
+        -->
+        <attr format="boolean" name="focusable"/>
+
+        <!--
+             Boolean that controls whether a view can take focus while in touch mode.
+             If this is true for a view, that view can gain focus when clicked on, and can keep
+             focus if another view is clicked on that doesn't have this attribute set to true.
+        -->
+        <attr format="boolean" name="focusableInTouchMode"/>
+
+        <!-- Controls the initial visibility of the view. -->
+        <attr name="visibility">
+
+            <!-- Visible on screen; the default value. -->
+            <enum name="visible" value="0"/>
+            <!-- Not displayed, but taken into account during layout (space is left for it). -->
+            <enum name="invisible" value="1"/>
+            <!-- Completely hidden, as if the view had not been added. -->
+            <enum name="gone" value="2"/>
+        </attr>
+
+        <!--
+             Boolean internal attribute to adjust view layout based on
+             system windows such as the status bar.
+             If true, adjusts the padding of this view to leave space for the system windows.
+             Will only take effect if this view is in a non-embedded activity.
+        -->
+        <attr format="boolean" name="fitsSystemWindows"/>
+
+        <!-- Defines which scrollbars should be displayed on scrolling or not. -->
+        <attr name="scrollbars">
+
+            <!-- No scrollbar is displayed. -->
+            <flag name="none" value="0x00000000"/>
+            <!-- Displays horizontal scrollbar only. -->
+            <flag name="horizontal" value="0x00000100"/>
+            <!-- Displays vertical scrollbar only. -->
+            <flag name="vertical" value="0x00000200"/>
+        </attr>
+
+        <!--
+             Controls the scrollbar style and position. The scrollbars can be overlaid or
+             inset. When inset, they add to the padding of the view. And the
+             scrollbars can be drawn inside the padding area or on the edge of
+             the view. For example, if a view has a background drawable and you
+             want to draw the scrollbars inside the padding specified by the
+             drawable, you can use insideOverlay or insideInset. If you want them
+             to appear at the edge of the view, ignoring the padding, then you can
+             use outsideOverlay or outsideInset.
+        -->
+        <attr name="scrollbarStyle">
+
+            <!-- Inside the padding and overlaid -->
+            <enum name="insideOverlay" value="0x0"/>
+            <!-- Inside the padding and inset -->
+            <enum name="insideInset" value="0x01000000"/>
+            <!-- Edge of the view and overlaid -->
+            <enum name="outsideOverlay" value="0x02000000"/>
+            <!-- Edge of the view and inset -->
+            <enum name="outsideInset" value="0x03000000"/>
+        </attr>
+
+        <!--
+             Set this if the view will serve as a scrolling container, meaing
+             that it can be resized to shrink its overall window so that there
+             will be space for an input method.  If not set, the default
+             value will be true if "scrollbars" has the vertical scrollbar
+             set, else it will be false.
+        -->
+        <attr format="boolean" name="isScrollContainer"/>
+
+        <!-- Defines whether to fade out scrollbars when they are not in use. -->
+        <attr format="boolean" name="fadeScrollbars"/>
+        <!-- Defines the delay in milliseconds that a scrollbar takes to fade out. -->
+        <attr format="integer" name="scrollbarFadeDuration"/>
+        <!-- Defines the delay in milliseconds that a scrollbar waits before fade out. -->
+        <attr format="integer" name="scrollbarDefaultDelayBeforeFade"/>
+        <!-- Sets the width of vertical scrollbars and height of horizontal scrollbars. -->
+        <attr format="dimension" name="scrollbarSize"/>
+        <!-- Defines the horizontal scrollbar thumb drawable. -->
+        <attr format="reference" name="scrollbarThumbHorizontal"/>
+        <!-- Defines the vertical scrollbar thumb drawable. -->
+        <attr format="reference" name="scrollbarThumbVertical"/>
+        <!-- Defines the horizontal scrollbar track drawable. -->
+        <attr format="reference" name="scrollbarTrackHorizontal"/>
+        <!-- Defines the vertical scrollbar track drawable. -->
+        <attr format="reference" name="scrollbarTrackVertical"/>
+        <!-- Defines whether the horizontal scrollbar track should always be drawn. -->
+        <attr format="boolean" name="scrollbarAlwaysDrawHorizontalTrack"/>
+        <!-- Defines whether the vertical scrollbar track should always be drawn. -->
+        <attr format="boolean" name="scrollbarAlwaysDrawVerticalTrack"/>
+
+        <!--
+             This attribute is deprecated and will be ignored as of
+             API level 14 ({@link android.os.Build.VERSION_CODES#ICE_CREAM_SANDWICH}).
+             Using fading edges may introduce noticeable performance
+             degradations and should be used only when required by the application's
+             visual design. To request fading edges with API level 14 and above,
+             use the <code>android:requiresFadingEdge</code> attribute instead.
+        -->
+        <attr name="fadingEdge">
+
+            <!-- No edge is faded. -->
+            <flag name="none" value="0x00000000"/>
+            <!-- Fades horizontal edges only. -->
+            <flag name="horizontal" value="0x00001000"/>
+            <!-- Fades vertical edges only. -->
+            <flag name="vertical" value="0x00002000"/>
+        </attr>
+        <!-- Defines which edges should be faded on scrolling. -->
+        <attr name="requiresFadingEdge">
+
+            <!-- No edge is faded. -->
+            <flag name="none" value="0x00000000"/>
+            <!-- Fades horizontal edges only. -->
+            <flag name="horizontal" value="0x00001000"/>
+            <!-- Fades vertical edges only. -->
+            <flag name="vertical" value="0x00002000"/>
+        </attr>
+        <!-- Defines the length of the fading edges. -->
+        <attr format="dimension" name="fadingEdgeLength"/>
+
+        <!--
+             Defines the next view to give focus to when the next focus is
+             {@link android.view.View#FOCUS_LEFT}.
+
+             If the reference refers to a view that does not exist or is part
+             of a hierarchy that is invisible, a {@link java.lang.RuntimeException}
+             will result when the reference is accessed.
+        -->
+        <attr format="reference" name="nextFocusLeft"/>
+
+        <!--
+             Defines the next view to give focus to when the next focus is
+             {@link android.view.View#FOCUS_RIGHT}
+
+             If the reference refers to a view that does not exist or is part
+             of a hierarchy that is invisible, a {@link java.lang.RuntimeException}
+             will result when the reference is accessed.
+        -->
+        <attr format="reference" name="nextFocusRight"/>
+
+        <!--
+             Defines the next view to give focus to when the next focus is
+             {@link android.view.View#FOCUS_UP}
+
+             If the reference refers to a view that does not exist or is part
+             of a hierarchy that is invisible, a {@link java.lang.RuntimeException}
+             will result when the reference is accessed.
+        -->
+        <attr format="reference" name="nextFocusUp"/>
+
+        <!--
+             Defines the next view to give focus to when the next focus is
+             {@link android.view.View#FOCUS_DOWN}
+
+             If the reference refers to a view that does not exist or is part
+             of a hierarchy that is invisible, a {@link java.lang.RuntimeException}
+             will result when the reference is accessed.
+        -->
+        <attr format="reference" name="nextFocusDown"/>
+
+        <!--
+             Defines the next view to give focus to when the next focus is
+             {@link android.view.View#FOCUS_FORWARD}
+
+             If the reference refers to a view that does not exist or is part
+             of a hierarchy that is invisible, a {@link java.lang.RuntimeException}
+             will result when the reference is accessed.
+        -->
+        <attr format="reference" name="nextFocusForward"/>
+
+        <!-- Defines whether this view reacts to click events. -->
+        <attr format="boolean" name="clickable"/>
+
+        <!-- Defines whether this view reacts to long click events. -->
+        <attr format="boolean" name="longClickable"/>
+
+        <!--
+             If unset, no state will be saved for this view when it is being
+             frozen. The default is true, allowing the view to be saved
+             (however it also must have an ID assigned to it for its
+             state to be saved).  Setting this to false only disables the
+             state for this view, not for its children which may still
+             be saved.
+        -->
+        <attr format="boolean" name="saveEnabled"/>
+
+        <!--
+             Specifies whether to filter touches when the view's window is obscured by
+             another visible window.  When set to true, the view will not receive touches
+             whenever a toast, dialog or other window appears above the view's window.
+             Refer to the {@link android.view.View} security documentation for more details.
+        -->
+        <attr format="boolean" name="filterTouchesWhenObscured"/>
+
+        <!--
+             Defines the quality of translucent drawing caches. This property is used
+             only when the drawing cache is enabled and translucent. The default value is auto.
+        -->
+        <attr name="drawingCacheQuality">
+
+            <!--
+                 Lets the framework decide what quality level should be used
+                 for the drawing cache.
+            -->
+            <enum name="auto" value="0"/>
+            <!--
+                 Low quality. When set to low quality, the drawing cache uses a lower color
+                 depth, thus losing precision in rendering gradients, but uses less memory.
+            -->
+            <enum name="low" value="1"/>
+            <!--
+                 High quality. When set to high quality, the drawing cache uses a higher
+                 color depth but uses more memory.
+            -->
+            <enum name="high" value="2"/>
+        </attr>
+
+        <!--
+             Controls whether the view's window should keep the screen on
+             while visible.
+        -->
+        <attr format="boolean" name="keepScreenOn"/>
+
+        <!--
+             When this attribute is set to true, the view gets its drawable state
+             (focused, pressed, etc.) from its direct parent rather than from itself.
+        -->
+        <attr format="boolean" name="duplicateParentState"/>
+
+        <!--
+             Defines the minimum height of the view. It is not guaranteed
+             the view will be able to achieve this minimum height (for example,
+             if its parent layout constrains it with less available height).
+        -->
+        <attr format="dimension" name="minHeight"/>
+
+        <!--
+             Defines the minimum width of the view. It is not guaranteed
+             the view will be able to achieve this minimum width (for example,
+             if its parent layout constrains it with less available width).
+        -->
+        <attr format="dimension" name="minWidth"/>
+
+        <!--
+             Boolean that controls whether a view should have sound effects
+             enabled for events such as clicking and touching.
+        -->
+        <attr format="boolean" name="soundEffectsEnabled"/>
+
+        <!--
+             Boolean that controls whether a view should have haptic feedback
+             enabled for events such as long presses.
+        -->
+        <attr format="boolean" name="hapticFeedbackEnabled"/>
+
+        <!--
+             Defines text that briefly describes content of the view. This property is used
+             primarily for accessibility. Since some views do not have textual
+             representation this attribute can be used for providing such.
+        -->
+        <attr format="string" localization="suggested" name="contentDescription"/>
+
+        <!--
+             Name of the method in this View's context to invoke when the view is
+             clicked. This name must correspond to a public method that takes
+             exactly one parameter of type View. For instance, if you specify
+             <code>android:onClick="sayHello"</code>, you must declare a
+             <code>public void sayHello(View v)</code> method of your context
+             (typically, your Activity).
+        -->
+        <attr format="string" name="onClick"/>
+
+        <!--
+             Defines over-scrolling behavior. This property is used only if the
+             View is scrollable. Over-scrolling is the ability for the user to
+             receive feedback when attempting to scroll beyond meaningful content.
+        -->
+        <attr name="overScrollMode">
+
+            <!--
+                 Always show over-scroll effects, even if the content fits entirely
+                 within the available space.
+            -->
+            <enum name="always" value="0"/>
+            <!--
+                 Only show over-scroll effects if the content is large
+                 enough to meaningfully scroll.
+            -->
+            <enum name="ifContentScrolls" value="1"/>
+            <!-- Never show over-scroll effects. -->
+            <enum name="never" value="2"/>
+        </attr>
+
+        <!--
+             alpha property of the view, as a value between 0 (completely transparent) and 1
+             (completely opaque).
+        -->
+        <attr format="float" name="alpha"/>
+
+        <!--
+             translation in x of the view. This value is added post-layout to the left
+             property of the view, which is set by its layout.
+        -->
+        <attr format="dimension" name="translationX"/>
+
+        <!--
+             translation in y of the view. This value is added post-layout to the left
+             property of the view, which is set by its layout.
+        -->
+        <attr format="dimension" name="translationY"/>
+
+        <!--
+             x location of the pivot point around which the view will rotate and scale.
+             This xml attribute sets the pivotX property of the View.
+        -->
+        <attr format="dimension" name="transformPivotX"/>
+
+        <!--
+             y location of the pivot point around which the view will rotate and scale.
+             This xml attribute sets the pivotY property of the View.
+        -->
+        <attr format="dimension" name="transformPivotY"/>
+
+        <!-- rotation of the view, in degrees. -->
+        <attr format="float" name="rotation"/>
+
+        <!-- rotation of the view around the x axis, in degrees. -->
+        <attr format="float" name="rotationX"/>
+
+        <!-- rotation of the view around the y axis, in degrees. -->
+        <attr format="float" name="rotationY"/>
+
+        <!-- scale of the view in the x direction. -->
+        <attr format="float" name="scaleX"/>
+
+        <!-- scale of the view in the y direction. -->
+        <attr format="float" name="scaleY"/>
+
+        <!-- Determines which side the vertical scroll bar should be placed on. -->
+        <attr name="verticalScrollbarPosition">
+
+            <!-- Place the scroll bar wherever the system default determines. -->
+            <enum name="defaultPosition" value="0"/>
+            <!-- Place the scroll bar on the left. -->
+            <enum name="left" value="1"/>
+            <!-- Place the scroll bar on the right. -->
+            <enum name="right" value="2"/>
+        </attr>
+
+        <!--
+             Specifies the type of layer backing this view. The default value is none.
+             Refer to {@link android.view.View#setLayerType(int, android.graphics.Paint)}
+             for more information.
+        -->
+        <attr name="layerType">
+
+            <!-- Don't use a layer. -->
+            <enum name="none" value="0"/>
+            <!--
+                 Use a software layer. Refer to
+                 {@link android.view.View#setLayerType(int, android.graphics.Paint) for
+                 more information.
+            -->
+            <enum name="software" value="1"/>
+            <!--
+                 Use a hardware layer. Refer to
+                 {@link android.view.View#setLayerType(int, android.graphics.Paint) for
+                 more information.
+            -->
+            <enum name="hardware" value="2"/>
+        </attr>
+
+        <!--
+             Defines the direction of layout drawing. This typically is associated with writing
+             direction of the language script used. The possible values are "ltr" for Left-to-Right,
+             "rtl" for Right-to-Left, "locale" and "inherit" from parent view. If there is nothing
+             to inherit, "locale" is used. "locale" falls back to "en-US". "ltr" is the direction
+             used in "en-US". The default for this attribute is "inherit".
+        -->
+        <attr name="layoutDirection">
+
+            <!-- Left-to-Right -->
+            <enum name="ltr" value="0"/>
+            <!-- Right-to-Left -->
+            <enum name="rtl" value="1"/>
+            <!-- Inherit from parent -->
+            <enum name="inherit" value="2"/>
+            <!-- Locale -->
+            <enum name="locale" value="3"/>
+        </attr>
+
+        <!--
+             Direction of the text. A heuristic is used to determine the resolved text direction
+             of paragraphs.
+        -->
+        <attr format="integer" name="textDirection">
+
+            <!-- Default -->
+            <enum name="inherit" value="0"/>
+            <!--
+                 Default for the root view. The first strong directional character determines the
+                 paragraph direction.  If there is no strong directional character, the paragraph
+                 direction is the view’s resolved layout direction.
+            -->
+            <enum name="firstStrong" value="1"/>
+            <!--
+                 The paragraph direction is RTL if it contains any strong RTL character, otherwise
+                 it is LTR if it contains any strong LTR characters.  If there are neither, the
+                 paragraph direction is the view’s resolved layout direction.
+            -->
+            <enum name="anyRtl" value="2"/>
+            <!-- The paragraph direction is left to right. -->
+            <enum name="ltr" value="3"/>
+            <!-- The paragraph direction is right to left. -->
+            <enum name="rtl" value="4"/>
+            <!-- The paragraph direction is coming from the system Locale. -->
+            <enum name="locale" value="5"/>
+        </attr>
+
+        <!--
+             Alignment of the text. A heuristic is used to determine the resolved
+            text alignment.
+        -->
+        <attr format="integer" name="textAlignment">
+
+            <!-- Default -->
+            <enum name="inherit" value="0"/>
+            <!--
+                 Default for the root view. The gravity determines the alignment, ALIGN_NORMAL,
+                ALIGN_CENTER, or ALIGN_OPPOSITE, which are relative to each paragraph’s
+                text direction
+            -->
+            <enum name="gravity" value="1"/>
+            <!-- Align to the start of the paragraph, e.g. ALIGN_NORMAL. -->
+            <enum name="textStart" value="2"/>
+            <!-- Align to the end of the paragraph, e.g. ALIGN_OPPOSITE. -->
+            <enum name="textEnd" value="3"/>
+            <!-- Center the paragraph, e.g. ALIGN_CENTER. -->
+            <enum name="center" value="4"/>
+            <!--
+                 Align to the start of the view, which is ALIGN_LEFT if the view’s resolved
+                layoutDirection is LTR, and ALIGN_RIGHT otherwise.
+            -->
+            <enum name="viewStart" value="5"/>
+            <!--
+                 Align to the end of the view, which is ALIGN_RIGHT if the view’s resolved
+                layoutDirection is LTR, and ALIGN_LEFT otherwise
+            -->
+            <enum name="viewEnd" value="6"/>
+        </attr>
+
+        <!--
+             Controls how this View is important for accessibility which is if it fires
+             accessibility events and if it is reported to accessibility services that
+             query the screen. Note: While not recommended, an accessibility service may
+             decide to ignore this attribute and operate on all views in the view tree.
+        -->
+        <attr format="integer" name="importantForAccessibility">
+
+            <!--
+                 The system determines whether the view is important for accessibility - default
+                 (recommended).
+            -->
+            <enum name="auto" value="0"/>
+            <!-- The view is important for accessibility. -->
+            <enum name="yes" value="1"/>
+            <!-- The view is not important for accessibility. -->
+            <enum name="no" value="2"/>
+        </attr>
+
+        <!-- @hide Controls whether this view can take accessibility focus. -->
+        <attr format="integer" name="accessibilityFocusable">
+
+            <!--
+                 The system determines whether the view can take accessibility focus - default
+                 (recommended).
+                 <p>
+                 Such a view is consideted by the focus search if it is:
+                 <ul>
+                 <li>
+                 Important for accessibility and actionable (clickable, long clickable, focusable)
+                 </li>
+                 <li>
+                 Important for accessibility, not actionable (clickable, long clickable, focusable),
+                 and does not have an actionable predecessor.
+                 </li>
+                 </ul>
+                 An accessibility srvice can request putting accessibility focus on such a view.
+                 </p>
+            -->
+            <enum name="auto" value="0"/>
+            <!--
+                 The view can take accessibility focus.
+                 <p>
+                 A view that can take accessibility focus is always considered during focus
+                 search and an accessibility service can request putting accessibility focus
+                 on it.
+                 </p>
+            -->
+            <enum name="yes" value="1"/>
+            <!--
+                 The view can not take accessibility focus.
+                 <p>
+                 A view that can not take accessibility focus is never considered during focus
+                 search and an accessibility service can not request putting accessibility focus
+                 on it.
+                 </p>
+            -->
+            <enum name="no" value="2"/>
+        </attr>
+    </declare-styleable><declare-styleable name="ListView">
+
+        <!-- Drawable or color to draw between list items. -->
+		<!-- <attr name="divider" format="reference|color" /> -->
+        <!--
+             Height of the divider. Will use the intrinsic height of the divider if this
+             is not specified.
+        -->
+        <attr format="dimension" name="dividerHeight"/>
+        <!--
+             When set to false, the ListView will not draw the divider after each header view.
+             The default value is true.
+        -->
+        <attr format="boolean" name="headerDividersEnabled"/>
+        <!--
+             When set to false, the ListView will not draw the divider before each footer view.
+             The default value is true.
+        -->
+        <attr format="boolean" name="footerDividersEnabled"/>
+        <!-- Drawable to draw above list content. -->
+        <attr format="reference|color" name="overScrollHeader"/>
+        <!-- Drawable to draw below list content. -->
+        
+        <attr format="reference|color" name="overScrollFooter"/>
+    </declare-styleable><declare-styleable name="AbsListView">
+
+        <!-- Drawable used to indicate the currently selected item in the list. -->
+        <attr format="color|reference" name="listSelector"/>
+        <!--
+             When set to true, the selector will be drawn over the selected item.
+             Otherwise the selector is drawn behind the selected item. The default
+             value is false.
+        -->
+        <attr format="boolean" name="drawSelectorOnTop"/>
+        <!-- Used by ListView and GridView to stack their content from the bottom. -->
+        <attr format="boolean" name="stackFromBottom"/>
+        <!--
+             When set to true, the list uses a drawing cache during scrolling.
+             This makes the rendering faster but uses more memory. The default
+             value is true.
+        -->
+        <attr format="boolean" name="scrollingCache"/>
+        <!--
+             When set to true, the list will filter results as the user types. The
+             List's adapter must support the Filterable interface for this to work.
+        -->
+        <attr format="boolean" name="textFilterEnabled"/>
+        <!--
+             Sets the transcript mode for the list. In transcript mode, the list
+             scrolls to the bottom to make new items visible when they are added.
+        -->
+        <attr name="transcriptMode">
+
+            <!-- Disables transcript mode. This is the default value. -->
+            <enum name="disabled" value="0"/>
+            <!--
+                 The list will automatically scroll to the bottom when
+                 a data set change notification is received and only if the last item is
+                 already visible on screen.
+            -->
+            <enum name="normal" value="1"/>
+            <!--
+                 The list will automatically scroll to the bottom, no matter what items
+                 are currently visible.
+            -->
+            <enum name="alwaysScroll" value="2"/>
+        </attr>
+        <!--
+             Indicates that this list will always be drawn on top of solid, single-color
+             opaque background. This allows the list to optimize drawing.
+        -->
+        <attr format="color" name="cacheColorHint"/>
+        <!--
+             Enables the fast scroll thumb that can be dragged to quickly scroll through
+             the list.
+        -->
+        <attr format="boolean" name="fastScrollEnabled"/>
+        <!--
+             When set to true, the list will use a more refined calculation
+             method based on the pixels height of the items visible on screen. This
+             property is set to true by default but should be set to false if your adapter
+             will display items of varying heights. When this property is set to true and
+             your adapter displays items of varying heights, the scrollbar thumb will
+             change size as the user scrolls through the list. When set to fale, the list
+             will use only the number of items in the adapter and the number of items visible
+             on screen to determine the scrollbar's properties.
+        -->
+        <attr format="boolean" name="smoothScrollbar"/>
+        <!--
+             Defines the choice behavior for the view. By default, lists do not have
+             any choice behavior. By setting the choiceMode to singleChoice, the list
+             allows up to one item to be in a chosen state. By setting the choiceMode to
+             multipleChoice, the list allows any number of items to be chosen.
+             Finally, by setting the choiceMode to multipleChoiceModal the list allows
+             any number of items to be chosen in a special selection mode.
+             The application will supply a
+             {@link android.widget.AbsListView.MultiChoiceModeListener} using
+             {@link android.widget.AbsListView#setMultiChoiceModeListener} to control the
+             selection mode. This uses the {@link android.view.ActionMode} API.
+        -->
+        <attr name="choiceMode">
+
+            <!-- Normal list that does not indicate choices. -->
+            <enum name="none" value="0"/>
+            <!-- The list allows up to one choice. -->
+            <enum name="singleChoice" value="1"/>
+            <!-- The list allows multiple choices. -->
+            <enum name="multipleChoice" value="2"/>
+            <!-- The list allows multiple choices in a custom selection mode. -->
+            <enum name="multipleChoiceModal" value="3"/>
+        </attr>
+
+        <!--
+             When set to true, the list will always show the fast scroll interface.
+             This setting implies fastScrollEnabled.
+        -->
+        <attr format="boolean" name="fastScrollAlwaysVisible"/>
+    </declare-styleable><declare-styleable name="PinterestLikeAdapterView">
+        <attr format="integer" name="plaColumnNumber"/>
+        <attr format="integer" name="plaLandscapeColumnNumber"/>
+        <attr format="dimension" name="plaColumnPaddingLeft"/>
+        <attr format="dimension" name="plaColumnPaddingRight"/>
+    </declare-styleable><attr format="reference" name="listViewStyle"/></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values/xlistview_ids.xml" qualifiers=""><item name="scrapped_view" type="id"/></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values/xlistview_style.xml" qualifiers=""><style name="ptr_header">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style><style name="ptr_headerContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0px</item>
+        <item name="android:gravity">bottom</item>
+    </style><style name="ptr_spinner" parent="@android:style/Widget.ProgressBar.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:layout_marginLeft">25dp</item>
+    </style><style name="ptr_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style><style name="ptr_textwrapper">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style><style name="ptr_arrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@drawable/ic_launcher</item>
+        <item name="android:layout_marginLeft">25dp</item>
+    </style></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values-land/dimens.xml" qualifiers="land"><integer name="num_cols">2</integer><dimen name="slidingmenu_offset">200dp</dimen></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values-large/dimens.xml" qualifiers="large-v4"><dimen name="slidingmenu_offset">300dp</dimen><integer name="num_cols">1</integer></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values-large-land/dimens.xml" qualifiers="large-land-v4"><integer name="num_cols">2</integer><dimen name="slidingmenu_offset">450dp</dimen></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values-xlarge/dimens.xml" qualifiers="xlarge-v4"><dimen name="slidingmenu_offset">500dp</dimen><integer name="num_cols">1</integer></file><file path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/values-xlarge-land/dimens.xml" qualifiers="xlarge-land-v4"><integer name="num_cols">3</integer><dimen name="slidingmenu_offset">750dp</dimen></file><file name="activity_guides_location_sort" path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/main/res/layout/activity_guides_location_sort.xml" qualifiers="" type="layout"/></source><source path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/generated/res/rs/debug"/><source path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/build/generated/res/resValues/debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="/Users/Jzy/Documents/AndroidStudioProject/TourismAppClient/app/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="PinterestLikeAdapterView"><attr format="integer" name="plaColumnNumber"/><attr format="integer" name="plaLandscapeColumnNumber"/><attr format="dimension" name="plaColumnPaddingLeft"/><attr format="dimension" name="plaColumnPaddingRight"/></declare-styleable><declare-styleable name="View"><attr format="reference" name="id"/><attr format="string" name="tag"/><attr format="dimension" name="scrollX"/><attr format="dimension" name="scrollY"/><attr format="dimension" name="padding"/><attr format="dimension" name="paddingLeft"/><attr format="dimension" name="paddingTop"/><attr format="dimension" name="paddingRight"/><attr format="dimension" name="paddingBottom"/><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr format="boolean" name="focusable"/><attr format="boolean" name="focusableInTouchMode"/><attr name="visibility"><enum name="visible" value="0"/><enum name="invisible" value="1"/><enum name="gone" value="2"/></attr><attr format="boolean" name="fitsSystemWindows"/><attr name="scrollbars"><flag name="none" value="0x00000000"/><flag name="horizontal" value="0x00000100"/><flag name="vertical" value="0x00000200"/></attr><attr name="scrollbarStyle"><enum name="insideOverlay" value="0x0"/><enum name="insideInset" value="0x01000000"/><enum name="outsideOverlay" value="0x02000000"/><enum name="outsideInset" value="0x03000000"/></attr><attr format="boolean" name="isScrollContainer"/><attr format="boolean" name="fadeScrollbars"/><attr format="integer" name="scrollbarFadeDuration"/><attr format="integer" name="scrollbarDefaultDelayBeforeFade"/><attr format="dimension" name="scrollbarSize"/><attr format="reference" name="scrollbarThumbHorizontal"/><attr format="reference" name="scrollbarThumbVertical"/><attr format="reference" name="scrollbarTrackHorizontal"/><attr format="reference" name="scrollbarTrackVertical"/><attr format="boolean" name="scrollbarAlwaysDrawHorizontalTrack"/><attr format="boolean" name="scrollbarAlwaysDrawVerticalTrack"/><attr name="fadingEdge"><flag name="none" value="0x00000000"/><flag name="horizontal" value="0x00001000"/><flag name="vertical" value="0x00002000"/></attr><attr name="requiresFadingEdge"><flag name="none" value="0x00000000"/><flag name="horizontal" value="0x00001000"/><flag name="vertical" value="0x00002000"/></attr><attr format="dimension" name="fadingEdgeLength"/><attr format="reference" name="nextFocusLeft"/><attr format="reference" name="nextFocusRight"/><attr format="reference" name="nextFocusUp"/><attr format="reference" name="nextFocusDown"/><attr format="reference" name="nextFocusForward"/><attr format="boolean" name="clickable"/><attr format="boolean" name="longClickable"/><attr format="boolean" name="saveEnabled"/><attr format="boolean" name="filterTouchesWhenObscured"/><attr name="drawingCacheQuality"><enum name="auto" value="0"/><enum name="low" value="1"/><enum name="high" value="2"/></attr><attr format="boolean" name="keepScreenOn"/><attr format="boolean" name="duplicateParentState"/><attr format="dimension" name="minHeight"/><attr format="dimension" name="minWidth"/><attr format="boolean" name="soundEffectsEnabled"/><attr format="boolean" name="hapticFeedbackEnabled"/><attr format="string" localization="suggested" name="contentDescription"/><attr format="string" name="onClick"/><attr name="overScrollMode"><enum name="always" value="0"/><enum name="ifContentScrolls" value="1"/><enum name="never" value="2"/></attr><attr format="float" name="alpha"/><attr format="dimension" name="translationX"/><attr format="dimension" name="translationY"/><attr format="dimension" name="transformPivotX"/><attr format="dimension" name="transformPivotY"/><attr format="float" name="rotation"/><attr format="float" name="rotationX"/><attr format="float" name="rotationY"/><attr format="float" name="scaleX"/><attr format="float" name="scaleY"/><attr name="verticalScrollbarPosition"><enum name="defaultPosition" value="0"/><enum name="left" value="1"/><enum name="right" value="2"/></attr><attr name="layerType"><enum name="none" value="0"/><enum name="software" value="1"/><enum name="hardware" value="2"/></attr><attr name="layoutDirection"><enum name="ltr" value="0"/><enum name="rtl" value="1"/><enum name="inherit" value="2"/><enum name="locale" value="3"/></attr><attr format="integer" name="textDirection"><enum name="inherit" value="0"/><enum name="firstStrong" value="1"/><enum name="anyRtl" value="2"/><enum name="ltr" value="3"/><enum name="rtl" value="4"/><enum name="locale" value="5"/></attr><attr format="integer" name="textAlignment"><enum name="inherit" value="0"/><enum name="gravity" value="1"/><enum name="textStart" value="2"/><enum name="textEnd" value="3"/><enum name="center" value="4"/><enum name="viewStart" value="5"/><enum name="viewEnd" value="6"/></attr><attr format="integer" name="importantForAccessibility"><enum name="auto" value="0"/><enum name="yes" value="1"/><enum name="no" value="2"/></attr><attr format="integer" name="accessibilityFocusable"><enum name="auto" value="0"/><enum name="yes" value="1"/><enum name="no" value="2"/></attr></declare-styleable><declare-styleable name="ViewGroup"><attr format="boolean" name="animateLayoutChanges"/><attr format="boolean" name="clipChildren"/><attr format="boolean" name="clipToPadding"/><attr format="reference" name="layoutAnimation"/><attr format="boolean" name="animationCache"/><attr name="persistentDrawingCache"><flag name="none" value="0x0"/><flag name="animation" value="0x1"/><flag name="scrolling" value="0x2"/><flag name="all" value="0x3"/></attr><attr format="boolean" name="alwaysDrawnWithCache"/><attr format="boolean" name="addStatesFromChildren"/><attr name="descendantFocusability"><enum name="beforeDescendants" value="0"/><enum name="afterDescendants" value="1"/><enum name="blocksDescendants" value="2"/></attr><attr format="boolean" name="splitMotionEvents"/></declare-styleable><declare-styleable name="Themes"><attr format="reference" name="numberProgressBarStyle"/></declare-styleable><declare-styleable name="AbsListView"><attr format="color|reference" name="listSelector"/><attr format="boolean" name="drawSelectorOnTop"/><attr format="boolean" name="stackFromBottom"/><attr format="boolean" name="scrollingCache"/><attr format="boolean" name="textFilterEnabled"/><attr name="transcriptMode"><enum name="disabled" value="0"/><enum name="normal" value="1"/><enum name="alwaysScroll" value="2"/></attr><attr format="color" name="cacheColorHint"/><attr format="boolean" name="fastScrollEnabled"/><attr format="boolean" name="smoothScrollbar"/><attr name="choiceMode"><enum name="none" value="0"/><enum name="singleChoice" value="1"/><enum name="multipleChoice" value="2"/><enum name="multipleChoiceModal" value="3"/></attr><attr format="boolean" name="fastScrollAlwaysVisible"/></declare-styleable><declare-styleable name="CircleImageView"><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/></declare-styleable><declare-styleable name="SuperProgressWheel"><attr format="color" name="roundColor"/><attr format="color" name="roundProgressColor"/><attr format="dimension" name="roundWidth"/><attr format="color" name="textColor"/><attr format="dimension" name="textSize"/><attr format="integer" name="maxProgress"/></declare-styleable><declare-styleable name="SlidingMenu"><attr name="mode"><enum name="left" value="0"/><enum name="right" value="1"/></attr><attr format="reference" name="viewAbove"/><attr format="reference" name="viewBehind"/><attr format="dimension" name="behindOffset"/><attr format="dimension" name="behindWidth"/><attr format="float" name="behindScrollScale"/><attr name="touchModeAbove"><enum name="margin" value="0"/><enum name="fullscreen" value="1"/><enum name="none" value="2"/></attr><attr name="touchModeBehind"><enum name="margin" value="0"/><enum name="fullscreen" value="1"/><enum name="none" value="2"/></attr><attr format="reference" name="shadowDrawable"/><attr format="dimension" name="shadowWidth"/><attr format="boolean" name="fadeEnabled"/><attr format="float" name="fadeDegree"/><attr format="boolean" name="selectorEnabled"/><attr format="reference" name="selectorDrawable"/></declare-styleable><declare-styleable name="ListView"><attr format="dimension" name="dividerHeight"/><attr format="boolean" name="headerDividersEnabled"/><attr format="boolean" name="footerDividersEnabled"/><attr format="reference|color" name="overScrollHeader"/><attr format="reference|color" name="overScrollFooter"/></declare-styleable><declare-styleable name="NumberProgressBar"><attr format="integer" name="progress"/><attr format="integer" name="max"/><attr format="color" name="progress_unreached_color"/><attr format="color" name="progress_reached_color"/><attr format="dimension" name="progress_reached_bar_height"/><attr format="dimension" name="progress_unreached_bar_height"/><attr format="dimension" name="progress_text_size"/><attr format="color" name="progress_text_color"/><attr format="dimension" name="progress_text_offset"/><attr format="enum" name="progress_text_visibility"><enum name="visible" value="0"/><enum name="invisible" value="1"/></attr></declare-styleable><declare-styleable name="MultiDirectionSlidingDrawer"><attr format="reference" name="handle"/><attr format="reference" name="content"/><attr name="direction"/><attr format="dimension" name="bottomOffset"/><attr format="dimension" name="topOffset"/><attr format="boolean" name="allowSingleTap"/><attr format="boolean" name="animateOnClick"/></declare-styleable></configuration></mergedItems></merger>

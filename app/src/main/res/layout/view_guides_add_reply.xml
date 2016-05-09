@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_gray2"
+    android:gravity="bottom"
+    android:visibility="gone"
+    android:id="@+id/reply_ll"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/reply_bottom_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_white"
+        android:orientation="vertical" >
+        
+        <EditText
+        	android:id="@+id/guides_reply_et" 
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:minHeight="30dp"
+        	android:layout_margin="@dimen/global_padding_little"   
+        	android:background="@drawable/bg_white_gray"
+        	android:textSize="@dimen/sp_12"
+        	android:padding="@dimen/global_padding_little"
+        	android:imeOptions="actionDone"
+        	android:hint="评论"
+        />
+        
+        <TextView
+        	android:id="@+id/guides_reply_count_tv"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="12 / 150字"
+        	android:textColor="@color/text_gray"
+        	android:paddingRight="@dimen/global_padding_little"
+        	android:paddingBottom="@dimen/global_padding_little"
+        	android:gravity="right"
+        	android:textSize="@dimen/sp_12"
+        />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/navigation_height"
+        android:background="@color/title_brand" >
+
+        <com.tourism.app.widget.view.CustomImageButton
+            android:id="@+id/user_btn"
+            android:layout_width="35dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent"
+            android:onClick="onClick"
+            android:src="@drawable/btn_user" />
+
+        <TextView
+            android:id="@+id/navigation_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/navigation_right_btn"
+            android:layout_toRightOf="@+id/navigation_left_btn"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/text_white"
+            android:textSize="20sp" />
+
+        <com.tourism.app.widget.view.CustomImageButton
+            android:id="@+id/more_btn"
+            android:layout_width="35dp"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent"
+            android:onClick="onClick"
+            android:src="@drawable/btn_brand_more_content" />
+
+        <com.tourism.app.widget.view.CustomImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/more_btn"
+            android:background="@color/transparent"
+            android:onClick="onClick"
+            android:src="@drawable/btn_back" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null" />
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ico_ok" android:state_checked="false"/>
+    <item android:drawable="@drawable/btn_xz_d" android:state_checked="true"/>
+
+</selector>

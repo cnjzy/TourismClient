@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+    <com.tourism.app.widget.view.CustomButton
+        android:id="@+id/service_phone_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/global_padding_mid2"
+        android:layout_marginRight="@dimen/global_padding_mid2"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/btn_blue_round"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/brand_service_phone"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp_14" />
+
+    <com.tourism.app.widget.view.CustomButton
+        android:id="@+id/near_distributor_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/global_padding_mid2"
+        android:layout_marginRight="@dimen/global_padding_mid2"
+        android:layout_marginTop="@dimen/global_padding_mid"
+        android:background="@drawable/btn_blue_round"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/brand_near_distributor"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp_14" />
+
+    <com.tourism.app.widget.view.CustomButton
+        android:id="@+id/make_maintenance_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/global_padding_mid2"
+        android:layout_marginRight="@dimen/global_padding_mid2"
+        android:layout_marginTop="@dimen/global_padding_mid"
+        android:background="@drawable/btn_blue_round"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/brand_make_maintenance"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp_14" />
+
+    <com.tourism.app.widget.view.CustomButton
+        android:id="@+id/make_test_drive_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/global_padding_mid2"
+        android:layout_marginRight="@dimen/global_padding_mid2"
+        android:layout_marginTop="@dimen/global_padding_mid"
+        android:background="@drawable/btn_blue_round"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/brand_make_test_drive"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp_14" />
+
+    <LinearLayout
+        android:id="@+id/online_advice_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/global_padding_mid2"
+        android:layout_marginRight="@dimen/global_padding_mid2"
+        android:layout_marginTop="@dimen/global_padding_mid"
+        android:background="@drawable/btn_green_round"
+        android:gravity="center"
+        android:onClick="onClick" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/icon_brand_advice"
+            android:drawablePadding="@dimen/global_padding_small"
+            android:gravity="center"
+            android:text="@string/brand_online_advice"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+</LinearLayout>

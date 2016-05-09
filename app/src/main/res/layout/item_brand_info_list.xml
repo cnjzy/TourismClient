@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="240dp"
+        android:padding="@dimen/global_padding_small" >
+
+        <ImageView
+            android:id="@+id/item_icon_iv"
+            android:layout_width="fill_parent"
+            android:layout_height="240dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_default_bannber" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/global_padding_mid"
+            android:layout_marginBottom="@dimen/global_padding_mid2"
+            android:layout_alignParentBottom="true" >
+
+            <com.tourism.app.widget.view.CustomButton
+                android:id="@+id/item_make_maintenance_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/global_padding_mid"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue_round"
+                android:onClick="onClick"
+                android:padding="@dimen/global_padding_little"
+                android:text="@string/brand_make_maintenance"
+                android:textColor="@color/text_white" />
+
+            <com.tourism.app.widget.view.CustomButton
+                android:id="@+id/item_make_test_drive_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue_round"
+                android:onClick="onClick"
+                android:padding="@dimen/global_padding_little"
+                android:text="@string/brand_make_test_drive"
+                android:textColor="@color/text_white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
