@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 主体颜色 -->
+    <color name="background">#EEEEEE</color>
+    <color name="background_user">#EBF0F5</color>
+    <color name="title">#009BE1</color>
+    <color name="title_brand">#003B90</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_gray">#E5E5E5</color>
+    <color name="bg_black">#000000</color>
+
+    <!-- 透明背景色 -->
+    <color name="transparent">#00000000</color>
+
+    <!-- 灰色半透明 -->
+    <color name="transparent_gray">#50000000</color>
+    <color name="transparent_gray2">#3C000000</color>
+    <color name="transparent_white">#5AFFFFFF</color>
+
+    <!-- 字体颜色 -->
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_gray">#999999</color>
+    <color name="text_green">#06C1AE</color>
+    <color name="text_gray_light">#707070</color>
+    <color name="text_blue">#009BE1</color>
+    <color name="text_black">#333333</color>
+    <color name="text_orange">#FFA500</color>
+    <color name="text_red">#FD5B37</color>
+    <color name="button_gray">#c8c8c8</color>
+
+    <!-- 分割线颜色 -->
+    <color name="line_color">#A0A0A0</color>
+    
+    <!-- tab color -->
+    <color name="tab_color_default">#FFFFFF</color>
+    <color name="tab_color_selected">#C9C9CA</color>
+    
+    <!-- guides tab color -->
+    <color name="guides_tab_color_def">#EBEBEB</color>
+</resources>

@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_user"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_navigation" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.tourism.app.widget.view.CustomButton
+            android:id="@+id/login_sina_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/global_padding_small"
+            android:background="@drawable/btn_sina"
+            android:onClick="onClick" />
+
+        <com.tourism.app.widget.view.CustomButton
+            android:id="@+id/login_weixin_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_weixin"
+            android:onClick="onClick" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:layout_marginTop="@dimen/global_padding_mid2"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_padding_small"
+            android:text="+86" />
+
+        <EditText
+            android:id="@+id/login_user_et"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/bg_white"
+            android:gravity="right|center_vertical"
+            android:hint="@string/regiter_name_hint"
+            android:paddingRight="@dimen/global_padding_small"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:layout_marginLeft="@dimen/global_padding_little"
+        android:layout_marginRight="@dimen/global_padding_little"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_padding_small"
+            android:text="密码" />
+
+        <EditText
+            android:id="@+id/login_password_et"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@color/bg_white"
+            android:hint="@string/login_password_hint"
+            android:gravity="right|center_vertical"
+            android:paddingRight="@dimen/global_padding_small"
+            android:password="true"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:background="@color/line_color" />
+
+    <com.tourism.app.widget.view.CustomButton
+        android:id="@+id/login_submit_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="@dimen/global_padding_small"
+        android:layout_marginRight="@dimen/global_padding_small"
+        android:layout_marginTop="@dimen/global_padding_mid2"
+        android:background="@drawable/btn_gray_round"
+        android:onClick="onClick"
+        android:text="@string/user_register_next"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>

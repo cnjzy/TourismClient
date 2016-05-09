@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_user"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_navigation" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:layout_marginTop="@dimen/global_padding_mid2"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/clear_cache_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/global_line_size"
+            android:background="@color/bg_white"
+            android:gravity="left|center"
+            android:paddingLeft="@dimen/global_padding_small"
+            android:text="@string/setting_clear_cache"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/cache_size_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/global_line_size"
+            android:background="@color/bg_white"
+            android:gravity="left|center"
+            android:paddingRight="@dimen/global_padding_small"
+            android:text="0M"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:layout_below="@+id/user_nickname_et"
+        android:background="@color/line_color" />
+
+    <com.tourism.app.widget.view.CustomButton
+        android:id="@+id/logout_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_white_selector"
+        android:onClick="onClick"
+        android:text="@string/setting_logout"
+        android:textColor="@color/text_red"
+        android:textSize="@dimen/sp_14" />
+
+</LinearLayout>

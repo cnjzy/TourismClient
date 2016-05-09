@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_navigation"/>
+	
+    <EditText 
+    	android:id="@+id/guides_name_et"
+    	android:layout_width="fill_parent"
+    	android:layout_height="30dp"
+    	android:layout_margin="@dimen/global_padding_mid"
+    	android:background="@drawable/bg_white_round"
+    	android:gravity="center_vertical"
+    	android:textSize="@dimen/sp_14"
+    	android:paddingLeft="@dimen/global_padding_small"
+    	android:hint="攻略标题"
+    />
+    
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 自定义title字体 -->
+    <dimen name="custom_title_text_size">@dimen/sp_16</dimen>
+    <!-- network -->
+    <dimen name="network_showtip_txt_size">15.0sp</dimen>
+    <!-- 网络提示页面字号 -->
+    <dimen name="network_txt_icon_margin_top">20.0dip</dimen>
+    <!-- 网络提示页面字图间距 -->
+    <!-- 通讯录左侧滑动栏 -->
+    <dimen name="blade_text_size">14dp</dimen>
+
+    <!-- 单选浮选按钮内间距 -->
+    <dimen name="box_padding">7dp</dimen>
+    <!-- 公用间距值 -->
+    <dimen name="global_padding_little">5dp</dimen>
+    <!-- 微小号padding -->
+    <dimen name="global_padding_small">8dp</dimen>
+    <!-- 小号padding -->
+    <dimen name="global_padding_mid">10dp</dimen>
+    <!-- 中号padding -->
+    <dimen name="global_padding_mid2">15dp</dimen>
+
+    <!-- 各种字号，统一在文档里，方便拓展修改 -->
+    <dimen name="main_tab_font_size">10sp</dimen>
+    <dimen name="sp_9">9sp</dimen>
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_11">11sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_17">17sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_19">19sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_21">21sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+
+    <!-- navigation -->
+    <dimen name="navigation_height">42dp</dimen>
+    <!-- 首页 -->
+    <dimen name="menu_height">43dp</dimen>
+    <!-- 菜单栏高度 -->
+    <!-- 线宽度 -->
+    <dimen name="global_line_size">0.66dp</dimen>
+    <!-- 线宽度 -->
+    <dimen name="global_listview_line_size">1dp</dimen>
+    
+    <!-- brand banner height -->
+    <dimen name="brand_banner_height">136dp</dimen>
+
+    <!-- Sliding Menu -->
+    <dimen name="content_padding_left">60dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <integer name="num_cols">1</integer>
+    
+    <!-- 微信分享 -->
+    <dimen name="LargeTextSize">16dp</dimen>
+    <dimen name="BasicTextSize">15dp</dimen>
+    <dimen name="TitleTextSize">18dp</dimen>
+    
+    <!-- dialog list item -->
+    <dimen name="dialog_list_item_height">51dp</dimen>
+    <dimen name="dialog_list_item_text_size">18sp</dimen>
+</resources>
