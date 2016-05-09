@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_navigation" />
+
+    <ImageView
+    	android:id="@+id/user_avatar_icon_iv"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:scaleType="fitCenter"
+    	android:layout_below="@+id/navigation_layout"
+    	android:layout_above="@+id/guides_replay_ll"
+    	android:src="@drawable/img_default_horizon"
+    />
+
+    <RelativeLayout 
+        android:id="@+id/guides_replay_ll"
+    	android:layout_width="fill_parent"
+    	android:layout_alignParentBottom="true"
+    	android:layout_height="45dp"
+    >
+        <Button 
+        	android:id="@+id/guides_add_reply_btn"
+        	android:background="@color/transparent"
+        	android:layout_width="wrap_content"
+        	android:layout_height="fill_parent"
+        	android:layout_centerInParent="true"
+        	android:drawableLeft="@drawable/ico_miaoshu"
+        	android:drawablePadding="3dp"
+        	android:gravity="center"
+        	android:text="点击添加相片描述"
+        	android:onClick="onClick"
+        	android:textColor="@color/text_white"
+        	android:textSize="@dimen/sp_14"
+        />
+        
+        <TextView
+        	android:id="@+id/guides_reply_tv"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:paddingLeft="@dimen/global_padding_small"
+        	android:textColor="@color/text_white"
+        	android:layout_centerVertical="true"
+        	android:textSize="@dimen/sp_14"
+        	android:text="评论评论评论评论"
+        	android:visibility="invisible"
+        />
+    </RelativeLayout>
+    
+    <include layout="@layout/view_guides_add_reply"/>
+</RelativeLayout>

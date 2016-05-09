@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_navigation" />
+
+    <EditText
+        android:id="@+id/feedback_content_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="147dp"
+        android:layout_margin="@dimen/global_padding_small"
+        android:background="@drawable/bg_white_round"
+        android:gravity="top|left"
+        android:hint="@string/feedback_content_hint"
+        android:padding="@dimen/global_padding_small"
+        android:textSize="@dimen/sp_14" />
+
+    <EditText
+        android:id="@+id/feedback_user_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/global_padding_small"
+        android:layout_marginRight="@dimen/global_padding_small"
+        android:background="@drawable/bg_white_round"
+        android:gravity="center_vertical"
+        android:hint="@string/feedback_user_hint"
+        android:padding="@dimen/global_padding_small"
+        android:textSize="@dimen/sp_14" />
+
+    <EditText
+        android:id="@+id/feedback_phone_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/global_padding_small"
+        android:background="@drawable/bg_white_round"
+        android:gravity="center_vertical"
+        android:hint="@string/feedback_phone_hint"
+        android:padding="@dimen/global_padding_small"
+        android:textSize="@dimen/sp_14" />
+
+    <com.tourism.app.widget.view.CustomButton
+        android:id="@+id/feedback_submit_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:textColor="@color/text_white"
+        android:layout_marginTop="@dimen/global_padding_mid2"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginLeft="@dimen/global_padding_small"
+        android:layout_marginRight="@dimen/global_padding_small"
+        android:background="@drawable/btn_blue2_round"
+        android:onClick="onClick"
+        android:text="@string/feedback_submit" />
+
+</LinearLayout>

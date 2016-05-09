@@ -1,0 +1,192 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_user"
+    android:orientation="vertical" >
+
+    <include layout="@layout/view_navigation" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:layout_marginTop="@dimen/global_padding_mid2"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="102dp"
+        android:background="@color/text_white" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:paddingLeft="@dimen/global_padding_mid"
+            android:text="@string/user_setting_avatar"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/arrow_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/global_padding_mid"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/btn_arrow" />
+
+        <ImageView
+            android:id="@+id/user_avatar_iv"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginRight="@dimen/global_padding_little"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/arrow_iv"
+            android:background="@drawable/ic_launcher"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <com.tourism.app.widget.view.CustomButton
+                android:id="@+id/user_setting_nickname_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="34dp"
+                android:background="@drawable/btn_white_selector"
+                android:drawableRight="@drawable/ico_jr"
+                android:gravity="center_vertical"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/global_padding_mid"
+                android:paddingRight="@dimen/global_padding_mid"
+                android:text="@string/user_setting_nickname"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/user_setting_nickname_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:text="未设置"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/sp_12" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/global_line_size"
+            android:layout_marginLeft="@dimen/global_padding_mid"
+            android:layout_marginRight="@dimen/global_padding_mid"
+            android:layout_marginTop="68dp"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:background="@color/line_color" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:layout_marginTop="@dimen/global_padding_small"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.tourism.app.widget.view.CustomButton
+            android:id="@+id/user_setting_gender_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_white_selector"
+            android:drawableRight="@drawable/ico_jr"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingLeft="@dimen/global_padding_mid"
+            android:paddingRight="@dimen/global_padding_mid"
+            android:text="@string/user_setting_gender"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/user_setting_gender_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="未设置"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:background="@color/line_color" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:layout_marginTop="@dimen/global_padding_small"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.tourism.app.widget.view.CustomButton
+            android:id="@+id/user_setting_verify_check_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_white_selector"
+            android:drawableRight="@drawable/ico_jr"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingLeft="@dimen/global_padding_mid"
+            android:paddingRight="@dimen/global_padding_mid"
+            android:text="@string/user_setting_verify_user"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/user_setting_verify_check_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="未验证"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:background="@color/line_color" />
+
+    <com.tourism.app.widget.view.CustomButton
+        android:id="@+id/logout_submit_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="@dimen/global_padding_small"
+        android:layout_marginRight="@dimen/global_padding_small"
+        android:layout_marginTop="@dimen/global_padding_mid2"
+        android:background="@drawable/btn_red_round"
+        android:onClick="onClick"
+        android:text="@string/user_setting_logout"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>
