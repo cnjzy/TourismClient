@@ -48,6 +48,8 @@
     <!-- 线宽度 -->
     <dimen name="global_line_size">0.66dp</dimen>
     <!-- 线宽度 -->
+    <dimen name="global_line_size_x2">1.5dp</dimen>
+    <!-- 线宽度 -->
     <dimen name="global_listview_line_size">1dp</dimen>
     
     <!-- brand banner height -->
@@ -68,4 +70,7 @@
     <!-- dialog list item -->
     <dimen name="dialog_list_item_height">51dp</dimen>
     <dimen name="dialog_list_item_text_size">18sp</dimen>
+
+
+    <dimen name="search_item_bg_height">140dp</dimen>
 </resources>

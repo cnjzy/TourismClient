@@ -7,35 +7,34 @@ package com.tourism.app.vo;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * 游记地点节点
  */
 @DatabaseTable(tableName = "guides_locations")
-public class GuidesLocationVO extends BaseVO {
-    @DatabaseField
-    private String server_id = "0";
+public class GuidesLocationVO extends BaseDBVO {
+    /**
+     * 地理位置名称
+     */
     @DatabaseField
     private String location_name;
     @DatabaseField
-    int rank;
-    @DatabaseField
-    private boolean is_upload;
-    @DatabaseField
-    private String parent_id;
+    private int rank;
+
+    private String location_name_en;
+    private int type;
+
     // 游记内容集合
     private List<GuidesNotedVO> notes;
 
-    public GuidesLocationVO(){}
+    private String day;
+    private String dateStr;
+    private boolean isDate;
 
 
-    public String getServer_id() {
-        return server_id;
-    }
-
-    public void setServer_id(String server_id) {
-        this.server_id = server_id;
+    public GuidesLocationVO() {
     }
 
     public String getLocation_name() {
@@ -55,6 +54,8 @@ public class GuidesLocationVO extends BaseVO {
     }
 
     public List<GuidesNotedVO> getNotes() {
+        if (notes == null)
+            notes = new ArrayList<GuidesNotedVO>();
         return notes;
     }
 
@@ -62,19 +63,43 @@ public class GuidesLocationVO extends BaseVO {
         this.notes = notes;
     }
 
-    public boolean is_upload() {
-        return is_upload;
+    public String getLocation_name_en() {
+        return location_name_en;
     }
 
-    public void setIs_upload(boolean is_upload) {
-        this.is_upload = is_upload;
+    public void setLocation_name_en(String location_name_en) {
+        this.location_name_en = location_name_en;
     }
 
-    public String getParent_id() {
-        return parent_id;
+    public int getType() {
+        return type;
     }
 
-    public void setParent_id(String parent_id) {
-        this.parent_id = parent_id;
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    public String getDateStr() {
+        return dateStr;
+    }
+
+    public void setDateStr(String dateStr) {
+        this.dateStr = dateStr;
+    }
+
+    public boolean isDate() {
+        return isDate;
+    }
+
+    public void setIsDate(boolean isDate) {
+        this.isDate = isDate;
     }
 }

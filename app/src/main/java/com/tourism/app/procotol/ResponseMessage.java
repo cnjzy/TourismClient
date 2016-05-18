@@ -1,13 +1,13 @@
 package com.tourism.app.procotol;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
 import com.google.gson.reflect.TypeToken;
 import com.tourism.app.MyApp;
 import com.tourism.app.util.LogUtil;
 import com.tourism.app.util.StringUtil;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 /**
  * 消息响应基类
@@ -23,6 +23,7 @@ public abstract class ResponseMessage implements MessageIF {
 	private int pageCount;
 	private int pageNo;
 	private String data;
+	private int code;
 	
 	public ResponseMessage() {
 		parser = new JSONParser();
@@ -30,6 +31,7 @@ public abstract class ResponseMessage implements MessageIF {
 	
 	private void parseHeader(JSONObject obj) throws Exception {
 		if (obj.containsKey("code")) {
+			code = Integer.parseInt(obj.get("code").toString());
 			success = Integer.parseInt(obj.get("code").toString()) == 200;
 		} 
 		if (obj.containsKey("msg")) {
@@ -142,5 +144,9 @@ public abstract class ResponseMessage implements MessageIF {
 	}
 	public String getData() {
 		return data;
+	}
+
+	public int getCode() {
+		return code;
 	}
 }

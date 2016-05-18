@@ -1,15 +1,14 @@
 package com.tourism.app.activity.news;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.gson.reflect.TypeToken;
@@ -22,10 +21,14 @@ import com.tourism.app.base.BaseFragment;
 import com.tourism.app.common.Constants;
 import com.tourism.app.net.utils.RequestParameter;
 import com.tourism.app.procotol.BaseResponseMessage;
+import com.tourism.app.util.DeviceUtil;
 import com.tourism.app.vo.NewsVO;
 import com.tourism.app.vo.WeatherVO;
 import com.tourism.app.widget.view.ChildViewPager;
 import com.tourism.app.widget.view.PointWidget;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NewsFragment extends BaseFragment{
 	private final int REQUEST_GET_NEWS_CODE = 10001;
@@ -35,6 +38,7 @@ public class NewsFragment extends BaseFragment{
 	private PointWidget view_pager_ponit;
 	private TextView news_name_tv;
 	private NewsBannerAdapter newsBannerAdapter;
+	private RelativeLayout.LayoutParams bannerParams;
 	
 	private ListView list_view;
 	private NewsListAdapter listAdapter;
@@ -50,6 +54,7 @@ public class NewsFragment extends BaseFragment{
 	
 	@Override
 	public void init() {
+		bannerParams = new RelativeLayout.LayoutParams(AbsListView.LayoutParams.FILL_PARENT, DeviceUtil.dip2px(context, 180));
 	}
 
 	@Override
@@ -108,13 +113,14 @@ public class NewsFragment extends BaseFragment{
 		List<RequestParameter> parameter = new ArrayList<RequestParameter>();
 		startHttpRequest(Constants.HTTP_GET, Constants.URL_NEWS_LIST, parameter, false, REQUEST_GET_NEWS_CODE);
 	}
-	
+
+
 	/**
 	 * 获取天气信息
 	 */
 	public void requestWeather() {
 		List<RequestParameter> parameter = new ArrayList<RequestParameter>();
-		parameter.add(new RequestParameter("city", "北京"));
+		parameter.add(new RequestParameter("city", Constants.location == null ? "北京" : Constants.location.getCity()));
 		startHttpRequest(Constants.HTTP_GET, Constants.URL_WEATHER_LIST, parameter, false, REQUEST_GET_WEATHER_CODE);
 	}
 	
@@ -133,6 +139,7 @@ public class NewsFragment extends BaseFragment{
 						news_name_tv.setOnClickListener(this);
 						
 						// 设置banner
+//						view_pager.setLayoutParams(bannerParams);
 						newsBannerAdapter = new NewsBannerAdapter(context, vo.getBanner(), view_pager, view_pager_ponit);
 						view_pager.setAdapter(newsBannerAdapter);
 						view_pager.setCurrentItem(100 + (100%vo.getBanner().size()), false);

@@ -73,10 +73,20 @@ public class WebViewActivity extends BaseActivity{
 		webview.getSettings().setUseWideViewPort(true);
 		webview.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
 		webview.getSettings().setBuiltInZoomControls(true); // 设置显示缩放按钮  
-		webview.getSettings().setSupportZoom(true); // 支持缩放 
-		
-		webview.loadUrl(url);
-		
+		webview.getSettings().setSupportZoom(true); // 支持缩放
+		webview.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+
+		webview.getSettings().setUseWideViewPort(true);
+		webview.getSettings().setLoadWithOverviewMode(true);
+
+//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//			webview.getSettings().setLayoutAlgorithm(
+//					WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING);
+//		} else {
+//			webview.getSettings().setLayoutAlgorithm(
+//					WebSettings.LayoutAlgorithm.NORMAL);
+//		}
+
 		webview.setWebChromeClient(new WebChromeClient(){
         	public void onProgressChanged(WebView view,int progress){//载入进度改变而触发 
                 super.onProgressChanged(view, progress);  
@@ -93,9 +103,9 @@ public class WebViewActivity extends BaseActivity{
 				}else{
 					loading_layout.setVisibility(View.VISIBLE);
 				}
-            }   
-        });
-		
+			}
+		});
+
 		webview.setWebViewClient(new WebViewClient() {
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -104,6 +114,8 @@ public class WebViewActivity extends BaseActivity{
 				return false;
 			}
 		});
+
+		webview.loadUrl(url);
 	}
 	
 	@Override

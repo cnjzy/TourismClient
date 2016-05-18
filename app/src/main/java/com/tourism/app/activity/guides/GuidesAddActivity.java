@@ -56,7 +56,7 @@ public class GuidesAddActivity extends BaseActivity{
 					vo.setLocal_id(id);
 					Bundle data = new Bundle();
 					data.putSerializable("vo", vo);
-					showActivity(context, GuidesAddInfoActivity.class, data);
+					showActivity(context, GuidesEditActivity.class, data);
 					finish();
 				}
 				break;

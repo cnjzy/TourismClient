@@ -36,10 +36,10 @@ public class EventListAdapter extends ETSBaseAdapter {
 
 	public DisplayImageOptions bgOptions;
 	public DisplayImageOptions circleOptions;
-	
+
 	public EventListAdapter(BaseActivity context, AbsListView listView) {
 		super(context, listView);
-		
+
 		bgOptions = new DisplayImageOptions
 				.Builder()
 				.showImageOnLoading(R.drawable.img_default_horizon)
@@ -83,7 +83,7 @@ public class EventListAdapter extends ETSBaseAdapter {
 		TextView item_date_tv = ViewHolderUtil.get(convertView, R.id.item_date_tv);
 		ImageView item_icon_iv = ViewHolderUtil.get(convertView, R.id.item_icon_iv);
 		TextView item_vip_tv = ViewHolderUtil.get(convertView, R.id.item_vip_tv);
-		
+
 		EventVO vo = (EventVO) getItem(position);
 		if(vo != null){
 			ImageLoader.getInstance().displayImage(vo.getPoster(), item_bg_iv, bgOptions, animateFirstListener);

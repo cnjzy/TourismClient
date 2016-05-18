@@ -1,10 +1,5 @@
 package com.tourism.app.activity;
 
-import java.util.ArrayList;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -15,17 +10,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.tourism.app.R;
-import com.tourism.app.activity.user.UserLoginActivity;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.util.preference.Preferences;
 import com.tourism.app.util.preference.PreferencesUtils;
 import com.tourism.app.widget.view.PointWidget;
 
+import java.util.ArrayList;
+
 /***
  * 第一次进入软件时的软件介绍界面
- * 
+ *
  * @author sailor
- * 
  */
 public class GuideActivity extends BaseActivity {
     private ArrayList<View> ViewPagerList;
@@ -34,31 +29,31 @@ public class GuideActivity extends BaseActivity {
     private ViewPager viewPager;
 
     @Override
-	public void initLayout() {
-    	setContentView(R.layout.activity_guide);
-	}
+    public void initLayout() {
+        setContentView(R.layout.activity_guide);
+    }
 
-	@Override
-	public void init() {
-		preferencesUtils = new PreferencesUtils(this, Preferences.CONFIG_FILE);
+    @Override
+    public void init() {
+        preferencesUtils = new PreferencesUtils(this, Preferences.CONFIG_FILE);
         preferencesUtils.putBoolean(Preferences.FIRST_START, false);
-	}
+    }
 
-	@Override
-	public void initView() {
-		pw = (PointWidget) findViewById(R.id.litu_welcome_ponit);
-		viewPager = (ViewPager) findViewById(R.id.viewPager);
-	}
+    @Override
+    public void initView() {
+        pw = (PointWidget) findViewById(R.id.litu_welcome_ponit);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+    }
 
-	@Override
-	public void initListener() {
-		// TODO Auto-generated method stub
-		
-	}
+    @Override
+    public void initListener() {
+        // TODO Auto-generated method stub
 
-	@Override
-	public void initValue() {
-		ViewPagerList = new ArrayList<View>();
+    }
+
+    @Override
+    public void initValue() {
+        ViewPagerList = new ArrayList<View>();
 
         ImageView view1 = new ImageView(this);
         ImageView view2 = new ImageView(this);
@@ -85,8 +80,8 @@ public class GuideActivity extends BaseActivity {
         pw.setPointCount(ViewPagerList.size() - 1);
         viewPager.setAdapter(pa);
         viewPager.setOnPageChangeListener(onPageChangeListener);
-	}
-    
+    }
+
     private OnPageChangeListener onPageChangeListener = new OnPageChangeListener() {
 
         @Override
@@ -160,12 +155,8 @@ public class GuideActivity extends BaseActivity {
     };
 
     public void showNextActivity() {
-    	if(getUserInfo() == null){
-			showActivity(context, UserLoginActivity.class);
-		}else{
-			showActivity(context, MainActivity.class);
-		}
+        showActivity(context, MainActivity.class);
         finish();
     }
-	
+
 }

@@ -61,7 +61,7 @@ public class UnderlineEditText extends EditText {
 		int lines = (int) (h / size);// 获取行数
 
 		// 从下向上画线
-		for (int i = 0; i < lines; i++)
+		for (int i = 1; i < lines; i++)
 			canvas.drawLine(padL// startX
 					, this.getHeight() - padB - size * i// startY
 					, this.getWidth() - padR// endX

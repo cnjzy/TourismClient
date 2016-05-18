@@ -1,5 +1,7 @@
 package com.tourism.app.common;
 
+import com.baidu.location.BDLocation;
+
 public class Constants {
 
     /************************************ Common ******************************/
@@ -32,8 +34,10 @@ public class Constants {
     public static final String HTTP_GET = "GET";
     public static final String HTTP_FILE = "FILE";
 
+
     /******************************** Location *******************************/
     public static final int LOCATION_SCAN_SPAN = 30 * 1000;
+    public static BDLocation location = null;
 
     /******************************** API ************************************/
     // 登陆
@@ -80,4 +84,40 @@ public class Constants {
     
     // 报名
     public static final String URL_CATEGORY_SIGNED_UP = BASE_URL + "v1/friend/activityApply";
+
+    // 搜索
+    public static final String URL_SEARCH_ = BASE_URL + "v1/friend/search";
+
+    // 攻略、游记详情
+    public static final String URL_RIP_DETAILS = BASE_URL + "v1/friend/tripDetails";
+
+    // 意见反馈
+    public static final String URL_FEEDBACK = BASE_URL + "v1/index/feedback";
+
+    // 游记收藏列表
+    public static final String URL_USER_COLLECTION = BASE_URL + "v1/user/myFavorites";
+
+    // 游记喜欢列表
+    public static final String URL_USER_FOLLOW = BASE_URL + "v1/user/myLikes";
+
+    // 用户已报名活动
+    public static final String URL_USER_ACTIONS = BASE_URL + "v1/user/myApplys";
+
+    // 收藏活动、攻略
+    public static final String URL_COLLECTION = BASE_URL + "v1/friend/favorite";
+
+    // 喜欢图片
+    public static final String URL_LIKE_PHOTO = BASE_URL + "v1/friend/photoLike";
+
+    // 评论列表
+    public static final String URL_REPLY_LIST = BASE_URL + "v1/friend/comments";
+
+    // 同步游记数据
+    public static final String URL_SYNC_GUIDES_DATA = BASE_URL + "v1/user/tripSave";
+
+    // 同步游记图片
+    public static final String URL_SYNC_GUIDES_IMAGE = BASE_URL +"v1/user/tripUpload";
+
+    // 拼友分类列表
+    public static final String URL_GUIDES_CATEGORY = BASE_URL + "v1/user/categorys";
 }

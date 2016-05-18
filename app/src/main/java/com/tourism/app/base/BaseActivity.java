@@ -1,11 +1,5 @@
 package com.tourism.app.base;
 
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -17,6 +11,7 @@ import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,7 +37,12 @@ import com.tourism.app.util.preference.Preferences;
 import com.tourism.app.util.preference.PreferencesUtils;
 import com.tourism.app.vo.UserInfoVO;
 import com.tourism.app.widget.dialog.CustomLoadingDialog;
-import com.tourism.app.widget.view.CustomImageButton;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * 
@@ -124,6 +124,14 @@ public abstract class BaseActivity extends FragmentActivity implements ThreadCal
 
     public void setUserInfo(UserInfoVO userInfo) {
         mApp.setUserInfo(userInfo);
+    }
+
+    public boolean isUserEmpty(){
+        if (getUserInfo() == null || TextUtils.isEmpty(getUserInfo().getToken())){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     // 图片第一次加载动画
@@ -488,13 +496,13 @@ public abstract class BaseActivity extends FragmentActivity implements ThreadCal
     	setNavigationRightButton(visibility, resId > 0 ? getString(resId) : "", resBg);
     }
     public void setNavigationRightButton(int visibility, String text, int resBg){
-    	CustomImageButton navigation_right_btn = (CustomImageButton) findViewById(R.id.navigation_right_btn);
+    	ImageButton navigation_right_btn = (ImageButton) findViewById(R.id.navigation_right_btn);
     	if(navigation_right_btn != null){
     		navigation_right_btn.setVisibility(visibility);
     		if(visibility == View.VISIBLE){
     			navigation_right_btn.setOnClickListener(this);
 	    		if(!TextUtils.isEmpty(text)){
-	    			navigation_right_btn.setText(text);
+//	    			navigation_right_btn.setText(text);
 	    		}
 	    		if(resBg > 0){
 	    			navigation_right_btn.setImageResource(resBg);

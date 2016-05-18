@@ -3,23 +3,23 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/background"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/background"
-        android:descendantFocusability="blocksDescendants" >
+        android:descendantFocusability="blocksDescendants">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="200dp" >
+                android:layout_height="200dp">
 
                 <ImageView
                     android:id="@+id/event_banner_iv"
@@ -43,13 +43,14 @@
                     android:layout_alignParentRight="true"
                     android:background="@color/transparent"
                     android:onClick="onClick"
-                    android:src="@drawable/icon_share" />
+                    android:src="@drawable/icon_share"
+                    android:visibility="gone" />
 
                 <ImageButton
                     android:id="@+id/navigation_reply_btn"
                     android:layout_width="@dimen/navigation_height"
                     android:layout_height="@dimen/navigation_height"
-                    android:layout_toLeftOf="@+id/navigation_share_btn"
+                    android:layout_alignParentRight="true"
                     android:background="@color/transparent"
                     android:onClick="onClick"
                     android:src="@drawable/icon_reply" />
@@ -70,7 +71,8 @@
                     android:layout_toLeftOf="@+id/navigation_collection_btn"
                     android:background="@color/transparent"
                     android:onClick="onClick"
-                    android:src="@drawable/icon_down" />
+                    android:src="@drawable/icon_down"
+                    android:visibility="invisible" />
 
                 <TextView
                     android:id="@+id/navigation_price_tv"
@@ -79,7 +81,6 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="@dimen/global_padding_mid"
                     android:layout_marginLeft="@dimen/global_padding_mid"
-                    android:text="￥600/每天"
                     android:textColor="@color/text_white"
                     android:textSize="@dimen/sp_18" />
 
@@ -91,7 +92,6 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginBottom="@dimen/global_padding_mid"
                     android:layout_marginRight="@dimen/global_padding_mid"
-                    android:text="丝塔芙、丝塔芙"
                     android:textColor="@color/text_white"
                     android:textSize="@dimen/sp_18" />
             </RelativeLayout>
@@ -103,8 +103,8 @@
                 android:background="@color/text_white"
                 android:paddingBottom="@dimen/global_padding_little"
                 android:paddingLeft="@dimen/global_padding_mid"
+                android:paddingRight="@dimen/global_padding_mid"
                 android:paddingTop="@dimen/global_padding_little"
-                android:text="丝塔芙、丝塔芙"
                 android:textColor="@color/text_black"
                 android:textSize="@dimen/sp_14" />
 
@@ -116,10 +116,8 @@
                 android:layout_height="wrap_content"
                 android:background="@color/text_white"
                 android:gravity="center"
-                android:paddingBottom="@dimen/global_padding_little"
-                android:paddingLeft="@dimen/global_padding_mid"
-                android:paddingTop="@dimen/global_padding_little"
-                android:text="浏览数\n2050"
+                android:paddingBottom="1dp"
+                android:paddingTop="1dp"
                 android:textColor="@color/text_black"
                 android:textSize="@dimen/sp_12" />
 
@@ -131,11 +129,11 @@
     </ScrollView>
 
     <RelativeLayout
+        android:id="@+id/foot_bar_rl"
         android:layout_width="fill_parent"
         android:layout_height="48dp"
-        android:id="@+id/foot_bar_rl"
         android:background="@color/text_gray"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <com.tourism.app.widget.view.CustomButton
             android:id="@+id/call_phone_btn"

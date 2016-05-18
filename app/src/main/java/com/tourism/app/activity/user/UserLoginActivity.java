@@ -9,21 +9,20 @@
 
 package com.tourism.app.activity.user;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 
 import com.google.gson.reflect.TypeToken;
 import com.tourism.app.R;
-import com.tourism.app.activity.MainActivity;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.common.Constants;
 import com.tourism.app.net.utils.RequestParameter;
 import com.tourism.app.procotol.BaseResponseMessage;
 import com.tourism.app.vo.UserInfoVO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * ClassName:UserLoginActivity Date: 2016年4月19日 下午2:44:56
@@ -64,7 +63,7 @@ public class UserLoginActivity extends BaseActivity {
 	@Override
 	public void initValue() {
 		setNavigationTitle(R.string.login_title);
-		setNavigationRightButton(View.VISIBLE, R.string.regiter_title, 0);
+//		setNavigationRightButton(View.VISIBLE, R.string.regiter_title, 0);
 	}
 
 	@Override
@@ -119,8 +118,8 @@ public class UserLoginActivity extends BaseActivity {
 					UserInfoVO mUserInfo = new UserInfoVO();
 					mUserInfo.setToken(brm.getToken());
 					setUserInfo(mUserInfo);
-					clearTask();
-					showActivity(context, MainActivity.class);
+					setResult(RESULT_OK);
+					finish();
 				}
 				break;
 			}

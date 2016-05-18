@@ -1,5 +1,6 @@
 package com.tourism.app.activity.guides;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,11 +10,14 @@ import com.tourism.app.R;
 import com.tourism.app.activity.guides.adapter.GuidesGalleryAdapter;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.util.image.ImageFolder;
+import com.tourism.app.vo.GuidesVO;
 
 public class GuidesGalleryActivity extends BaseActivity {
 
     private ListView listView;
     private GuidesGalleryAdapter adapter;
+
+    private GuidesVO guidesVO;
 
     @Override
     public void initLayout() {
@@ -22,8 +26,7 @@ public class GuidesGalleryActivity extends BaseActivity {
 
     @Override
     public void init() {
-        // TODO Auto-generated method stub
-
+        guidesVO = (GuidesVO) getIntent().getExtras().getSerializable("vo");
     }
 
     @Override
@@ -41,7 +44,8 @@ public class GuidesGalleryActivity extends BaseActivity {
                     vo.recyleBitmap();
                     Bundle data = new Bundle();
                     data.putSerializable("vo", vo);
-                    showActivity(context, GuidesGalleryImageActivity.class, data);
+                    data.putSerializable("guidesVO", guidesVO);
+                    showActivityForResult(context, GuidesGalleryImageActivity.class, 99, data);
                 }
             }
         });
@@ -53,4 +57,12 @@ public class GuidesGalleryActivity extends BaseActivity {
         listView.setAdapter(adapter);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK && requestCode == 99){
+            setResult(RESULT_OK);
+            finish();
+        }
+    }
 }

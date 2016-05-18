@@ -1,8 +1,5 @@
 package com.tourism.app.activity.brand.adapter;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -13,7 +10,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -28,6 +24,9 @@ import com.tourism.app.vo.NewsVO;
 import com.tourism.app.widget.view.ChildViewPager;
 import com.tourism.app.widget.view.ChildViewPager.OnSingleTouchListener;
 import com.tourism.app.widget.view.PointWidget;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 首页轮播adpter
@@ -118,7 +117,7 @@ public class BrandBannerAdapter extends PagerAdapter {
 				if (dataList != null && dataList.size() > 0 && dataList.size() > viewPager.getCurrentItem()%dataList.size()) {
 					final NewsVO vo = dataList.get(viewPager.getCurrentItem() % dataList.size());
 					if(vo.getType() == 1){
-						WebViewActivity.show(context, vo.getLink(), context.getString(R.string.news_info_title));
+						WebViewActivity.show(context, vo.getLink(), vo.getTitle());
 					}else{
 						Bundle data = new Bundle();
 						data.putSerializable("vo", vo);

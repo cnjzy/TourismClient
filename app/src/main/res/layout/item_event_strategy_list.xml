@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:background="#EBF0F5"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_day_ll"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:background="@color/text_white"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/item_day_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAY1"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/item_day_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_padding_small"
+            android:text="2016年4月5日周五"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_content_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/item_top_location_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/global_padding_small">
+
+            <ImageView
+                android:id="@+id/item_location_icon_iv"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/ico_jd"
+                android:scaleType="center" />
+
+            <TextView
+                android:id="@+id/item_location_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/global_padding_small"
+                android:text="雷克萨斯"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_day_content_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/global_padding_small"
+            android:text="雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯雷克萨斯"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/item_icon_iv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/item_image_content_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/global_padding_small"
+            android:text="雷克萨斯"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_12" />
+
+        <LinearLayout
+            android:id="@+id/item_bottom_location_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/global_padding_small">
+
+            <TextView
+                android:id="@+id/item_bottom_location_name_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ico_wz"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text="雷克萨斯"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/item_like_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_xh_round"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/icon_xh_d"
+                android:drawablePadding="3dp"
+                android:text="11"
+                android:textColor="@color/text_black"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/item_line_iv"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="8dp"
+        android:background="#C8C7CC" />
+</LinearLayout>

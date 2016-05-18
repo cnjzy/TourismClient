@@ -25,6 +25,7 @@
             android:background="@color/bg_white"
             android:gravity="left|center"
             android:paddingLeft="@dimen/global_padding_small"
+            android:onClick="onClick"
             android:text="@string/setting_clear_cache"
             android:textSize="@dimen/sp_12" />
 

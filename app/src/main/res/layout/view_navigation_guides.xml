@@ -34,6 +34,7 @@
         android:background="@color/transparent"
         android:src="@drawable/ico_preview_d"
         android:textColor="@color/text_white"
+        android:onClick="onClick"
         android:textSize="@dimen/sp_14" />
 
     <com.tourism.app.widget.view.CustomImageButton
@@ -44,6 +45,7 @@
         android:background="@color/transparent"
         android:src="@drawable/ico_gd_d"
         android:textColor="@color/text_white"
+        android:onClick="onClick"
         android:textSize="@dimen/sp_14" />
 
 </RelativeLayout>

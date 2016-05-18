@@ -1,9 +1,5 @@
 package com.tourism.app.activity.brand;
 
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,17 +15,17 @@ import com.google.gson.reflect.TypeToken;
 import com.tourism.app.R;
 import com.tourism.app.activity.brand.adapter.BrandBannerAdapter;
 import com.tourism.app.activity.brand.adapter.BrandListAdapter;
-import com.tourism.app.activity.news.adapter.NewsBannerAdapter;
-import com.tourism.app.activity.news.adapter.NewsListAdapter;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.base.BaseFragment;
 import com.tourism.app.common.Constants;
 import com.tourism.app.net.utils.RequestParameter;
 import com.tourism.app.procotol.BaseResponseMessage;
 import com.tourism.app.vo.NewsVO;
-import com.tourism.app.vo.WeatherVO;
 import com.tourism.app.widget.view.ChildViewPager;
 import com.tourism.app.widget.view.PointWidget;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BrandFragment extends BaseFragment{
 	private final int REQUEST_GET_BRAND_CODE = 10001;
@@ -80,7 +76,12 @@ public class BrandFragment extends BaseFragment{
 	public void initListener() {
 		list_view.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				BaseActivity.showActivity(context, BrandInfoActivity.class);
+				NewsVO vo = (NewsVO) list_view.getItemAtPosition(position);
+				if(vo != null) {
+					Bundle data = new Bundle();
+					data.putSerializable("vo", vo);
+					BaseActivity.showActivity(context, BrandInfoActivity.class, data);
+				}
 			}
 		});
 	}

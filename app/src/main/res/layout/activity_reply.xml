@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_navigation" />
+
+    <com.tourism.app.widget.view.PullToRefreshView
+        android:id="@+id/pull_refresh_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/reply_ll"
+        android:layout_below="@+id/navigation_layout"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:listSelector="@color/transparent" />
+    </com.tourism.app.widget.view.PullToRefreshView>
+
+    <LinearLayout
+        android:id="@+id/reply_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent_gray2"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/reply_bottom_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/text_white"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/guides_reply_et"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/global_padding_little"
+                android:background="@drawable/bg_white_gray"
+                android:hint="评论"
+                android:imeOptions="actionDone"
+                android:minHeight="30dp"
+                android:padding="@dimen/global_padding_little"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/guides_reply_count_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingBottom="@dimen/global_padding_little"
+                android:paddingRight="@dimen/global_padding_little"
+                android:text="12 / 150字"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/list_is_null"/>
+</RelativeLayout>

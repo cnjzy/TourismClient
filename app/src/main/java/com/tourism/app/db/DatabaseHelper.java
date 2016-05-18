@@ -1,9 +1,5 @@
 package com.tourism.app.db;
 
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -12,10 +8,14 @@ import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.tourism.app.vo.GuidesDayVO;
-import com.tourism.app.vo.GuidesImageVO;
+import com.tourism.app.vo.GuidesDeleteVO;
 import com.tourism.app.vo.GuidesLocationVO;
 import com.tourism.app.vo.GuidesNotedVO;
 import com.tourism.app.vo.GuidesVO;
+
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private static final String TABLE_NAME = "guides.db";
@@ -32,9 +32,9 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         try {
             TableUtils.createTable(connectionSource, GuidesVO.class);
             TableUtils.createTable(connectionSource, GuidesDayVO.class);
-            TableUtils.createTable(connectionSource, GuidesImageVO.class);
             TableUtils.createTable(connectionSource, GuidesLocationVO.class);
             TableUtils.createTable(connectionSource, GuidesNotedVO.class);
+            TableUtils.createTable(connectionSource, GuidesDeleteVO.class);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -46,9 +46,9 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         try {
             TableUtils.dropTable(connectionSource, GuidesVO.class, true);
             TableUtils.dropTable(connectionSource, GuidesDayVO.class, true);
-            TableUtils.dropTable(connectionSource, GuidesImageVO.class, true);
             TableUtils.dropTable(connectionSource, GuidesLocationVO.class, true);
             TableUtils.dropTable(connectionSource, GuidesNotedVO.class, true);
+            TableUtils.dropTable(connectionSource, GuidesDeleteVO.class, true);
             onCreate(database, connectionSource);
         } catch (SQLException e) {
             e.printStackTrace();

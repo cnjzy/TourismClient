@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="108dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/global_padding_mid"
         android:layout_marginRight="12dp"
         android:layout_marginTop="@dimen/global_padding_small" >
@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/item_bg_iv"
             android:layout_width="fill_parent"
-            android:layout_height="108dp"
+            android:layout_height="@dimen/search_item_bg_height"
             android:layout_marginLeft="@dimen/global_padding_little"
             android:scaleType="fitXY" />
 

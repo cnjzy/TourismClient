@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include layout="@layout/view_navigation" />
 
@@ -11,7 +11,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@color/text_white"
-        android:padding="@dimen/global_padding_small" >
+        android:padding="@dimen/global_padding_small">
 
         <ImageView
             android:id="@+id/user_icon_iv"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:background="@color/text_white"
         android:orientation="horizontal"
-        android:padding="@dimen/global_padding_little" >
+        android:padding="@dimen/global_padding_little">
 
         <RadioButton
             android:id="@+id/user_gl_rb"
@@ -99,17 +99,23 @@
             android:layout_height="37dp"
             android:background="@color/line_color" />
 
-        <RadioButton
+        <com.tourism.app.widget.view.CustomButton
             android:id="@+id/user_gd_rb"
-            style="@style/navigation_radio_button_style"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
             android:drawableTop="@drawable/ico_gd_d"
+            android:background="@color/transparent"
+            android:textSize="@dimen/sp_10"
+            android:textColor="@color/bg_black"
+            android:onClick="onClick"
             android:text="更多" />
     </RadioGroup>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/user_down_arrow_iv"
@@ -119,9 +125,57 @@
             android:background="@drawable/ico_sj" />
     </LinearLayout>
 
-    <FrameLayout 
-    	android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+    <RelativeLayout
         android:id="@+id/content"
-    ></FrameLayout>
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.tourism.app.widget.view.PullToRefreshView
+            android:id="@+id/pull_refresh_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@null"
+                android:listSelector="@color/transparent" />
+
+
+        </com.tourism.app.widget.view.PullToRefreshView>
+
+        <me.maxwin.view.XListView
+            android:id="@+id/xlistView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fastScrollEnabled="true"
+            android:visibility="gone"
+            android:scrollbars="vertical" />
+
+        <LinearLayout
+            android:id="@+id/list_is_empty_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ico_bq" />
+
+            <TextView
+                android:id="@+id/list_is_empty_content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/global_padding_mid"
+                android:text="您还没有攻略"
+                android:textColor="#ADAEAE"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

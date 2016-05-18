@@ -5,7 +5,7 @@
     android:versionName="1.0.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="21" />
 
     <!-- Required  一些系统要求的权限，如访问网络等 -->
@@ -117,7 +117,7 @@
             android:name="com.tourism.app.activity.guides.GuidesImageActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.tourism.app.activity.guides.GuidesAddInfoActivity"
+            android:name=".activity.guides.GuidesEditActivity"
             android:screenOrientation="portrait" />
 
         <activity
@@ -138,8 +138,36 @@
         <activity
             android:name="com.tourism.app.activity.guides.GuidesSettingCoverActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name="com.tourism.app.activity.guides.GuidesDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tourism.app.activity.guides.GuidesLocationSortActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tourism.app.activity.guides.GuidesSyncActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tourism.app.activity.guides.GuidesCategoryActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tourism.app.activity.poolfriend.StrategyInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tourism.app.activity.user.UserFollowImageActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tourism.app.activity.user.UserActionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tourism.app.activity.poolfriend.ReplyActivity"
             android:screenOrientation="portrait" />
 
         <!-- 微信支付回调界面 -->
@@ -147,6 +175,15 @@
             android:name="com.tourism.app.wxapi.WXPayEntryActivity"
             android:exported="true"
             android:launchMode="singleTop" />
+
+        <!-- 百度地图-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="63ytMnYjGpgFveI2HOjGvhX6HzulHB1f" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
     </application>
 
 </manifest>

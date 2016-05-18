@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/text_white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <include layout="@layout/view_navigation_guides"/>
+    <include layout="@layout/view_navigation_guides" />
 
     <ListView
         android:id="@+id/listView"
@@ -26,7 +26,7 @@
         android:layout_height="@dimen/navigation_height"
         android:background="@color/text_white"
         android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <com.tourism.app.widget.view.CustomImageButton
             android:id="@+id/foot_bar_noted_btn"

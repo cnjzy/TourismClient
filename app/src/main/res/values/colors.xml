@@ -30,7 +30,7 @@
     <color name="button_gray">#c8c8c8</color>
 
     <!-- 分割线颜色 -->
-    <color name="line_color">#A0A0A0</color>
+    <color name="line_color">#C8C7CC</color>
     
     <!-- tab color -->
     <color name="tab_color_default">#FFFFFF</color>

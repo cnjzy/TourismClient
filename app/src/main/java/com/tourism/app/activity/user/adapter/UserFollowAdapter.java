@@ -1,23 +1,28 @@
 package com.tourism.app.activity.user.adapter;
 
-import me.maxwin.view.ScaleImageView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.tourism.app.R;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.base.ETSBaseAdapter;
 import com.tourism.app.util.ViewHolderUtil;
-import com.tourism.app.vo.NewsVO;
+import com.tourism.app.vo.UserFollowVO;
 
+import me.maxwin.view.ScaleImageView;
+
+/**
+ * todo 用户喜欢适配器
+ */
 public class UserFollowAdapter extends ETSBaseAdapter {
+
+	private int screenWidth;
 
 	public UserFollowAdapter(BaseActivity context, AbsListView listView) {
 		super(context, listView);
+		screenWidth = context.getWindowManager().getDefaultDisplay().getWidth();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -34,15 +39,16 @@ public class UserFollowAdapter extends ETSBaseAdapter {
 		}
 		
 		ScaleImageView item_image_iv = ViewHolderUtil.get(convertView, R.id.item_image_iv);
-		ImageView item_vip_iv = ViewHolderUtil.get(convertView, R.id.item_vip_iv);
-		TextView item_name_tv = ViewHolderUtil.get(convertView, R.id.item_name_tv);
-		TextView item_count_tv = ViewHolderUtil.get(convertView, R.id.item_count_tv);
-		
-		NewsVO vo = (NewsVO) getItem(position);
+
+		UserFollowVO vo = (UserFollowVO) getItem(position);
 		
 		if(vo != null){
-			item_name_tv.setText(vo.getTitle());
-			item_count_tv.setText("111");
+			int imageWidth = screenWidth / 2;
+			float scale = (float)vo.getWidth() / imageWidth;
+			int imageHeight = (int)(vo.getHeight() / scale);
+			item_image_iv.setImageWidth(imageWidth);
+			item_image_iv.setImageHeight(imageHeight);
+
 			ImageLoader.getInstance().displayImage(vo.getLitpic(), item_image_iv, options, animateFirstListener);
 		}
 		

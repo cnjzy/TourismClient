@@ -40,7 +40,7 @@ public class EventVO extends BaseVO{
 	private int is_review;
 	private int is_bind;
 	private String url_web;
-	private String current_user_favorite;
+	private int current_user_favorite;
 	private String amount;
 	
 	/**
@@ -274,10 +274,10 @@ public class EventVO extends BaseVO{
 	public void setUrl_web(String url_web) {
 		this.url_web = url_web;
 	}
-	public String getCurrent_user_favorite() {
+	public int getCurrent_user_favorite() {
 		return current_user_favorite;
 	}
-	public void setCurrent_user_favorite(String current_user_favorite) {
+	public void setCurrent_user_favorite(int current_user_favorite) {
 		this.current_user_favorite = current_user_favorite;
 	}
 	public String getAmount() {

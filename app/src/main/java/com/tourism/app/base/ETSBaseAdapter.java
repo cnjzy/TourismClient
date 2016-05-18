@@ -1,35 +1,33 @@
 package com.tourism.app.base;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.AbsListView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
+import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
+import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import com.tourism.app.R;
 import com.tourism.app.common.Constants;
 import com.tourism.app.util.DeviceUtil;
 import com.tourism.app.util.preference.Preferences;
 import com.tourism.app.util.preference.PreferencesUtils;
 import com.tourism.app.widget.dialog.CustomLoadingDialog;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
-import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
-import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public abstract class ETSBaseAdapter extends BaseAdapter {
 	protected BaseActivity context;
@@ -222,7 +220,7 @@ public abstract class ETSBaseAdapter extends BaseAdapter {
 			if (listView == null)
 				loadRow = 0;
 			else
-				loadRow = 1;
+				loadRow = 0;
 		} else {
 			CURRENT_TYPE = TYPE_SHOW_DATA;
 			loadRow = 0;

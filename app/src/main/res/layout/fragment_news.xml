@@ -3,16 +3,16 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/background"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <com.tourism.app.widget.view.ChildViewPager
             android:id="@+id/view_pager"
             android:layout_width="fill_parent"
-            android:layout_height="136dp" />
+            android:layout_height="180dp" />
 
         <com.tourism.app.widget.view.PointWidget
             android:id="@+id/view_pager_ponit"
@@ -58,23 +58,25 @@
         android:layout_weight="1"
         android:background="@drawable/bg_weather"
         android:minHeight="153dp"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/weather_city_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/global_padding_little"
+                android:paddingLeft="@dimen/global_padding_little"
+                android:paddingRight="@dimen/global_padding_little"
+                android:paddingTop="@dimen/global_padding_little"
                 android:text="北京，北京"
                 android:textColor="@color/text_white"
-                android:textSize="@dimen/sp_18" />
+                android:textSize="@dimen/sp_16" />
 
             <TextView
                 android:id="@+id/weather_wendu_tv"
@@ -83,7 +85,7 @@
                 android:padding="@dimen/global_padding_little"
                 android:text="多云   2~16°"
                 android:textColor="@color/text_white"
-                android:textSize="28sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -91,7 +93,7 @@
             android:layout_height="70dp"
             android:background="@color/transparent_gray"
             android:gravity="center"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/weather_kongqi_tv"
@@ -101,7 +103,7 @@
                 android:text="空气质量：优良    PM2.5：1.0"
                 android:textColor="@color/text_white"
                 android:textSize="@dimen/sp_14" />
-            
+
             <TextView
                 android:id="@+id/weather_xianxing_tv"
                 android:layout_width="wrap_content"

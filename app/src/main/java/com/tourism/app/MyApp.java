@@ -1,21 +1,13 @@
 package com.tourism.app;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-
-import org.json.simple.BaseJson;
-
 import android.app.Application;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
-import cn.jpush.android.api.JPushInterface;
-import cn.jpush.android.api.TagAliasCallback;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.google.gson.reflect.TypeToken;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -25,11 +17,16 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
-import com.tourism.app.util.DeviceUtil;
 import com.tourism.app.util.StringUtil;
 import com.tourism.app.util.preference.Preferences;
 import com.tourism.app.util.preference.PreferencesUtils;
 import com.tourism.app.vo.UserInfoVO;
+
+import org.json.simple.BaseJson;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class MyApp extends Application {
     private static Context context;
@@ -68,7 +65,8 @@ public class MyApp extends Application {
         mUserInfo = (UserInfoVO) (BaseJson.parser(new TypeToken<UserInfoVO>() {
         }, preferencesUtils.getString(Preferences.PREFERENSE_USER_INFO, "")));
         
-//        initJPush();
+        // 在使用 SDK 各组间之前初始化 context 信息，传入 ApplicationContext
+        SDKInitializer.initialize(this);
     }
 
     /**
@@ -139,16 +137,4 @@ public class MyApp extends Application {
         }
     }
     
-    private void initJPush(){
-        // 设置开启日志,发布时请关闭日志
-        JPushInterface.setDebugMode(true);  
-        // 初始化 JPush   
-        JPushInterface.init(this);             
-        // 设置别名
-        JPushInterface.setAlias(this, DeviceUtil.getIMEI(this), new TagAliasCallback() {
-            public void gotResult(int arg0, String arg1, Set<String> arg2) {
-                System.out.println("init jpush alias arg0:" + arg0 + " arg1" + arg1 + " arg2" + arg2);
-            }
-        });
-    }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent_gray"
+    android:gravity="center"
+    android:id="@+id/progress_ll"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.tourism.app.widget.view.CustomRoundProgress
+            android:id="@+id/sync_progress_rg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:roundColor="#999999"
+            app:roundProgressColor="#4971B6"
+            app:roundWidth="30dp"
+            app:textColor="@color/text_white"
+            app:textSize="40sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

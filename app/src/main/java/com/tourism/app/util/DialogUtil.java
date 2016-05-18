@@ -1,11 +1,5 @@
 package com.tourism.app.util;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -15,7 +9,9 @@ import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.graphics.Typeface;
 import android.os.Handler;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -38,10 +34,17 @@ import android.widget.TextView;
 import com.tourism.app.MyApp;
 import com.tourism.app.R;
 import com.tourism.app.base.BaseActivity;
+import com.tourism.app.widget.view.CustomRoundProgress;
 import com.tourism.app.widget.wheel.OnWheelChangedListener;
 import com.tourism.app.widget.wheel.WheelView;
 import com.tourism.app.widget.wheel.adapter.ArrayWheelAdapter;
 import com.tourism.app.widget.wheel.adapter.NumericWheelAdapter;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class DialogUtil {
 
@@ -246,18 +249,18 @@ public class DialogUtil {
 			}
 		});
 		btn4.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                dialog.cancel();
-                if (onCallbackListener != null) {
-                    onCallbackListener.onClick(3, null);
-                }
-            }
-        });
+			public void onClick(View v) {
+				dialog.cancel();
+				if (onCallbackListener != null) {
+					onCallbackListener.onClick(3, null);
+				}
+			}
+		});
 		btn5.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                dialog.cancel();
-            }
-        });
+			public void onClick(View v) {
+				dialog.cancel();
+			}
+		});
 
 		// set a large value put it in bottom
 		setDilaogBottomStyle(dialog);
@@ -277,20 +280,20 @@ public class DialogUtil {
 		TextView guides_reply_count_tv = (TextView) view.findViewById(R.id.guides_reply_count_tv);
 
 		guides_reply_et.setOnKeyListener(new OnKeyListener() {
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (keyCode == KeyEvent.KEYCODE_ENTER) {
-                    System.err.println("11111111");
-                    dialog.cancel();
-                }
-                return false;
-            }
-        });
+			public boolean onKey(View v, int keyCode, KeyEvent event) {
+				if (keyCode == KeyEvent.KEYCODE_ENTER) {
+					System.err.println("11111111");
+					dialog.cancel();
+				}
+				return false;
+			}
+		});
 		
 		handler.postDelayed(new Runnable() {
-            public void run() {
-                DeviceUtil.showIMM(act, guides_reply_et);
-            }
-        }, 500);
+			public void run() {
+				DeviceUtil.showIMM(act, guides_reply_et);
+			}
+		}, 500);
 		
 
 		// set a large value put it in bottom
@@ -321,25 +324,179 @@ public class DialogUtil {
             }
         });
 
-        btn_pick_photo.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                dialog.cancel();
-                if(onCallbackListener != null){
-                    onCallbackListener.onClick(1, null);
-                }
-            }
-        });
+        btn_pick_photo.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				dialog.cancel();
+				if (onCallbackListener != null) {
+					onCallbackListener.onClick(1, null);
+				}
+			}
+		});
 
-        btn_cancel.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                dialog.cancel();
-            }
-        });
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				dialog.cancel();
+			}
+		});
 
 		// set a large value put it in bottom
 		setDilaogBottomStyle(dialog);
+		dialog.setContentView(view);
+
+		dialog.show();
+	}
+
+	/**
+	 * 用户更多Dialog
+	 */
+	public static void showUserMoreDialog(final Activity act, final OnCallbackListener onCallbackListener) {
+		View view = act.getLayoutInflater().inflate(R.layout.dialog_user_more, null);
+		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+
+		Button btn1 = (Button) view.findViewById(R.id.btn1);
+		Button btn5 = (Button) view.findViewById(R.id.btn5);
+
+		btn1.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+				if (onCallbackListener != null) {
+					onCallbackListener.onClick(0, null);
+				}
+			}
+		});
+
+		btn5.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+			}
+		});
+
+		// set a large value put it in bottom
+		setDilaogBottomStyle(dialog);
+		dialog.setContentView(view);
+
+		dialog.show();
+	}
+
+	/**
+	 * 游记文本操作Dialog
+	 */
+	public static void showGuidesNotedDialog(final Activity act, final OnCallbackListener onCallbackListener) {
+		View view = act.getLayoutInflater().inflate(R.layout.dialog_guides_noted_action, null);
+		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+
+		Button btn1 = (Button) view.findViewById(R.id.btn1);
+		Button btn2 = (Button) view.findViewById(R.id.btn1);
+		Button btn5 = (Button) view.findViewById(R.id.btn5);
+
+		btn1.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+				if (onCallbackListener != null) {
+					onCallbackListener.onClick(0, null);
+				}
+			}
+		});
+
+		btn2.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+				if (onCallbackListener != null) {
+					onCallbackListener.onClick(1, null);
+				}
+			}
+		});
+
+		btn5.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+			}
+		});
+
+		// set a large value put it in bottom
+		setDilaogBottomStyle(dialog);
+		dialog.setContentView(view);
+
+		dialog.show();
+	}
+
+	/**
+	 * 游记文本操作Dialog
+	 */
+	public static void showReplyDialog(final BaseActivity act, final OnCallbackListener onCallbackListener) {
+		View view = act.getLayoutInflater().inflate(R.layout.view_guides_add_reply, null);
+		view.setVisibility(View.VISIBLE);
+		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+
+		View reply_bottom_ll = view.findViewById(R.id.reply_bottom_ll);
+		final EditText guides_reply_et = (EditText) view.findViewById(R.id.guides_reply_et);
+		final TextView guides_reply_count_tv = (TextView) view.findViewById(R.id.guides_reply_count_tv);
+
+		view.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+			}
+		});
+
+		guides_reply_et.addTextChangedListener(new TextWatcher() {
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			}
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
+				guides_reply_count_tv.setText(guides_reply_et.getText().length() + "/150");
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+
+			}
+		});
+
+		guides_reply_et.setOnKeyListener(new OnKeyListener() {
+			public boolean onKey(View v, int keyCode, KeyEvent event) {
+				if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN) {
+					if (!TextUtils.isEmpty(guides_reply_et.getText())) {
+						if (onCallbackListener != null) {
+							onCallbackListener.onClick(0, guides_reply_et.getText().toString());
+						}
+						dialog.cancel();
+						return true;
+					} else {
+						MyApp.showToast("评论内容不能为空");
+					}
+				}
+				return false;
+			}
+		});
+
+		// set a large value put it in bottom
+		setDilaogBottomStyle(dialog);
+		dialog.setContentView(view);
+
+		ViewUtil.controlKeyboardLayout(view, reply_bottom_ll);
+		DeviceUtil.showIMM(act, guides_reply_et);
+
+		dialog.show();
+	}
+
+	/**
+	 * 游记文本操作Dialog
+	 */
+	public static void showCustomProgressDialog(final BaseActivity act, final OnCallbackListener onCallbackListener, Handler handler) {
+		View view = act.getLayoutInflater().inflate(R.layout.dialog_image_sync, null);
+		view.setVisibility(View.VISIBLE);
+		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+
+		CustomRoundProgress sync_progress_rg = (CustomRoundProgress) view.findViewById(R.id.sync_progress_rg);
+
+
+
+		// set a large value put it in bottom
+//		setDilaogBottomStyle(dialog);
 		dialog.setContentView(view);
 
 		dialog.show();

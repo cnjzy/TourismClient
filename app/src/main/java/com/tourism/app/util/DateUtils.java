@@ -1,5 +1,7 @@
 package com.tourism.app.util;
 
+import android.text.TextUtils;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -256,22 +258,23 @@ public class DateUtils  {
 	 * @return
 	 * @author zhangyun
 	 */
-	public static double getIntervalDays(Date minDate, Date maxDate) {
-		Calendar c = Calendar.getInstance();
-		c.setTime(minDate);
-		int firstYear = c.get(Calendar.YEAR);
-		int firstMonth = c.get(Calendar.MONTH);
-		int firstDay = c.get(Calendar.DAY_OF_MONTH);
-		c.setTime(maxDate);
-		int lastYear = c.get(Calendar.YEAR);
-		int lastMonth = c.get(Calendar.MONTH);
-		int lastDay = c.get(Calendar.DAY_OF_MONTH);
-		if(lastYear - firstYear > 0)
-			return 365;
-		else if(lastMonth - firstMonth > 0)
-			return 30;
-		else
-			return lastDay - firstDay;
+	public static long getIntervalDays(Date minDate, Date maxDate) {
+		Calendar minC = Calendar.getInstance();
+		minC.setTime(minDate);
+		Calendar maxC = Calendar.getInstance();
+		maxC.setTime(maxDate);
+		return (maxC.getTimeInMillis() - minC.getTimeInMillis()) / (1000 * 60 * 60 * 24);
+	}
+
+	/**
+	 * @description 【获取时间间隔天】
+	 * @param minDateStr
+	 * @param maxDateStr
+	 * @return
+	 * @author zhangyun
+	 */
+	public static long getIntervalDays(String minDateStr, String maxDateStr, String format) {
+		return getIntervalDays(getDateByString(minDateStr, format), getDateByString(maxDateStr, format)) + 1;
 	}
 
 	/**
@@ -378,7 +381,7 @@ public class DateUtils  {
 		SimpleDateFormat fromat = new SimpleDateFormat("yyyy-MM-dd");
 		Calendar c = Calendar.getInstance();
 		c.get(Calendar.YEAR);
-		c.get(Calendar.MONTH+1);
+		c.get(Calendar.MONTH);
 		c.get(Calendar.DAY_OF_MONTH);
 		String time = fromat.format(c.getInstance().getTime());
 		return time;
@@ -411,7 +414,7 @@ public class DateUtils  {
 			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 			Date dptDates = df.parse(dptDate);
 			Date birDates = df.parse(birthDate);
-			year = DateUtils.getIntervalYears(dptDates,birDates);
+			year = DateUtils.getIntervalYears(dptDates, birDates);
 			
 		} catch (Exception e) {
 		}
@@ -549,5 +552,42 @@ public class DateUtils  {
 			LogUtil.e(e);
 		}
 		return false;
+	}
+
+	/**
+	 * 通过日期字符串获取时间戳
+	 * @param dateStr
+	 * @return
+	 */
+	public static long getLongByString(String dateStr, String format){
+		try {
+			if (!TextUtils.isEmpty(dateStr)){
+				SimpleDateFormat sdf = new SimpleDateFormat(format);
+				Date date = sdf.parse(dateStr);
+				Calendar c = Calendar.getInstance();
+				c.setTime(date);
+				return c.getTimeInMillis();
+			}
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	/**
+	 * 通过日期字符串获取时间戳
+	 * @param dateStr
+	 * @return
+	 */
+	public static Date getDateByString(String dateStr, String format){
+		try {
+			if (!TextUtils.isEmpty(dateStr)){
+				SimpleDateFormat sdf = new SimpleDateFormat(format);
+				return sdf.parse(dateStr);
+			}
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

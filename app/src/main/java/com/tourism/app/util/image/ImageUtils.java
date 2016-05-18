@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Environment;
 import android.provider.MediaStore;
 
 import com.tourism.app.util.DateUtils;
@@ -19,16 +20,12 @@ import java.util.Map;
  * Created by Jzy on 16/5/9.
  */
 public class ImageUtils {
-    private static List<ImageFolder> ifList = new ArrayList<ImageFolder>();
-
-    public static List<ImageFolder> getIfList() {
-        return ifList;
-    }
-
     /**
      * 获取SD卡图片文件夹目录
      */
     public static List<ImageFolder> getAllSDImageFolder(Context context) {
+        List<ImageFolder> ifList = new ArrayList<ImageFolder>();
+
         String[] projection = new String[]{MediaStore.Images.Media._ID, MediaStore.Images.Media.BUCKET_ID, // 直接包含该图片文件的文件夹ID，防止在不同下的文件夹重名
                 MediaStore.Images.Media.BUCKET_DISPLAY_NAME, // 直接包含该图片文件的文件夹名
                 MediaStore.Images.Media.DISPLAY_NAME, // 图片文件名
@@ -72,13 +69,10 @@ public class ImageUtils {
         return ifList;
     }
 
-    private static List<ImageFolder> imageList = new ArrayList<ImageFolder>();
-
-    public static List<ImageFolder> getImageList() {
-        return imageList;
-    }
 
     public static List<ImageFolder> getAllImageByFolder(Context context, ImageFolder imageFolder) {
+        List<ImageFolder> imageList = new ArrayList<ImageFolder>();
+
         String[] projection = new String[]{MediaStore.Images.Media._ID, MediaStore.Images.Media.BUCKET_ID, // 直接包含该图片文件的文件夹ID，防止在不同下的文件夹重名
                 MediaStore.Images.Media.BUCKET_DISPLAY_NAME, // 直接包含该图片文件的文件夹名
                 MediaStore.Images.Media.DISPLAY_NAME, // 图片文件名
@@ -148,4 +142,34 @@ public class ImageUtils {
         }
         return null;
     }
+
+
+    /**
+     * SD卡地址
+     */
+    public static final String BASE_IMAGE_PATH = Environment.getExternalStorageDirectory().getPath() + File.separator + "Tourism" + File.separator + "images";
+
+//    /**
+//     * 拷贝所有文件
+//     */
+//    public static void copyAllFile(GuidesVO vo){
+//        try {
+//            for (int i = 0 ; i < vo.getTrip_days().size() ; i++){
+//                GuidesDayVO dayVO = vo.getTrip_days().get(i);
+//                for (int j = 0; j < dayVO.getLocations().size(); j++){
+//                    GuidesLocationVO locationVO = dayVO.getLocations().get(j);
+//                    for (int m = 0; m < locationVO.get)
+//                }
+//            }
+//
+//            File tempFile = new File(TEMP_PATH);
+//            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(tempFile));
+//            bm.compress(Bitmap.CompressFormat.JPEG, 80, bos);
+//            bos.flush();
+//            bos.close();
+//            bm.recycle();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

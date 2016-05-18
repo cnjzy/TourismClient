@@ -28,7 +28,7 @@
         android:textColor="@color/text_white"
         android:textSize="20sp" />
 
-    <com.tourism.app.widget.view.CustomImageButton
+    <ImageButton
         android:id="@+id/navigation_right_btn"
         android:layout_width="@dimen/navigation_height"
         android:layout_height="fill_parent"

@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import com.tourism.app.R;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.base.ETSBaseAdapter;
+import com.tourism.app.util.LoadLocalImageUtil;
 import com.tourism.app.util.ViewHolderUtil;
 import com.tourism.app.util.image.ImageFolder;
 
@@ -39,7 +40,7 @@ public class GuidesGalleryImageAdapter extends ETSBaseAdapter {
         final ImageFolder vo = (ImageFolder) getItem(position);
 
         if(vo != null){
-            item_icon_iv.setImageBitmap(vo.getBmp(context));
+            LoadLocalImageUtil.getInstance().displayFromSDCard(vo.getPath(), item_icon_iv, null);
             if(vo.isSelected()){
                 item_mask_iv.setVisibility(View.VISIBLE);
                 item_selected_iv.setVisibility(View.VISIBLE);

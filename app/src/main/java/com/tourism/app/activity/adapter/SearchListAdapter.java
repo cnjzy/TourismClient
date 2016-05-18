@@ -22,7 +22,7 @@ import com.tourism.app.R;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.base.ETSBaseAdapter;
 import com.tourism.app.util.ViewHolderUtil;
-import com.tourism.app.vo.EventVO;
+import com.tourism.app.vo.StrategyVO;
 import com.tourism.app.widget.imageloader.CircleBitmapDisplayer;
 
 /**
@@ -36,10 +36,10 @@ public class SearchListAdapter extends ETSBaseAdapter {
 
 	public DisplayImageOptions bgOptions;
 	public DisplayImageOptions circleOptions;
-	
+
 	public SearchListAdapter(BaseActivity context, AbsListView listView) {
 		super(context, listView);
-		
+
 		bgOptions = new DisplayImageOptions
 				.Builder()
 				.showImageOnLoading(R.drawable.img_default_horizon)
@@ -84,16 +84,16 @@ public class SearchListAdapter extends ETSBaseAdapter {
 		TextView item_date_tv = ViewHolderUtil.get(convertView, R.id.item_date_tv);
 		ImageView item_icon_iv = ViewHolderUtil.get(convertView, R.id.item_icon_iv);
 		TextView item_vip_tv = ViewHolderUtil.get(convertView, R.id.item_vip_tv);
-		
-		EventVO vo = (EventVO) getItem(position);
+
+		StrategyVO vo = (StrategyVO) getItem(position);
 		if(vo != null){
-			ImageLoader.getInstance().displayImage(vo.getPoster(), item_bg_iv, bgOptions, animateFirstListener);
+			ImageLoader.getInstance().displayImage(vo.getLitpic(), item_bg_iv, bgOptions, animateFirstListener);
 			ImageLoader.getInstance().displayImage(vo.getUser_avatar(), item_icon_iv, circleOptions, animateFirstListener);
 			
 			item_new_iv.setVisibility(View.INVISIBLE);
 			item_price_tv.setVisibility(View.INVISIBLE);
-			item_name_tv.setText(vo.getTitle());
-			item_date_tv.setText(vo.getStart_time().replaceAll("-", "."));
+			item_name_tv.setText(vo.getName());
+			item_date_tv.setText(vo.getStart_date().replaceAll("-", "."));
 			item_vip_tv.setText(vo.getUser_type() == 1 ? "V友" : "V企");
 			
 		}

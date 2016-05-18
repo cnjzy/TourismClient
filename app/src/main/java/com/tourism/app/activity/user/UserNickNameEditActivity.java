@@ -1,22 +1,19 @@
 package com.tourism.app.activity.user;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 
 import com.google.gson.reflect.TypeToken;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.tourism.app.R;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.common.Constants;
 import com.tourism.app.net.utils.RequestParameter;
 import com.tourism.app.procotol.BaseResponseMessage;
 import com.tourism.app.vo.FileVO;
-import com.tourism.app.vo.UserInfoVO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserNickNameEditActivity extends BaseActivity{
 	private final int REQUEST_EDIT_USER_INFO_CODE = 10003;
@@ -48,6 +45,8 @@ public class UserNickNameEditActivity extends BaseActivity{
 	public void initValue() {
 		setNavigationRightButton(View.VISIBLE, 0, R.drawable.ico_ok);
 		setNavigationTitle("设置昵称");
+
+		user_nickname_et.setText(getUserInfo().getNickname());
 	}
 	
 	@Override

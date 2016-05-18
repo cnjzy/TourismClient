@@ -9,9 +9,6 @@
   
 package com.tourism.app.activity.poolfriend;  
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,16 +19,21 @@ import android.widget.ListView;
 import com.google.gson.reflect.TypeToken;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.tourism.app.R;
+import com.tourism.app.activity.SearchActivity;
 import com.tourism.app.activity.poolfriend.adapter.EventListAdapter;
-import com.tourism.app.activity.poolfriend.adapter.StrategyListAdapter;
+import com.tourism.app.activity.poolfriend.adapter.EventStrategyListAdapter;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.common.Constants;
 import com.tourism.app.net.utils.RequestParameter;
 import com.tourism.app.procotol.BaseResponseMessage;
 import com.tourism.app.vo.CategoryVO.Category;
 import com.tourism.app.vo.EventVO;
+import com.tourism.app.vo.StrategyVO;
 import com.tourism.app.widget.view.PullToRefreshView;
 import com.tourism.app.widget.view.PullToRefreshView.OnFooterRefreshListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /** 
  * ClassName:EventCategoryListActivity 
@@ -55,7 +57,7 @@ public class CategoryListActivity extends BaseActivity implements OnFooterRefres
 	/**
 	 * 攻略列表
 	 */
-	private StrategyListAdapter strategyListAdapter;
+	private EventStrategyListAdapter strategyListAdapter;
 	
 	/**
      * 当前页码
@@ -99,11 +101,21 @@ public class CategoryListActivity extends BaseActivity implements OnFooterRefres
 		pull_refresh_view.setOnFooterRefreshListener(this);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				EventVO bean = (EventVO) listView.getItemAtPosition(position);
-				if(bean != null){
-					Bundle data = new Bundle();
-					data.putSerializable("vo", bean);
-					showActivity(context, CategoryInfoActivity.class, data);
+
+
+				Bundle data = new Bundle();
+				if (currentType == 1) {
+					StrategyVO bean = (StrategyVO) listView.getItemAtPosition(position);
+					if (bean != null) {
+						data.putSerializable("vo", bean);
+						showActivity(context, StrategyInfoActivity.class, data);
+					}
+				}else{
+					EventVO bean = (EventVO) listView.getItemAtPosition(position);
+					if (bean != null) {
+						data.putSerializable("vo", bean);
+						showActivity(context, CategoryInfoActivity.class, data);
+					}
 				}
 			}
 		});
@@ -112,10 +124,10 @@ public class CategoryListActivity extends BaseActivity implements OnFooterRefres
 	@Override
 	public void initValue() {
 		ImageLoader.getInstance().displayImage(categoryVO.getBanner(), category_banner_iv, options, animateFirstListener);
-		
-		eventListAdapter = new EventListAdapter(context, listView);
-		listView.setAdapter(eventListAdapter);
-		requestEventList(categoryVO.getLink_strategy());
+
+		strategyListAdapter = new EventStrategyListAdapter(context, listView);
+		listView.setAdapter(strategyListAdapter);
+		requestEventList(categoryVO.getLink_strategy(), true);
 	}
 
 	@Override
@@ -134,22 +146,23 @@ public class CategoryListActivity extends BaseActivity implements OnFooterRefres
 		case R.id.navigation_left_btn:
 			break;
 		case R.id.navigation_right_btn:
+			showActivity(context, SearchActivity.class);
 			break;
 		case R.id.tab_left_rb:
 			currentType = 1;
-			eventListAdapter = new EventListAdapter(context, listView);
-			listView.setAdapter(eventListAdapter);
+			strategyListAdapter = new EventStrategyListAdapter(context, listView);
+			listView.setAdapter(strategyListAdapter);
 			page = 0;
-	        isLoading = false;
-	        requestEventList(categoryVO.getLink_strategy());
+			isLoading = false;
+			requestEventList(categoryVO.getLink_strategy(), true);
 			break;
 		case R.id.tab_right_rb:
 			currentType = 2;
-			strategyListAdapter = new StrategyListAdapter(context, listView);
-			listView.setAdapter(strategyListAdapter);
+			eventListAdapter = new EventListAdapter(context, listView);
+			listView.setAdapter(eventListAdapter);
 			page = 0;
-	        isLoading = false;
-	        requestEventList(categoryVO.getLink_activity());
+			isLoading = false;
+			requestEventList(categoryVO.getLink_activity(), true);
 			break;
 		}
 	}
@@ -159,9 +172,9 @@ public class CategoryListActivity extends BaseActivity implements OnFooterRefres
         if(!isLoading){
             page ++;
             if(currentType == 1){
-            	requestEventList(categoryVO.getLink_activity());
+            	requestEventList(categoryVO.getLink_strategy(), false);
             }else{
-            	requestEventList(categoryVO.getLink_strategy());
+            	requestEventList(categoryVO.getLink_activity(), false);
             }
         }else{
             pull_refresh_view.onFooterRefreshComplete();
@@ -171,10 +184,10 @@ public class CategoryListActivity extends BaseActivity implements OnFooterRefres
 	/**
 	 * 获取服务信息
 	 */
-	public void requestEventList(String url) {
+	public void requestEventList(String url, boolean isLoading) {
 		List<RequestParameter> parameter = new ArrayList<RequestParameter>();
 		parameter.add(new RequestParameter("page", page));
-		startHttpRequest(Constants.HTTP_GET, url, parameter, false, GET_EVENT_LIST_KEY);
+		startHttpRequest(Constants.HTTP_GET, url, parameter, isLoading, GET_EVENT_LIST_KEY);
 	}
 
 	@Override
@@ -185,15 +198,22 @@ public class CategoryListActivity extends BaseActivity implements OnFooterRefres
             switch(resultCode){
             case GET_EVENT_LIST_KEY:
             	BaseResponseMessage br1 = new BaseResponseMessage();
-            	br1.parseResponse(resultJson, new TypeToken<List<EventVO>>(){});
-                if(br1.isSuccess() && br1.getResultList() != null && br1.getResultList().size() > 0){
-                	if(currentType == 1){
-                		eventListAdapter.addLast(br1.getResultList());
-                	}else{
-                		strategyListAdapter.addLast(br1.getResultList());
-                	}
-                    isLoading = false;
-                }
+
+				if(currentType == 1){
+					br1.parseResponse(resultJson, new TypeToken<List<StrategyVO>>(){});
+					if(br1.isSuccess() && br1.getResultList() != null && br1.getResultList().size() > 0){
+						strategyListAdapter.addLast(br1.getResultList());
+						isLoading = false;
+					}
+				}else{
+					br1.parseResponse(resultJson, new TypeToken<List<EventVO>>(){});
+					if(br1.isSuccess() && br1.getResultList() != null && br1.getResultList().size() > 0){
+						eventListAdapter.addLast(br1.getResultList());
+						isLoading = false;
+					}
+				}
+
+
                 pull_refresh_view.onFooterRefreshComplete();
                 break;
             }

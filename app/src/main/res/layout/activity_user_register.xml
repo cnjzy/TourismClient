@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_user"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include layout="@layout/view_navigation" />
 
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="66dp"
         android:gravity="center"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <com.tourism.app.widget.view.CustomButton
             android:id="@+id/login_sina_btn"
@@ -20,14 +20,16 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/global_padding_small"
             android:background="@drawable/btn_sina"
-            android:onClick="onClick" />
+            android:onClick="onClick"
+            android:visibility="invisible" />
 
         <com.tourism.app.widget.view.CustomButton
             android:id="@+id/login_weixin_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_weixin"
-            android:onClick="onClick" />
+            android:onClick="onClick"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <ImageView
@@ -41,7 +43,7 @@
         android:layout_height="wrap_content"
         android:background="@color/bg_white"
         android:gravity="center"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,7 +74,7 @@
         android:layout_height="wrap_content"
         android:background="@color/bg_white"
         android:gravity="center"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,8 +87,8 @@
             android:layout_width="fill_parent"
             android:layout_height="40dp"
             android:background="@color/bg_white"
-            android:hint="@string/login_password_hint"
             android:gravity="right|center_vertical"
+            android:hint="@string/login_password_hint"
             android:paddingRight="@dimen/global_padding_small"
             android:password="true"
             android:textSize="@dimen/sp_12" />

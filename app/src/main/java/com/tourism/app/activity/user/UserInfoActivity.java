@@ -1,9 +1,5 @@
 package com.tourism.app.activity.user;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -24,6 +20,10 @@ import com.tourism.app.procotol.BaseResponseMessage;
 import com.tourism.app.util.PhotoManager;
 import com.tourism.app.vo.FileVO;
 import com.tourism.app.vo.UserInfoVO;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserInfoActivity extends BaseActivity{
 
@@ -184,6 +184,8 @@ public class UserInfoActivity extends BaseActivity{
 				brm.parseResponse(resultJson, new TypeToken<UserInfoVO>(){});
 				if(brm.isSuccess()){
 					vo = (UserInfoVO) brm.getResult();
+					vo.setToken(getUserInfo().getToken());
+					setUserInfo(vo);
 					setViewsValue();
 				}
 				break;
