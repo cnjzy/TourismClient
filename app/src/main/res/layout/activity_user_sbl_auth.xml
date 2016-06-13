@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_navigation" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:layout_marginTop="@dimen/global_padding_mid2"
+        android:background="@color/line_color" />
+
+    <EditText
+        android:id="@+id/login_user_et"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/bg_white"
+        android:hint="姓名"
+        android:paddingLeft="@dimen/global_padding_small"
+        android:textSize="@dimen/sp_12" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:layout_marginLeft="@dimen/global_padding_little"
+        android:layout_marginRight="@dimen/global_padding_little"
+        android:background="@color/line_color" />
+
+    <EditText
+        android:id="@+id/login_password_et"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/bg_white"
+        android:hint="车架号"
+        android:paddingLeft="@dimen/global_padding_small"
+        android:textSize="@dimen/sp_12" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/global_line_size"
+        android:background="@color/line_color" />
+
+    <com.tourism.app.widget.view.CustomButton
+        android:id="@+id/login_submit_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="@dimen/global_padding_small"
+        android:layout_marginRight="@dimen/global_padding_small"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_gray_round"
+        android:onClick="onClick"
+        android:text="提交"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp_16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/global_padding_mid"
+        android:layout_marginRight="@dimen/global_padding_mid"
+        android:text="@string/user_sbl_auth_hint"
+        android:textColor="@color/text_gray_light"
+        android:layout_marginTop="@dimen/global_padding_mid2"
+        android:textSize="@dimen/sp_12" />
+</LinearLayout>

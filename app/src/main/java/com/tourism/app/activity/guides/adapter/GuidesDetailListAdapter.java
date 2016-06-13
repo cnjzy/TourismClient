@@ -123,7 +123,9 @@ public class GuidesDetailListAdapter extends ETSBaseAdapter {
                 if (TextUtils.isEmpty(vo.getLocation_name())) {
                     item_top_location_ll.setVisibility(View.GONE);
                     item_bottom_location_name_tv.setVisibility(View.INVISIBLE);
+                    item_bottom_location_ll.setVisibility(View.GONE);
                 } else {
+                    item_bottom_location_ll.setVisibility(View.VISIBLE);
                     item_top_location_ll.setVisibility(View.VISIBLE);
                     item_bottom_location_name_tv.setVisibility(View.VISIBLE);
 
@@ -136,10 +138,10 @@ public class GuidesDetailListAdapter extends ETSBaseAdapter {
                 item_day_content_tv.setText("");
                 item_day_content_tv.setVisibility(View.GONE);
 
-                if (vo.getType().equals("pic")) {
+                if (vo.getType().equals("pic") && !TextUtils.isEmpty(vo.getWidth()) && !TextUtils.isEmpty(vo.getHeight())) {
                     item_icon_iv.setVisibility(View.VISIBLE);
-                    float scale = screenWidth / vo.getWidth();
-                    float height = vo.getHeight() * scale;
+                    float scale = screenWidth / Integer.parseInt(vo.getWidth());
+                    float height = Integer.parseInt(vo.getHeight()) * scale;
                     imageParams.height = (int) height;
                     item_icon_iv.setLayoutParams(imageParams);
                     LoadLocalImageUtil.getInstance().displayFromSDCard(vo.getUrl(), item_icon_iv, options);

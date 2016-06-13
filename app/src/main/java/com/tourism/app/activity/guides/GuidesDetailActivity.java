@@ -19,8 +19,13 @@ import com.tourism.app.R;
 import com.tourism.app.activity.guides.adapter.GuidesDetailListAdapter;
 import com.tourism.app.activity.poolfriend.adapter.StrategyLeftBarAdapter;
 import com.tourism.app.base.BaseActivity;
+import com.tourism.app.db.dao.GuidesDao;
+import com.tourism.app.db.dao.GuidesDayDao;
+import com.tourism.app.db.dao.GuidesLocationDao;
+import com.tourism.app.db.dao.GuidesNotedDao;
 import com.tourism.app.util.DateUtils;
 import com.tourism.app.util.LoadLocalImageUtil;
+import com.tourism.app.util.json.StrategyJson;
 import com.tourism.app.vo.GuidesDayVO;
 import com.tourism.app.vo.GuidesLocationVO;
 import com.tourism.app.vo.GuidesNotedVO;
@@ -29,6 +34,7 @@ import com.tourism.app.vo.StrategyVO;
 import com.tourism.app.widget.imageloader.CircleBitmapDisplayer;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -66,7 +72,7 @@ public class GuidesDetailActivity extends BaseActivity {
     /**
      * 活动对象
      */
-    private GuidesVO eventVO;
+    private GuidesVO vo;
 
     /**
      * 数据对象列表
@@ -82,6 +88,10 @@ public class GuidesDetailActivity extends BaseActivity {
      */
     public DisplayImageOptions circleOptions;
 
+    private GuidesDao guidesDao;
+    private GuidesDayDao guidesDayDao;
+    private GuidesLocationDao guidesLocationDao;
+    private GuidesNotedDao guidesNotedDao;
 
     @Override
     public void initLayout() {
@@ -90,7 +100,12 @@ public class GuidesDetailActivity extends BaseActivity {
 
     @Override
     public void init() {
-        eventVO = (GuidesVO) getIntent().getExtras().getSerializable("vo");
+        guidesDao = new GuidesDao(context);
+        guidesDayDao = new GuidesDayDao(context);
+        guidesLocationDao = new GuidesLocationDao(context);
+        guidesNotedDao = new GuidesNotedDao(context);
+
+        vo = (GuidesVO) getIntent().getExtras().getSerializable("vo");
 
         rightInAnimation = AnimationUtils.loadAnimation(context, R.anim.left_bar_right_out);
         rightInAnimation.setFillAfter(true);
@@ -158,20 +173,66 @@ public class GuidesDetailActivity extends BaseActivity {
         });
     }
 
+    /**
+     * 初始化数据
+     */
+    private void initData() {
+        vo = guidesDao.getById(vo.getLocal_id());
+        vo.setPhotoVO(guidesNotedDao.getById(vo.getFront_cover_photo_id()));
+
+        String key = "parent_id";
+        HashMap<String, Object> params = new HashMap<String, Object>();
+        params.put(key, vo.getLocal_id());
+        vo.setTrip_days(guidesDayDao.getByParams(params));
+        for (int i = 0; i < vo.getTrip_days().size(); i++) {
+            params.put(key, vo.getTrip_days().get(i).getLocal_id());
+            vo.getTrip_days().get(i).setLocations(guidesLocationDao.getByParams(params));
+        }
+
+        for (int i = 0; i < vo.getTrip_days().size(); i++) {
+            for (int j = 0; j < vo.getTrip_days().get(i).getLocations().size(); j++) {
+                params.put(key, vo.getTrip_days().get(i).getLocations().get(j).getLocal_id());
+                vo.getTrip_days().get(i).getLocations().get(j).setNotes(guidesNotedDao.getByParams(params));
+            }
+        }
+
+        // 删除无用信息
+        for (int i = 0; i < vo.getTrip_days().size(); i++) {
+            // 如果每天节点里面地理位置为空，那么删除
+            if (vo.getTrip_days().get(i).getLocations().size() == 0) {
+                guidesDayDao.deleteById(vo.getTrip_days().get(i).getLocal_id());
+                vo.getTrip_days().remove(i);
+                i--;
+            }
+        }
+
+        System.out.println("=====" + StrategyJson.getGuiesJson(vo));
+    }
+
     @Override
     public void initValue() {
 
-        for (int i = 0; i < eventVO.getTrip_days().size(); i++){
-            GuidesDayVO dayVO = eventVO.getTrip_days().get(i);
+        for (int i = 0; i < vo.getTrip_days().size(); i++){
+            GuidesDayVO dayVO = vo.getTrip_days().get(i);
             StrategyVO childDayVO = new StrategyVO();
             childDayVO.setTrip_date(dayVO.getTrip_date());
             childDayVO.setId(dayVO.getLocal_id());
-            childDayVO.setDay(DateUtils.getIntervalDays(eventVO.getStart_date(), dayVO.getTrip_date(), DateUtils.parsePatterns[1]) + "");
+            childDayVO.setDay(DateUtils.getIntervalDays(vo.getStart_date(), dayVO.getTrip_date(), DateUtils.parsePatterns[1]) + "");
             childDayVO.setIsDate(true);
             dataList.add(childDayVO);
 
             for (int j = 0 ; j < dayVO.getLocations().size(); j++){
                 GuidesLocationVO locationVO = dayVO.getLocations().get(j);
+
+                // 设置排序，文字排在最上面
+                for (int m = locationVO.getNotes().size()-1; m >= 0; m--){
+                    if (locationVO.getNotes().get(m).getType().equals("txt")){
+                        GuidesNotedVO notedVO = locationVO.getNotes().get(m);
+                        locationVO.getNotes().remove(m);
+                        locationVO.getNotes().add(0, notedVO);
+                    }
+                }
+
                 for (int m = 0; m < locationVO.getNotes().size(); m++){
                     GuidesNotedVO notedVO = locationVO.getNotes().get(m);
                     StrategyVO childNotedVO = new StrategyVO();
@@ -187,9 +248,10 @@ public class GuidesDetailActivity extends BaseActivity {
                         tmp.recycle();
                         tmp = null;
                     }
-                    childNotedVO.setWidth(options.outWidth);
-                    childNotedVO.setHeight(options.outHeight);
+                    childNotedVO.setWidth(options.outWidth + "");
+                    childNotedVO.setHeight(options.outHeight + "");
                     childNotedVO.setLocation_name(locationVO.getLocation_name());
+
                     dataList.add(childNotedVO);
                 }
             }
@@ -220,13 +282,13 @@ public class GuidesDetailActivity extends BaseActivity {
         listAdapter.addLast(dataList, false);
         listView.setAdapter(listAdapter);
 
-        if (eventVO.getPhotoVO() != null){
-            LoadLocalImageUtil.getInstance().displayFromSDCard(eventVO.getPhotoVO().getPath(), event_banner_iv, options);
+        if (vo.getPhotoVO() != null){
+            LoadLocalImageUtil.getInstance().displayFromSDCard(vo.getPhotoVO().getPath(), event_banner_iv, options);
         }
 
         ImageLoader.getInstance().displayImage(getUserInfo().getAvatar(), user_icon_iv, circleOptions, animateFirstListener);
         user_name_tv.setText(getUserInfo().getNickname());
-        user_notepad_tv.setText(eventVO.getStart_date() + "/" + DateUtils.getIntervalDays(eventVO.getStart_date(), eventVO.getEnd_date(), DateUtils.parsePatterns[1]) + "天/" + eventVO.getPhotos_count() + "图");
+        user_notepad_tv.setText(vo.getStart_date() + "/" + DateUtils.getIntervalDays(vo.getStart_date(), vo.getEnd_date(), DateUtils.parsePatterns[1]) + "天/" + vo.getPhotos_count() + "图");
     }
 
     @Override

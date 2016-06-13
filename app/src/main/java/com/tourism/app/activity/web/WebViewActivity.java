@@ -1,4 +1,4 @@
-package com.tourism.app.activity.web;  
+package com.tourism.app.activity.web;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,7 +7,6 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
-import android.webkit.WebSettings.RenderPriority;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -63,21 +62,27 @@ public class WebViewActivity extends BaseActivity{
 			setNavigationTitle(R.string.loading_titile);
 		}
 	    
-	    webview.getSettings().setDisplayZoomControls(false);  
+//	    webview.getSettings().setDisplayZoomControls(false);
 		webview.getSettings().setJavaScriptEnabled(true);
-		webview.getSettings().setSavePassword(false);
-		webview.getSettings().setBlockNetworkImage(true);
-		webview.getSettings().setRenderPriority(RenderPriority.HIGH);
-		webview.getSettings().setBuiltInZoomControls(false);
-		webview.getSettings().setBlockNetworkImage(true);
-		webview.getSettings().setUseWideViewPort(true);
-		webview.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
-		webview.getSettings().setBuiltInZoomControls(true); // 设置显示缩放按钮  
-		webview.getSettings().setSupportZoom(true); // 支持缩放
-		webview.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
-
+//		webview.getSettings().setSavePassword(false);
+//		webview.getSettings().setBlockNetworkImage(true);
+//		webview.getSettings().setRenderPriority(RenderPriority.HIGH);
+//		webview.getSettings().setBuiltInZoomControls(false);
+//		webview.getSettings().setBlockNetworkImage(true);
+//		webview.getSettings().setUseWideViewPort(true);
+//		webview.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+//		webview.getSettings().setBuiltInZoomControls(true); // 设置显示缩放按钮
+//		webview.getSettings().setSupportZoom(true); // 支持缩放
+//		webview.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+//
 		webview.getSettings().setUseWideViewPort(true);
 		webview.getSettings().setLoadWithOverviewMode(true);
+
+		webview.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+		webview.setVerticalScrollBarEnabled(false);
+		webview.setVerticalScrollbarOverlay(false);
+		webview.setHorizontalScrollBarEnabled(false);
+		webview.setHorizontalScrollbarOverlay(false);
 
 //		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 //			webview.getSettings().setLayoutAlgorithm(
@@ -90,7 +95,6 @@ public class WebViewActivity extends BaseActivity{
 		webview.setWebChromeClient(new WebChromeClient(){
         	public void onProgressChanged(WebView view,int progress){//载入进度改变而触发 
                 super.onProgressChanged(view, progress);  
-//                webPg.setProgress(progress);
                 if (progress == 100) {
 					webview.getSettings().setBlockNetworkImage(false);
 					if(loadingDialog != null && loadingDialog.isShowing()){
@@ -110,7 +114,6 @@ public class WebViewActivity extends BaseActivity{
 			@Override
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
 				webview.getSettings().setBlockNetworkImage(true);
-//				loadingDialog.show();
 				return false;
 			}
 		});

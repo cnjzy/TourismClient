@@ -8,22 +8,6 @@ package com.tourism.app.net;
  * 
  */
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.SocketException;
-import java.net.UnknownHostException;
-import java.util.List;
-import java.util.zip.GZIPInputStream;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.conn.ConnectTimeoutException;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.CoreConnectionPNames;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Handler;
@@ -38,6 +22,22 @@ import com.tourism.app.net.utils.RequestParameter;
 import com.tourism.app.net.utils.Utils;
 import com.tourism.app.util.LogUtil;
 import com.tourism.app.widget.dialog.CustomLoadingDialog;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.conn.ConnectTimeoutException;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.CoreConnectionPNames;
+
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.util.List;
+import java.util.zip.GZIPInputStream;
 
 
 /**
@@ -139,7 +139,12 @@ public class AsyncHttpGet extends BaseRequest {
                 bulider.append("=");
                 bulider.append(Utils.encode(p.getValue()));
             }
-            url += "?" + bulider.toString();
+
+            if (url.indexOf("?") == -1) {
+                url += "?" + bulider.toString();
+            } else {
+                url += "&" + bulider.toString();
+            }
         }
 
         // get cache

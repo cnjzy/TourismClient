@@ -9,10 +9,13 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.TextUtils;
 import android.view.View;
 
+import com.baidu.android.pushservice.PushConstants;
+import com.baidu.android.pushservice.PushManager;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
+import com.google.gson.reflect.TypeToken;
 import com.tourism.app.R;
 import com.tourism.app.activity.brand.BrandFragment;
 import com.tourism.app.activity.news.NewsFragment;
@@ -22,12 +25,22 @@ import com.tourism.app.activity.user.UserLoginActivity;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.base.BaseFragment;
 import com.tourism.app.common.Constants;
+import com.tourism.app.net.utils.RequestParameter;
+import com.tourism.app.procotol.BaseResponseMessage;
+import com.tourism.app.util.DeviceUtil;
+import com.tourism.app.util.DialogUtil;
+import com.tourism.app.util.DownloadManagerUtils;
 import com.tourism.app.util.LogUtil;
 import com.tourism.app.util.PopupWindowsUtils;
+import com.tourism.app.vo.VersionVO;
 import com.tourism.app.widget.view.NavigationView;
 import com.tourism.app.widget.view.NavigationView.OnTitleChangeListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends BaseActivity {
+    private final int REQUEST_VERSION = 10001;
 
     private ViewPager viewPager;
     private TabFragmentPagerAdapter tabAdapter;
@@ -108,6 +121,20 @@ public class MainActivity extends BaseActivity {
 
         navigationView.setTab(tabTitle, 0);
         navigationView.setOnTitleChangeListener(onTitleChangeListener);
+
+        mHandler.postDelayed(new Runnable() {
+            public void run() {
+                requestVersion();
+            }
+        }, 3000);
+
+        initBaiduPush();
+    }
+
+    private void initBaiduPush(){
+
+        PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY,
+                DeviceUtil.getChannelName(context, "api_key"));
     }
 
     public class TabFragmentPagerAdapter extends FragmentPagerAdapter {
@@ -203,6 +230,40 @@ public class MainActivity extends BaseActivity {
         }
 
         public void onReceivePoi(BDLocation poiLocation) {
+        }
+    }
+
+    /**
+     * 获取服务信息
+     */
+    public void requestVersion() {
+        List<RequestParameter> parameter = new ArrayList<RequestParameter>();
+        parameter.add(new RequestParameter("system", 1));
+        startHttpRequest(Constants.HTTP_GET, Constants.URL_VERSION, parameter, false, REQUEST_VERSION);
+    }
+
+    @Override
+    public void onCallbackFromThread(String resultJson, int resultCode) {
+        super.onCallbackFromThread(resultJson, resultCode);
+        try{
+            switch (resultCode){
+                case REQUEST_VERSION:
+                    BaseResponseMessage brm = new BaseResponseMessage();
+                    brm.parseResponse(resultJson, new TypeToken<VersionVO>(){});
+                    if (brm.isSuccess()){
+                        final VersionVO vo = (VersionVO) brm.getResult();
+                        if (!vo.getVersion().equals(DeviceUtil.getVersionName(context))){
+                            DialogUtil.showTipDialog(context, "升级提示", vo.getContent(), new DialogUtil.OnCallbackListener() {
+                                public void onClick(int whichButton, Object o) {
+                                    DownloadManagerUtils.downloadApk(context, vo.getUrl(), getString(R.string.app_name), vo.getContent());
+                                }
+                            });
+                        }
+                    }
+                    break;
+            }
+        }catch(Exception e){
+            e.printStackTrace();
         }
     }
 }

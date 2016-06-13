@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -56,6 +57,8 @@ public class UserHomeActivity extends BaseActivity implements PullToRefreshView.
     private ImageView user_gender_iv;
     private TextView user_notepad_tv;
     private ImageView user_down_arrow_iv;
+    private Button add_guides_btn;
+    private ImageView user_vip_iv;
 
     private PullToRefreshView pull_refresh_view;
     private ListView listView;
@@ -146,6 +149,8 @@ public class UserHomeActivity extends BaseActivity implements PullToRefreshView.
         user_gender_iv = (ImageView) findViewById(R.id.user_gender_iv);
         user_notepad_tv = (TextView) findViewById(R.id.user_notepad_tv);
         user_down_arrow_iv = (ImageView) findViewById(R.id.user_down_arrow_iv);
+        add_guides_btn = (Button) findViewById(R.id.add_guides_btn);
+        user_vip_iv = (ImageView) findViewById(R.id.user_vip_iv);
 
         pull_refresh_view = (PullToRefreshView) findViewById(R.id.pull_refresh_view);
         listView = (ListView) findViewById(R.id.listView);
@@ -165,7 +170,7 @@ public class UserHomeActivity extends BaseActivity implements PullToRefreshView.
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (currentType == 0) {
                     GuidesVO vo = (GuidesVO) listView.getItemAtPosition(position);
-                    if (vo != null){
+                    if (vo != null) {
                         Bundle data = new Bundle();
                         data.putSerializable("vo", vo);
                         showActivityForResult(context, GuidesEditActivity.class, 101, data);
@@ -182,24 +187,27 @@ public class UserHomeActivity extends BaseActivity implements PullToRefreshView.
                         }
                     }
                 }
-            }});
+            }
+        });
 
-            xlistView.setOnItemClickListener(new PLA_AdapterView.OnItemClickListener(){
+            xlistView.setOnItemClickListener(new PLA_AdapterView.OnItemClickListener() {
                 @Override
-                public void onItemClick (PLA_AdapterView < ? > parent, View view,int position,
-                long id){
-                UserFollowVO vo = (UserFollowVO) xlistView.getItemAtPosition(position);
-                if (vo != null) {
-                    Bundle data = new Bundle();
-                    data.putSerializable("vo", vo);
-                    showActivity(context, UserFollowImageActivity.class, data);
+                public void onItemClick(PLA_AdapterView<?> parent, View view, int position,
+                                        long id) {
+                    UserFollowVO vo = (UserFollowVO) xlistView.getItemAtPosition(position);
+                    if (vo != null) {
+                        Bundle data = new Bundle();
+                        data.putSerializable("vo", vo);
+                        showActivity(context, UserFollowImageActivity.class, data);
+                    }
                 }
-            }});
+            });
         }
 
         @Override
         public void initValue () {
-            setNavigationRightButton(View.VISIBLE, 0, R.drawable.btu_tj);
+            setNavigationTitle("我的");
+            setNavigationRightButton(View.VISIBLE, 0, R.drawable.ico_gd_d);
             setDownArrowPoint(0);
 
             xlistView.setPullLoadEnable(false);
@@ -223,6 +231,7 @@ public class UserHomeActivity extends BaseActivity implements PullToRefreshView.
             super.onStart();
             requestUserInfo();
             initData();
+            setViewsValue();
         }
 
         /**
@@ -269,14 +278,23 @@ public class UserHomeActivity extends BaseActivity implements PullToRefreshView.
     }
 
     private void setViewsValue() {
-        ImageLoader.getInstance().displayImage(vo.getAvatar(), user_icon_iv, circleOptions, animateFirstListener);
-        user_name_tv.setText(TextUtils.isEmpty(vo.getNickname()) ? "游客" : vo.getNickname());
-        if (vo.getSex() == 0 || vo.getSex() == 3) {
-            user_gender_iv.setVisibility(View.INVISIBLE);
-        } else {
-            user_gender_iv.setBackgroundResource(vo.getSex() == 1 ? R.drawable.ico_nan : R.drawable.ico_nv);
+        if(vo != null) {
+            ImageLoader.getInstance().displayImage(vo.getAvatar(), user_icon_iv, circleOptions, animateFirstListener);
+            user_name_tv.setText(TextUtils.isEmpty(vo.getNickname()) ? "游客" : vo.getNickname());
+            if (vo.getSex() == 0 || vo.getSex() == 3) {
+                user_gender_iv.setVisibility(View.INVISIBLE);
+            } else {
+                user_gender_iv.setBackgroundResource(vo.getSex() == 1 ? R.drawable.ico_nan : R.drawable.ico_nv);
+            }
+
+            if (vo.getVip_status() == 2) {
+                user_vip_iv.setBackgroundResource(R.drawable.vip_review);
+            } else {
+                user_vip_iv.setBackgroundResource(R.drawable.vip_review_n);
+            }
+
+            user_notepad_tv.setText(vo.getTrips_count() + "篇游记");
         }
-        user_notepad_tv.setText(vo.getMid() + "篇游记");
     }
 
     @Override
@@ -313,6 +331,12 @@ public class UserHomeActivity extends BaseActivity implements PullToRefreshView.
                 requestFollowList(true);
                 break;
             case R.id.user_gd_rb:
+                showActivity(context, UserSblAuthActivity.class);
+                break;
+            case R.id.user_icon_iv:
+                showActivity(context, UserInfoActivity.class);
+                break;
+            case R.id.navigation_right_btn:
                 DialogUtil.showUserMoreDialog(context, new DialogUtil.OnCallbackListener() {
                     @Override
                     public void onClick(int whichButton, Object o) {
@@ -322,10 +346,7 @@ public class UserHomeActivity extends BaseActivity implements PullToRefreshView.
                     }
                 });
                 break;
-            case R.id.user_icon_iv:
-                showActivity(context, UserInfoActivity.class);
-                break;
-            case R.id.navigation_right_btn:
+            case R.id.add_guides_btn:
                 showActivity(context, GuidesAddActivity.class);
                 break;
         }
@@ -345,6 +366,11 @@ public class UserHomeActivity extends BaseActivity implements PullToRefreshView.
                 .getLayoutParams();
         arrowParams.leftMargin = marginLeft;
         user_down_arrow_iv.setLayoutParams(arrowParams);
+        if (i == 0){
+            add_guides_btn.setVisibility(View.VISIBLE);
+        }else{
+            add_guides_btn.setVisibility(View.GONE);
+        }
     }
 
     /**

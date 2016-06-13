@@ -92,13 +92,22 @@ public class GuidesAddNotedActivity extends BaseActivity {
         setNavigationTitle("旅行随记");
         if (notedVO != null){
             noted_et.setText(notedVO.getDescription());
+            noted_et.setSelection(noted_et.getText().length());
+            setNavigationRightButton(View.VISIBLE, -1, R.drawable.ico_gd_d);
         }
     }
 
     @Override
     public void onClick(View v) {
-        super.onClick(v);
         switch (v.getId()) {
+            case R.id.navigation_left_btn:
+                if (notedVO != null) {
+                    notedVO.setDescription(noted_et.getText().toString());
+                    guidesNotedDao.update(notedVO);
+                    setResult(RESULT_OK);
+                }
+                finish();
+                break;
             case R.id.navigation_right_btn:
                 if (notedVO != null){
                     DialogUtil.showGuidesNotedDialog(context, new DialogUtil.OnCallbackListener() {
@@ -115,7 +124,6 @@ public class GuidesAddNotedActivity extends BaseActivity {
                                             guidesNotedDao.delete(notedVO);
 
                                             // 新加节点
-                                            notedVO.setParent_id(locationVO.getLocal_id());
                                             guidesNotedDao.addNotedByDate(dateStr, vo, notedVO);
                                         }
                                     }, "选择日期").show();
@@ -161,6 +169,10 @@ public class GuidesAddNotedActivity extends BaseActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+            if (notedVO != null) {
+                notedVO.setDescription(noted_et.getText().toString());
+                guidesNotedDao.update(notedVO);
+            }
             setResult(RESULT_OK);
             finish();
             return false;

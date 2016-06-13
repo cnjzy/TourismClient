@@ -18,7 +18,13 @@ public class UserInfoVO extends BaseVO {
 	private String email;
 	private String avatar;
 	private String token;
-	
+	private int vip_status;
+	private String vip_name;
+	private String vip_code;
+
+	private int trips_count;
+	private int activitys_count;
+
 	/**
 	 * 
 	 */
@@ -107,6 +113,44 @@ public class UserInfoVO extends BaseVO {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
-	
-	
+
+	public int getVip_status() {
+		return vip_status;
+	}
+
+	public void setVip_status(int vip_status) {
+		this.vip_status = vip_status;
+	}
+
+	public String getVip_name() {
+		return vip_name;
+	}
+
+	public void setVip_name(String vip_name) {
+		this.vip_name = vip_name;
+	}
+
+	public String getVip_code() {
+		return vip_code;
+	}
+
+	public void setVip_code(String vip_code) {
+		this.vip_code = vip_code;
+	}
+
+	public int getTrips_count() {
+		return trips_count;
+	}
+
+	public void setTrips_count(int trips_count) {
+		this.trips_count = trips_count;
+	}
+
+	public int getActivitys_count() {
+		return activitys_count;
+	}
+
+	public void setActivitys_count(int activitys_count) {
+		this.activitys_count = activitys_count;
+	}
 }

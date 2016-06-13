@@ -2,19 +2,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/transparent_gray2"
+    android:background="@color/transparent_gray"
     android:gravity="bottom"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/body_view"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@color/background"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="40dp" >
+            android:layout_height="40dp">
 
             <TextView
                 android:layout_width="fill_parent"
@@ -78,15 +79,16 @@
             android:id="@+id/submit_btn"
             android:layout_width="fill_parent"
             android:layout_height="38dp"
+            android:layout_marginBottom="@dimen/global_padding_mid2"
             android:layout_marginLeft="@dimen/global_padding_small"
             android:layout_marginRight="@dimen/global_padding_small"
             android:layout_marginTop="@dimen/global_padding_mid2"
-            android:layout_marginBottom="@dimen/global_padding_mid2"
             android:background="@drawable/btn_blue2_round"
             android:onClick="onClick"
             android:text="@string/feedback_submit"
             android:textColor="@color/text_white"
             android:textSize="@dimen/sp_16" />
     </LinearLayout>
+
 
 </LinearLayout>

@@ -44,6 +44,16 @@
             android:scaleType="fitXY"
             android:src="@drawable/ico_nan" />
 
+        <ImageView
+            android:id="@+id/user_vip_iv"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginRight="@dimen/global_padding_little"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/user_gender_iv"
+            android:scaleType="fitXY"
+            android:src="@drawable/vip_review_n" />
+
         <TextView
             android:id="@+id/user_notepad_tv"
             android:layout_width="wrap_content"
@@ -104,18 +114,18 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:drawableTop="@drawable/ico_gd_d"
+            android:drawableTop="@drawable/vip_btn_n"
             android:background="@color/transparent"
             android:textSize="@dimen/sp_10"
             android:textColor="@color/bg_black"
             android:onClick="onClick"
-            android:text="更多" />
+            android:text="认证" />
     </RadioGroup>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/user_down_arrow_iv"
@@ -123,6 +133,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
             android:background="@drawable/ico_sj" />
+        <Button
+            android:id="@+id/add_guides_btn"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/global_padding_small"
+            android:layout_marginTop="@dimen/global_padding_little"
+            android:background="@drawable/new_travel"
+            android:onClick="onClick"/>
     </LinearLayout>
 
     <RelativeLayout
@@ -161,6 +179,7 @@
             android:layout_height="fill_parent"
             android:gravity="center"
             android:orientation="vertical"
+            android:background="@color/background"
             android:visibility="gone">
 
             <ImageView

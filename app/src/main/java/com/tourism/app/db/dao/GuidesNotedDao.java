@@ -9,6 +9,7 @@ import com.tourism.app.vo.GuidesLocationVO;
 import com.tourism.app.vo.GuidesNotedVO;
 import com.tourism.app.vo.GuidesVO;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -52,11 +53,14 @@ public class GuidesNotedDao extends BaseDao<GuidesNotedVO> {
                 guidesDayVO.setLocal_id(dayId);
                 guidesVO.getTrip_days().add(guidesDayVO);
             }
+            Map<String, Object> params = new HashMap<String, Object>();
+            params.put("parent_id", guidesDayVO.getLocal_id());
+            guidesDayVO.setLocations(guidesLocationDao.getByParams(params));
 
             // 获取地理位置对象
             GuidesLocationVO guidesLocationVO = null;
             for (int i = 0; i < guidesDayVO.getLocations().size(); i++) {
-                if (guidesDayVO.getLocations().get(i).getParent_id() == guidesDayVO.getLocal_id()) {
+                if (TextUtils.isEmpty(guidesDayVO.getLocations().get(i).getLocation_name())) {
                     guidesLocationVO = guidesDayVO.getLocations().get(i);
                     break;
                 }
@@ -69,11 +73,11 @@ public class GuidesNotedDao extends BaseDao<GuidesNotedVO> {
 
                 guidesLocationVO.setLocal_id(locationId);
                 guidesDayVO.getLocations().add(guidesLocationVO);
-
-                vo.setParent_id(locationId);
-            } else {
-                vo.setParent_id(guidesLocationVO.getLocal_id());
             }
+
+            // 设置note父类ID
+            vo.setParent_id(guidesLocationVO.getLocal_id());
+
 
             // 添加noted
             int notedId = add(vo);
@@ -94,13 +98,27 @@ public class GuidesNotedDao extends BaseDao<GuidesNotedVO> {
             guidesDayVO.setParent_id(guidesVO.getLocal_id());
             guidesDayVO.setLocal_id(guidesDayDao.add(guidesDayVO));
         }
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("parent_id", guidesDayVO.getLocal_id());
+        guidesDayVO.setLocations(guidesLocationDao.getByParams(params));
 
         // 创建新的地点节点
-        GuidesLocationVO locationVO = new GuidesLocationVO();
-        locationVO.setParent_id(guidesDayVO.getLocal_id());
-        locationVO.setRank(0);
-        locationVO.setLocation_name("");
-        locationVO.setLocal_id(guidesLocationDao.add(locationVO));
+        // 获取地理位置对象
+        GuidesLocationVO locationVO = null;
+        for (int i = 0; i < guidesDayVO.getLocations().size(); i++) {
+            if (TextUtils.isEmpty(guidesDayVO.getLocations().get(i).getLocation_name())) {
+                locationVO = guidesDayVO.getLocations().get(i);
+                break;
+            }
+        }
+
+        if (locationVO == null) {
+            locationVO = new GuidesLocationVO();
+            locationVO.setParent_id(guidesDayVO.getLocal_id());
+            locationVO.setRank(0);
+            locationVO.setLocation_name("");
+            locationVO.setLocal_id(guidesLocationDao.add(locationVO));
+        }
 
         // 添加
         notedVO.setParent_id(locationVO.getLocal_id());
@@ -118,10 +136,49 @@ public class GuidesNotedDao extends BaseDao<GuidesNotedVO> {
         guidesDao.update(guidesVO);
     }
 
+    /**
+     * 按照地理位置更新节点
+     * @param locationVO
+     * @param notedVO
+     */
+    public void updateNotedByLocation(GuidesLocationVO locationVO, GuidesNotedVO notedVO){
+        GuidesLocationVO guidesLocationVO = null;
+        if (locationVO.isDate()){
+            // 查询天节点是否有，没有创建
+            GuidesDayVO guidesDayVO = guidesDayDao.getById(locationVO.getLocal_id());
+            Map<String, Object> params = new HashMap<String, Object>();
+            params.put("parent_id", guidesDayVO.getLocal_id());
+            guidesDayVO.setLocations(guidesLocationDao.getByParams(params));
+
+            // 获取地理位置对象
+            GuidesLocationVO locationVO2 = null;
+            for (int i = 0; i < guidesDayVO.getLocations().size(); i++) {
+                if (TextUtils.isEmpty(guidesDayVO.getLocations().get(i).getLocation_name())) {
+                    locationVO2 = guidesDayVO.getLocations().get(i);
+                    break;
+                }
+            }
+            if (locationVO2 == null) {
+                locationVO2 = new GuidesLocationVO();
+                locationVO2.setParent_id(guidesDayVO.getLocal_id());
+                locationVO2.setRank(0);
+                locationVO2.setLocation_name("");
+                locationVO2.setLocal_id(guidesLocationDao.add(locationVO));
+            }
+            guidesLocationVO = locationVO2;
+        }else{
+            guidesLocationVO = locationVO;
+        }
+
+        notedVO.setParent_id(guidesLocationVO.getLocal_id());
+        update(notedVO);
+    }
+
     public void delete(GuidesNotedVO notedVO) {
+        deleteById(notedVO.getLocal_id(), notedVO.getServer_id(), "note");
 
         GuidesLocationVO preLocationVO = guidesLocationDao.getById(notedVO.getParent_id());
-        if (preLocationVO.getNotes().size() == 0) {
+        if (preLocationVO.getNotes().size() == 0 && TextUtils.isEmpty(preLocationVO.getLocation_name())) {
             guidesLocationDao.deleteById(preLocationVO.getLocal_id());
         }
 
@@ -129,8 +186,6 @@ public class GuidesNotedDao extends BaseDao<GuidesNotedVO> {
         if (preDayVO.getLocations().size() == 0) {
             guidesDayDao.deleteById(preDayVO.getLocal_id());
         }
-
-        deleteById(notedVO.getLocal_id(), notedVO.getServer_id(), "note");
     }
 
     public List<GuidesNotedVO> getByParams(Map<String, Object> params) {

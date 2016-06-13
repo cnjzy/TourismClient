@@ -62,7 +62,7 @@ public class CategoryListActivity extends BaseActivity implements OnFooterRefres
 	/**
      * 当前页码
      */
-    private int page = 0;
+    private int page = 1;
     /**
      * 是否在加载
      */
@@ -152,7 +152,7 @@ public class CategoryListActivity extends BaseActivity implements OnFooterRefres
 			currentType = 1;
 			strategyListAdapter = new EventStrategyListAdapter(context, listView);
 			listView.setAdapter(strategyListAdapter);
-			page = 0;
+			page = 1;
 			isLoading = false;
 			requestEventList(categoryVO.getLink_strategy(), true);
 			break;
@@ -160,7 +160,7 @@ public class CategoryListActivity extends BaseActivity implements OnFooterRefres
 			currentType = 2;
 			eventListAdapter = new EventListAdapter(context, listView);
 			listView.setAdapter(eventListAdapter);
-			page = 0;
+			page = 1;
 			isLoading = false;
 			requestEventList(categoryVO.getLink_activity(), true);
 			break;

@@ -31,7 +31,7 @@ public class GuidesLocationVO extends BaseDBVO {
 
     private String day;
     private String dateStr;
-    private boolean isDate;
+    private boolean isDate = false;
 
 
     public GuidesLocationVO() {

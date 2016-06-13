@@ -25,7 +25,8 @@ public class DateUtils  {
 			"yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd", "HH:mm",
 			"yyyy/MM/dd HH:mm:ss", "yyyy/MM/dd","yyyyMMdd",
 			"MM月dd日 HH:mm", "yyyyMMddHHmmssSSS", "yyyy年MM月dd日 HH:mm",
-			"MM-dd HH:mm", "yyyy年MM月dd日", "yyyyMMddHHmmss"
+			"MM-dd HH:mm", "yyyy年MM月dd日", "yyyyMMddHHmmss",
+			"yyyy-MM-dd HH:mm"
 	// 这里可以增加更多的日期格式，用得多的放在前面
 	};
 

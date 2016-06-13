@@ -21,6 +21,7 @@ import com.tourism.app.util.StringUtil;
 import com.tourism.app.util.preference.Preferences;
 import com.tourism.app.util.preference.PreferencesUtils;
 import com.tourism.app.vo.UserInfoVO;
+import com.umeng.socialize.PlatformConfig;
 
 import org.json.simple.BaseJson;
 
@@ -67,6 +68,18 @@ public class MyApp extends Application {
         
         // 在使用 SDK 各组间之前初始化 context 信息，传入 ApplicationContext
         SDKInitializer.initialize(this);
+
+        // 第三方授权、分享
+    }
+
+    //各个平台的配置，建议放在全局Application或者程序入口
+    {
+        //微信    wx12342956d1cab4f9,a5ae111de7d9ea137e88a5e02c07c94d
+        PlatformConfig.setWeixin("wx7bd1c85b7b913127", "a1b45b0e3fb1331530c5d0a98b93fba6");
+        //新浪微博
+        PlatformConfig.setSinaWeibo("1752635441", "699cef5eb788d08d6d11c12bbe0cd8e2");
+        // QQ
+        PlatformConfig.setQQZone("1105350693", "vj02zRPvC0G7jdz3");
     }
 
     /**

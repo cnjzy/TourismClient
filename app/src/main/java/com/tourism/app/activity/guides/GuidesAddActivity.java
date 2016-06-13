@@ -39,6 +39,7 @@ public class GuidesAddActivity extends BaseActivity{
 
 	@Override
 	public void initValue() {
+		setNavigationTitle("新建攻略");
 		setNavigationRightButton(View.VISIBLE, 0, R.drawable.ico_ok);
 	}
 

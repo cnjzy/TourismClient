@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/navigation_left_btn"
+        android:layout_width="@dimen/navigation_height"
+        android:layout_height="@dimen/navigation_height"
+        android:background="@color/transparent"
+        android:onClick="onClick"
+        android:src="@drawable/btn_back" />
+
+    <ImageButton
+        android:id="@+id/navigation_like_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/transparent_gray"
+        android:src="@drawable/ico_xh_d"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+    	android:id="@+id/user_avatar_icon_iv"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:scaleType="fitCenter"
+    	android:layout_below="@+id/navigation_layout"
+    	android:layout_above="@+id/guides_replay_ll"
+    	android:src="@drawable/img_default_horizon"
+    />
+
+    <RelativeLayout
+        android:id="@+id/guides_replay_ll"
+    	android:layout_width="fill_parent"
+    	android:layout_alignParentBottom="true"
+    	android:layout_height="45dp"
+    >
+        <TextView
+        	android:id="@+id/guides_reply_tv"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:paddingLeft="@dimen/global_padding_small"
+        	android:textColor="@color/text_white"
+        	android:layout_centerVertical="true"
+        	android:textSize="@dimen/sp_14"
+        	android:text="评论评论评论评论"
+        	android:visibility="invisible"
+        />
+    </RelativeLayout>
+
+</RelativeLayout>

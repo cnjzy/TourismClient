@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/background"
     android:orientation="vertical">
 
-    <ScrollView
+    <com.tourism.app.widget.view.MyScrollView
+        android:id="@+id/scrollview"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/background"
-        android:descendantFocusability="blocksDescendants">
+        android:descendantFocusability="blocksDescendants"
+        app:scrollbars="none">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -40,11 +43,11 @@
                     android:id="@+id/navigation_share_btn"
                     android:layout_width="@dimen/navigation_height"
                     android:layout_height="@dimen/navigation_height"
-                    android:layout_alignParentRight="true"
                     android:background="@color/transparent"
                     android:onClick="onClick"
                     android:src="@drawable/icon_share"
-                    android:visibility="gone" />
+                    android:layout_toLeftOf="@+id/navigation_collection_btn"
+                     />
 
                 <ImageButton
                     android:id="@+id/navigation_reply_btn"
@@ -62,7 +65,7 @@
                     android:layout_toLeftOf="@+id/navigation_reply_btn"
                     android:background="@color/transparent"
                     android:onClick="onClick"
-                    android:src="@drawable/icon_collection" />
+                    android:src="@drawable/icon_sc_d" />
 
                 <ImageButton
                     android:id="@+id/navigation_down_btn"
@@ -121,12 +124,14 @@
                 android:textColor="@color/text_black"
                 android:textSize="@dimen/sp_12" />
 
-            <WebView
+            <com.tourism.app.widget.view.MyWebView
                 android:id="@+id/webview"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent" />
+                android:layout_height="fill_parent"
+                android:scrollbars="none"/>
+
         </LinearLayout>
-    </ScrollView>
+    </com.tourism.app.widget.view.MyScrollView>
 
     <RelativeLayout
         android:id="@+id/foot_bar_rl"
@@ -137,10 +142,11 @@
 
         <com.tourism.app.widget.view.CustomButton
             android:id="@+id/call_phone_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@color/transparent"
             android:drawableLeft="@drawable/icon_phone"
+            android:layout_toLeftOf="@+id/signed_up_btn"
             android:drawablePadding="@dimen/global_padding_small"
             android:gravity="center|left"
             android:onClick="onClick"

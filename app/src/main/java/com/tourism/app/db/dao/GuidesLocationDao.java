@@ -1,6 +1,7 @@
 package com.tourism.app.db.dao;
 
 import android.content.Context;
+import android.text.TextUtils;
 
 import com.tourism.app.vo.GuidesLocationVO;
 
@@ -21,5 +22,13 @@ public class GuidesLocationDao extends BaseDao<GuidesLocationVO>{
 
     public void deleteById(int id) {
         super.deleteById(id, getById(id).getServer_id(), "location");
+    }
+
+    @Override
+    public synchronized int add(GuidesLocationVO vo) {
+        if (TextUtils.isEmpty(vo.getLocation_name())){
+            vo.setRank(-1);
+        }
+        return super.add(vo);
     }
 }

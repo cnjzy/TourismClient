@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,11 +33,6 @@ public class GuidesSettingActivity extends BaseActivity {
     private View item_category_ll;
     private TextView item_category_tv;
 
-    private View reply_ll;
-    private View reply_bottom_ll;
-    private EditText guides_reply_et;
-    private TextView guides_reply_count_tv;
-
     private GuidesVO guidesVO;
 
     public DisplayImageOptions bgOptions;
@@ -55,10 +49,6 @@ public class GuidesSettingActivity extends BaseActivity {
     public void init() {
         guidesDao = new GuidesDao(context);
         guidesNotedDao = new GuidesNotedDao(context);
-
-        guidesVO = (GuidesVO) getIntent().getExtras().getSerializable("vo");
-        guidesVO = guidesDao.getById(guidesVO.getLocal_id());
-        guidesVO.setPhotoVO(guidesNotedDao.getById(guidesVO.getFront_cover_photo_id()));
 
         bgOptions = new DisplayImageOptions
                 .Builder()
@@ -82,11 +72,6 @@ public class GuidesSettingActivity extends BaseActivity {
         item_open_tv = (SwitchButton) findViewById(R.id.item_switch_sb);
         item_category_ll = findViewById(R.id.item_category_ll);
         item_category_tv = (TextView) findViewById(R.id.item_category_tv);
-
-        reply_ll = findViewById(R.id.reply_ll);
-        reply_bottom_ll = reply_ll.findViewById(R.id.reply_bottom_ll);
-        guides_reply_et = (EditText) reply_ll.findViewById(R.id.guides_reply_et);
-        guides_reply_count_tv = (TextView) reply_ll.findViewById(R.id.guides_reply_count_tv);
     }
 
     @Override
@@ -113,11 +98,21 @@ public class GuidesSettingActivity extends BaseActivity {
     public void initValue() {
         setNavigationTitle("设置游记");
 
+        guidesVO = (GuidesVO) getIntent().getExtras().getSerializable("vo");
+        guidesVO = guidesDao.getById(guidesVO.getLocal_id());
+        guidesVO.setPhotoVO(guidesNotedDao.getById(guidesVO.getFront_cover_photo_id()));
+
         if (guidesVO.getPhotoVO() != null)
             LoadLocalImageUtil.getInstance().displayFromSDCard(guidesVO.getPhotoVO().getPath(), item_icon_iv, bgOptions);
         item_name_tv.setText(guidesVO.getName());
         item_open_tv.setChecked(guidesVO.getPrivacy() == 0 ? false : true);
         item_category_tv.setText(TextUtils.isEmpty(guidesVO.getFriend_category_name()) ? "未设置" : guidesVO.getFriend_category_name());
+    }
+
+    @Override
+    public void onResume() {
+        initValue();
+        super.onResume();
     }
 
     @Override
@@ -127,7 +122,7 @@ public class GuidesSettingActivity extends BaseActivity {
         data.putSerializable("vo", guidesVO);
         switch (v.getId()){
             case R.id.item_icon_ll:
-                showActivityForResult(context, GuidesSettingCoverActivity.class, 99, data);
+                showActivityForResult(context, GuidesSettingCoverActivity.class, 98, data);
                 break;
             case R.id.item_name_ll:
                 DialogUtil.showReplyDialog(context, new DialogUtil.OnCallbackListener() {
@@ -137,7 +132,7 @@ public class GuidesSettingActivity extends BaseActivity {
                         guidesDao.update(guidesVO);
                         item_name_tv.setText(o.toString());
                     }
-                });
+                }, "请输入标题");
                 break;
             case R.id.item_open_ll:
                 break;

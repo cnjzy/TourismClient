@@ -12,7 +12,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Build;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -20,6 +19,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.reflect.TypeToken;
@@ -36,11 +36,14 @@ import com.tourism.app.procotol.BaseResponseMessage;
 import com.tourism.app.util.DeviceUtil;
 import com.tourism.app.util.DialogUtil;
 import com.tourism.app.util.DialogUtil.OnCallbackListener;
+import com.tourism.app.util.ShareUtils;
 import com.tourism.app.vo.EventVO;
 import com.tourism.app.vo.OrderVO;
 import com.tourism.app.weixinpay.WeiXinPayManager;
 import com.tourism.app.widget.dialog.CustomLoadingDialog;
 import com.tourism.app.widget.imageloader.CircleBitmapDisplayer;
+import com.tourism.app.widget.view.MyScrollView;
+import com.tourism.app.widget.view.MyWebView;
 import com.tourism.app.wxapi.WXPayEntryActivity;
 
 import java.util.ArrayList;
@@ -51,7 +54,6 @@ import java.util.Map;
  * ClassName:EventInfoActivity Date: 2016年4月27日 上午10:48:45
  *
  * @author Jzy
- * @version
  * @see
  */
 public class CategoryInfoActivity extends BaseActivity {
@@ -60,6 +62,7 @@ public class CategoryInfoActivity extends BaseActivity {
     private final int REQUEST_MAKE_KEY = 10003;
     private final int REQUEST_COLLECTION = 10004;
 
+    private MyScrollView scrollview;
     private ImageView event_banner_iv;
     private TextView navigation_price_tv;
     private TextView navigation_name_tv;
@@ -77,7 +80,7 @@ public class CategoryInfoActivity extends BaseActivity {
     private TextView user_phone_is_auth_tv;
     private TextView event_price_tv;
     private TextView event_pv_tv;
-    private WebView webview;
+    private MyWebView webview;
 
     private ImageButton navigation_collection_btn;
 
@@ -128,6 +131,7 @@ public class CategoryInfoActivity extends BaseActivity {
 
     @Override
     public void initView() {
+        scrollview = (MyScrollView) findViewById(R.id.scrollview);
         event_banner_iv = (ImageView) findViewById(R.id.event_banner_iv);
         navigation_price_tv = (TextView) findViewById(R.id.navigation_price_tv);
         navigation_name_tv = (TextView) findViewById(R.id.navigation_name_tv);
@@ -145,11 +149,12 @@ public class CategoryInfoActivity extends BaseActivity {
         user_phone_is_auth_tv = (TextView) findViewById(R.id.user_phone_is_auth_tv);
         event_price_tv = (TextView) findViewById(R.id.event_price_tv);
         event_pv_tv = (TextView) findViewById(R.id.event_pv_tv);
-        webview = (WebView) findViewById(R.id.webview);
+        webview = (MyWebView) findViewById(R.id.webview);
         foot_bar_rl = findViewById(R.id.foot_bar_rl);
         make_rl = findViewById(R.id.make_rl);
-
         navigation_collection_btn = (ImageButton) findViewById(R.id.navigation_collection_btn);
+
+        scrollview.setWebview(webview);
     }
 
     private void setViewsValue() {
@@ -161,19 +166,27 @@ public class CategoryInfoActivity extends BaseActivity {
             }
         }
 
-        if (vo.getCurrent_user_favorite() == 1){
-            navigation_collection_btn.setImageResource(R.drawable.ico_xh_e);
-        }else{
-            navigation_collection_btn.setImageResource(R.drawable.ico_xh_d);
+        if (vo.getCurrent_user_favorite() == 1) {
+            navigation_collection_btn.setImageResource(R.drawable.icon_sc_e);
+        } else {
+            navigation_collection_btn.setImageResource(R.drawable.icon_sc_d);
         }
 
+        int footbarHeight = 0;
         if (vo.getType() == 1) {
             foot_bar_rl.setVisibility(View.VISIBLE);
             make_rl.setVisibility(View.INVISIBLE);
+            footbarHeight = foot_bar_rl.getHeight();
         } else {
             foot_bar_rl.setVisibility(View.GONE);
             make_rl.setVisibility(View.VISIBLE);
+            footbarHeight = 0;
         }
+
+        int webViewHeight = getWindowManager().getDefaultDisplay().getHeight();
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) webview.getLayoutParams();
+        params.height = webViewHeight - DeviceUtil.getStatusBarHeight(context) - footbarHeight;
+        webview.setLayoutParams(params);
 
         ImageLoader.getInstance().displayImage(vo.getPoster(), event_banner_iv,
                 options, animateFirstListener);
@@ -218,6 +231,17 @@ public class CategoryInfoActivity extends BaseActivity {
     @Override
     public void initValue() {
 
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.getSettings().setBlockNetworkImage(true);
+        webview.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
+        webview.getSettings().setBuiltInZoomControls(false);
+        webview.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+        webview.getSettings().setBuiltInZoomControls(false); // 设置显示缩放按钮
+        webview.getSettings().setSupportZoom(false); // 支持缩放
+        webview.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+        webview.getSettings().setUseWideViewPort(true);
+        webview.getSettings().setLoadWithOverviewMode(true);
+
         webview.setWebChromeClient(new WebChromeClient() {
             public void onProgressChanged(WebView view, int progress) {// 载入进度改变而触发
                 super.onProgressChanged(view, progress);
@@ -228,26 +252,29 @@ public class CategoryInfoActivity extends BaseActivity {
         });
 
         webview.setWebViewClient(new WebViewClient() {
+
+
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 webview.getSettings().setBlockNetworkImage(true);
                 return false;
             }
         });
-        webview.getSettings().setDefaultTextEncodingName("utf-8");
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            webview.getSettings().setLayoutAlgorithm(
-                    WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING);
-        } else {
-            webview.getSettings().setLayoutAlgorithm(
-                    WebSettings.LayoutAlgorithm.NORMAL);
-        }
+
 
         if (vo == null) {
             requestEventInfo(url);
         } else {
             requestEventInfo(vo.getLink());
         }
+
+        scrollview.post(new Runnable() {
+            @Override
+            public void run() {
+                scrollview.scrollTo(0, 0);
+            }
+        });
+
         loadingDialog.show();
     }
 
@@ -268,6 +295,8 @@ public class CategoryInfoActivity extends BaseActivity {
      */
     public void requestEventInfo(String url) {
         List<RequestParameter> parameter = new ArrayList<RequestParameter>();
+        if (getUserInfo() != null)
+            parameter.add(new RequestParameter("token", getUserInfo().getToken()));
         startHttpRequest(Constants.HTTP_GET, url, parameter, false,
                 GET_EVENT_INFO_KEY);
     }
@@ -276,7 +305,7 @@ public class CategoryInfoActivity extends BaseActivity {
      * 发送预约信息
      */
     public void requestMake(String userName, String userPhone, String payType) {
-        if (isUserEmpty()){
+        if (isUserEmpty()) {
             showActivity(context, UserLoginActivity.class);
             return;
         }
@@ -295,7 +324,7 @@ public class CategoryInfoActivity extends BaseActivity {
      * 发送报名信息
      */
     public void requestSignedUp(String userName, String userPhone, String remarks) {
-        if (isUserEmpty()){
+        if (isUserEmpty()) {
             showActivity(context, UserLoginActivity.class);
             return;
         }
@@ -313,7 +342,7 @@ public class CategoryInfoActivity extends BaseActivity {
      * 收藏活动
      */
     public void requestCollection(String action) {
-        if (isUserEmpty()){
+        if (isUserEmpty()) {
             showActivity(context, UserLoginActivity.class);
             return;
         }
@@ -377,7 +406,8 @@ public class CategoryInfoActivity extends BaseActivity {
                     break;
                 case REQUEST_COLLECTION:
                     BaseResponseMessage br4 = new BaseResponseMessage();
-                    br4.parseResponse(resultJson, new TypeToken<OrderVO>() {});
+                    br4.parseResponse(resultJson, new TypeToken<OrderVO>() {
+                    });
                     if (br4.isSuccess()) {
 //                        showToast("操作成功");
                     }
@@ -400,9 +430,10 @@ public class CategoryInfoActivity extends BaseActivity {
         super.onClick(v);
         switch (v.getId()) {
             case R.id.navigation_share_btn:
+                ShareUtils.getInstance().share(context, vo.getTitle());
                 break;
             case R.id.navigation_reply_btn:
-                if (isUserEmpty()){
+                if (isUserEmpty()) {
                     showActivity(context, UserLoginActivity.class);
                     return;
                 }
@@ -411,16 +442,16 @@ public class CategoryInfoActivity extends BaseActivity {
             case R.id.navigation_collection_btn:
                 requestCollection(vo.getCurrent_user_favorite() == 1 ? "off" : "on");
                 vo.setCurrent_user_favorite(vo.getCurrent_user_favorite() == 1 ? 0 : 1);
-                if (vo.getCurrent_user_favorite() == 1){
-                    navigation_collection_btn.setImageResource(R.drawable.ico_xh_e);
-                }else{
-                    navigation_collection_btn.setImageResource(R.drawable.ico_xh_d);
+                if (vo.getCurrent_user_favorite() == 1) {
+                    navigation_collection_btn.setImageResource(R.drawable.icon_sc_e);
+                } else {
+                    navigation_collection_btn.setImageResource(R.drawable.icon_sc_d);
                 }
                 break;
             case R.id.navigation_down_btn:
                 break;
             case R.id.user_pay_btn:
-                if (isUserEmpty()){
+                if (isUserEmpty()) {
                     showActivity(context, UserLoginActivity.class);
                     return;
                 }
@@ -445,7 +476,7 @@ public class CategoryInfoActivity extends BaseActivity {
                 });
                 break;
             case R.id.signed_up_btn:
-                if (isUserEmpty()){
+                if (isUserEmpty()) {
                     showActivity(context, UserLoginActivity.class);
                     return;
                 }
@@ -474,5 +505,12 @@ public class CategoryInfoActivity extends BaseActivity {
             }
         }
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (scrollview != null)
+            scrollview.onDesctory();
+        super.onDestroy();
     }
 }

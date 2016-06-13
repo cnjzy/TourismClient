@@ -49,6 +49,12 @@ public class SearchActivity extends BaseActivity implements PullToRefreshView.On
      */
     private String keyword = "";
 
+    /**
+     * 1活动
+     * 2攻略
+     */
+    private String currentType = "trip";
+
     @Override
     public void initLayout() {
         setContentView(R.layout.activity_search);
@@ -113,6 +119,22 @@ public class SearchActivity extends BaseActivity implements PullToRefreshView.On
             case R.id.navigation_right_btn:
                 goBack();
                 break;
+            case R.id.tab_left_rb:
+                if (!TextUtils.isEmpty(keyword)) {
+                    currentType = "trip";
+                    adapter.clear();
+                    page = 1;
+                    requestEventList(true);
+                }
+                break;
+            case R.id.tab_right_rb:
+                if (!TextUtils.isEmpty(keyword)) {
+                    currentType = "activity";
+                    adapter.clear();
+                    page = 1;
+                    requestEventList(true);
+                }
+                break;
         }
     }
 
@@ -134,6 +156,7 @@ public class SearchActivity extends BaseActivity implements PullToRefreshView.On
         List<RequestParameter> parameter = new ArrayList<RequestParameter>();
         parameter.add(new RequestParameter("page", page));
         parameter.add(new RequestParameter("keyword", keyword));
+        parameter.add(new RequestParameter("type", currentType));
         startHttpRequest(Constants.HTTP_GET, Constants.URL_SEARCH_, parameter, isLoading, GET_EVENT_LIST_KEY);
     }
 
@@ -141,7 +164,6 @@ public class SearchActivity extends BaseActivity implements PullToRefreshView.On
     public void onCallbackFromThread(String resultJson, int resultCode) {
         // TODO Auto-generated method stub
         super.onCallbackFromThread(resultJson, resultCode);
-        System.out.println("resultJson:" + resultJson);
         try {
             switch (resultCode) {
                 case GET_EVENT_LIST_KEY:

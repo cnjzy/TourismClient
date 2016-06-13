@@ -17,13 +17,13 @@
     	android:src="@drawable/img_default_horizon"
     />
 
-    <RelativeLayout 
+    <RelativeLayout
         android:id="@+id/guides_replay_ll"
     	android:layout_width="fill_parent"
     	android:layout_alignParentBottom="true"
     	android:layout_height="45dp"
     >
-        <Button 
+        <Button
         	android:id="@+id/guides_add_reply_btn"
         	android:background="@color/transparent"
         	android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
         	android:textColor="@color/text_white"
         	android:textSize="@dimen/sp_14"
         />
-        
+
         <TextView
         	android:id="@+id/guides_reply_tv"
         	android:layout_width="fill_parent"
@@ -50,6 +50,5 @@
         	android:visibility="invisible"
         />
     </RelativeLayout>
-    
-    <include layout="@layout/view_guides_add_reply"/>
+
 </RelativeLayout>

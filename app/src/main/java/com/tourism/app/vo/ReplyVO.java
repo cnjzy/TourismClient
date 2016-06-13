@@ -8,7 +8,7 @@ public class ReplyVO extends BaseVO {
     private String id;
     private String content;
     private String pubdate;
-    private String user_id;
+    private int user_id;
     private String user_avatar;
     private String user_nickname;
     private int user_sex;
@@ -38,11 +38,11 @@ public class ReplyVO extends BaseVO {
         this.pubdate = pubdate;
     }
 
-    public String getUser_id() {
+    public int getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(String user_id) {
+    public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
 

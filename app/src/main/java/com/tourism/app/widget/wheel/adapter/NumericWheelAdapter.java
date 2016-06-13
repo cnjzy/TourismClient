@@ -34,8 +34,8 @@ public class NumericWheelAdapter extends AbstractWheelTextAdapter {
     private int maxValue;
     
     // format
-    private String format;
-    
+    public String format;
+
     /**
      * Constructor
      * @param context the current context
@@ -73,7 +73,7 @@ public class NumericWheelAdapter extends AbstractWheelTextAdapter {
     public CharSequence getItemText(int index) {
         if (index >= 0 && index < getItemsCount()) {
             int value = minValue + index;
-            return format != null ? String.format(format, value) : Integer.toString(value);
+            return Integer.toString(value) + format;
         }
         return null;
     }

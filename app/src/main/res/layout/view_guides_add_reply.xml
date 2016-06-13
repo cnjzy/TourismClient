@@ -2,15 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/transparent_gray2"
-    android:gravity="bottom"
-    android:visibility="gone"
+	android:background="@color/transparent_gray"
     android:id="@+id/reply_ll"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+	android:gravity="bottom">
 
     <LinearLayout
         android:id="@+id/reply_bottom_ll"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/text_white"
         android:orientation="vertical" >

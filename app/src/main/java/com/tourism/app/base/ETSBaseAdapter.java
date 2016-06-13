@@ -125,6 +125,16 @@ public abstract class ETSBaseAdapter extends BaseAdapter {
 		notifyDataSetChanged();
 	}
 
+	public void addFirst(final Object o) {
+		isLoadingData = false;
+		isLoading = false;
+		dismissLoadingDialog();
+		if (o != null) {
+			getDataList().add(0, o);
+		}
+		notifyDataSetChanged();
+	}
+
 	public void addItem(Object o) {
 		isLoadingData = false;
 		isLoading = false;

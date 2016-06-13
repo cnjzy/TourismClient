@@ -1,11 +1,13 @@
 package com.tourism.app.activity.poolfriend;
 
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -22,6 +24,7 @@ import com.tourism.app.base.BaseActivity;
 import com.tourism.app.common.Constants;
 import com.tourism.app.net.utils.RequestParameter;
 import com.tourism.app.procotol.BaseResponseMessage;
+import com.tourism.app.util.ShareUtils;
 import com.tourism.app.vo.StrategyVO;
 import com.tourism.app.widget.imageloader.CircleBitmapDisplayer;
 
@@ -36,7 +39,10 @@ public class StrategyInfoActivity extends BaseActivity {
     private final int REQUEST_SIGNED_UP_KEY = 10002;
     private final int REQUEST_MAKE_KEY = 10003;
     private final int REQUEST_PHOTOLIKE_KEY = 10004;
+    private final int REQUEST_COLLECTION = 10005;
 
+
+    private ImageButton navigation_collection_btn;
     /**
      * 基层View
      */
@@ -145,6 +151,7 @@ public class StrategyInfoActivity extends BaseActivity {
         event_strategy_left_bar_ll = getLayoutInflater().inflate(R.layout.view_event_strategy_left_bar, null);
         left_bar_listView = (ListView) event_strategy_left_bar_ll.findViewById(R.id.left_bar_listView);
 
+        navigation_collection_btn = (ImageButton) headerView.findViewById(R.id.navigation_collection_btn);
         event_banner_iv = (ImageView) headerView.findViewById(R.id.event_banner_iv);
         user_icon_iv = (ImageView) headerView.findViewById(R.id.user_icon_iv);
         user_name_tv = (TextView) headerView.findViewById(R.id.user_name_tv);
@@ -162,6 +169,18 @@ public class StrategyInfoActivity extends BaseActivity {
                 } else {
                     StrategyVO vo = (StrategyVO) left_bar_listView.getItemAtPosition(position);
                     listView.smoothScrollToPositionFromTop(vo.getIndex() + 1, 0);
+                }
+            }
+        });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                StrategyVO vo = (StrategyVO) listView.getItemAtPosition(position);
+                if(vo != null){
+                    Bundle data = new Bundle();
+                    data.putSerializable("vo", vo);
+                    showActivity(context, CategoryImageActivity.class, data);
                 }
             }
         });
@@ -195,6 +214,12 @@ public class StrategyInfoActivity extends BaseActivity {
         ImageLoader.getInstance().displayImage(strategyVO.getUser_avatar(), user_icon_iv, circleOptions, animateFirstListener);
         user_name_tv.setText(strategyVO.getUser_nickname());
         user_notepad_tv.setText(strategyVO.getStart_date() + "/" + strategyVO.getDays_count() + "天/" + strategyVO.getPhotos_count() + "图");
+
+        if (strategyVO.getCurrent_user_favorite() == 1){
+            navigation_collection_btn.setImageResource(R.drawable.icon_xh_e);
+        }else{
+            navigation_collection_btn.setImageResource(R.drawable.icon_xh_d);
+        }
     }
 
     @Override
@@ -218,6 +243,18 @@ public class StrategyInfoActivity extends BaseActivity {
                 }
                 ReplyActivity.show(context, strategyVO.getId() + "", "trip");
                 break;
+            case R.id.navigation_collection_btn:
+                requestCollection(eventVO.getCurrent_user_favorite() == 1 ? "off" : "on");
+                eventVO.setCurrent_user_favorite(eventVO.getCurrent_user_favorite() == 1 ? 0 : 1);
+                if (eventVO.getCurrent_user_favorite() == 1){
+                    navigation_collection_btn.setImageResource(R.drawable.icon_xh_e);
+                }else{
+                    navigation_collection_btn.setImageResource(R.drawable.icon_xh_d);
+                }
+                break;
+            case R.id.navigation_share_btn:
+                ShareUtils.getInstance().share(context, eventVO.getName());
+                break;
         }
     }
 
@@ -226,6 +263,8 @@ public class StrategyInfoActivity extends BaseActivity {
      */
     public void requestEventInfo(String url) {
         List<RequestParameter> parameter = new ArrayList<RequestParameter>();
+        if (getUserInfo() != null)
+            parameter.add(new RequestParameter("token", getUserInfo().getToken()));
         startHttpRequest(Constants.HTTP_GET, url, parameter, true,
                 GET_EVENT_INFO_KEY);
     }
@@ -244,6 +283,23 @@ public class StrategyInfoActivity extends BaseActivity {
         parameter.add(new RequestParameter("action", action));
         startHttpRequest(Constants.HTTP_POST, Constants.URL_LIKE_PHOTO, parameter, false,
                 REQUEST_PHOTOLIKE_KEY);
+    }
+
+    /**
+     * 收藏活动
+     */
+    public void requestCollection(String action) {
+        if (isUserEmpty()){
+            showActivity(context, UserLoginActivity.class);
+            return;
+        }
+        List<RequestParameter> parameter = new ArrayList<RequestParameter>();
+        parameter.add(new RequestParameter("token", getUserInfo().getToken()));
+        parameter.add(new RequestParameter("aid", eventVO.getId()));
+        parameter.add(new RequestParameter("action", action));
+        parameter.add(new RequestParameter("type", "trip"));
+        startHttpRequest(Constants.HTTP_POST, Constants.URL_COLLECTION, parameter, true,
+                REQUEST_COLLECTION);
     }
 
     @Override

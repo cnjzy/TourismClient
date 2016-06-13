@@ -1,6 +1,8 @@
 package com.tourism.app.activity.guides;
 
 import android.text.TextUtils;
+import android.view.KeyEvent;
+import android.view.View;
 
 import com.mobeta.android.dslv.DragSortController;
 import com.mobeta.android.dslv.DragSortListView;
@@ -121,8 +123,7 @@ public class GuidesLocationSortActivity extends BaseActivity {
         }
     }
 
-    @Override
-    public void finish() {
+    private void setData(){
         locationList = adapter.getDataList();
         // 设置排序
         int parent_id = 0;
@@ -135,11 +136,14 @@ public class GuidesLocationSortActivity extends BaseActivity {
                 locationList.get(i).setParent_id(parent_id);
                 locationList.get(i).setRank(rank);
                 guidesLocationDao.update(locationList.get(i));
+                rank++;
             }
         }
-
-        super.finish();
+        setResult(RESULT_OK);
+        finish();
     }
+
+
 
     public DragSortController getController() {
         return mController;
@@ -159,5 +163,23 @@ public class GuidesLocationSortActivity extends BaseActivity {
         controller.setDragInitMode(DragSortController.ON_DOWN);
 //        controller.setRemoveMode(removeMode);
         return controller;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.navigation_left_btn:
+                setData();
+                break;
+        }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+            setData();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

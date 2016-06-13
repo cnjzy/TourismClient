@@ -206,6 +206,8 @@ public class GuidesGalleryImageActivity extends BaseActivity{
 			// 更新游记对象
 			guidesDao.update(guidesVO);
 
+			guidesVO = guidesDao.getById(guidesVO.getLocal_id());
+
 			// 处理结束，退出
 			mHandler.post(new Runnable() {
 				@Override

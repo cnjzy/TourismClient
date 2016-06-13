@@ -122,6 +122,8 @@ public class PhotoManager {
     public void showGetPhotoDialog(final Activity act, final String fileName) {
         View view = act.getLayoutInflater().inflate(R.layout.select_pic_layout, null);
         final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet2);
+        final int cFullFillWidth = 10000;
+        view.setMinimumWidth(cFullFillWidth);
 
         Button takePhotoBtn = (Button) view.findViewById(R.id.btn_take_photo);
         Button pickPhotoBtn = (Button) view.findViewById(R.id.btn_pick_photo);

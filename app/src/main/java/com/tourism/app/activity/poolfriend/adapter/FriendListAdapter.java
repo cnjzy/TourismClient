@@ -64,7 +64,10 @@ public class FriendListAdapter extends ETSBaseAdapter {
 		View item_right_layout = ViewHolderUtil.get(convertView, R.id.item_right_layout);
 		TextView item_right_name_tv = ViewHolderUtil.get(convertView, R.id.item_right_name_tv);
 		ImageView item_right_icon_iv = ViewHolderUtil.get(convertView, R.id.item_right_icon_iv);
-		
+
+		item_left_name_tv.setVisibility(View.GONE);
+		item_right_name_tv.setVisibility(View.GONE);
+
 		final CategoryVO.Category vo1 = (CategoryVO.Category) getItem(position*2);
 		if(vo1 != null){
 			item_left_layout.setVisibility(View.VISIBLE);
@@ -72,9 +75,17 @@ public class FriendListAdapter extends ETSBaseAdapter {
 			ImageLoader.getInstance().displayImage(vo1.getLitpic(), item_left_icon_iv, options, animateFirstListener);
 			item_left_layout.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
-					Bundle data = new Bundle();
-					data.putSerializable("vo", vo1);
-					BaseActivity.showActivity(context, CategoryListActivity.class, data);
+					if (vo1.getName().equals("斯巴鲁专区")){
+						NewsVO newsVO = new NewsVO();
+						newsVO.setLink("http://api.yxj.76iw.com/v1/brand/details?id=5");
+						Bundle data = new Bundle();
+						data.putSerializable("vo", newsVO);
+						BaseActivity.showActivity(context, BrandInfoActivity.class, data);
+					}else{
+						Bundle data = new Bundle();
+						data.putSerializable("vo", vo1);
+						BaseActivity.showActivity(context, CategoryListActivity.class, data);
+					}
 				}
 			});
 		}else{
@@ -89,9 +100,17 @@ public class FriendListAdapter extends ETSBaseAdapter {
 			ImageLoader.getInstance().displayImage(vo2.getLitpic(), item_right_icon_iv, options, animateFirstListener);
 			item_right_layout.setOnClickListener(new View.OnClickListener() {
 				public void onClick(View v) {
-					Bundle data = new Bundle();
-					data.putSerializable("vo", vo2);
-					BaseActivity.showActivity(context, CategoryListActivity.class, data);
+					if (vo2.getName().equals("斯巴鲁专区")){
+						NewsVO newsVO = new NewsVO();
+						newsVO.setLink("http://api.yxj.76iw.com/v1/brand/details?id=5");
+						Bundle data = new Bundle();
+						data.putSerializable("vo", newsVO);
+						BaseActivity.showActivity(context, BrandInfoActivity.class, data);
+					}else {
+						Bundle data = new Bundle();
+						data.putSerializable("vo", vo2);
+						BaseActivity.showActivity(context, CategoryListActivity.class, data);
+					}
 				}
 			});
 		}else{

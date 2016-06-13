@@ -31,11 +31,10 @@
             android:id="@+id/navigation_share_btn"
             android:layout_width="@dimen/navigation_height"
             android:layout_height="@dimen/navigation_height"
-            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/navigation_collection_btn"
             android:background="@color/transparent"
             android:onClick="onClick"
-            android:src="@drawable/icon_share"
-            android:visibility="invisible" />
+            android:src="@drawable/icon_share" />
 
         <ImageButton
             android:id="@+id/navigation_reply_btn"
@@ -44,7 +43,7 @@
             android:layout_alignParentRight="true"
             android:background="@color/transparent"
             android:onClick="onClick"
-            android:src="@drawable/icon_reply"/>
+            android:src="@drawable/icon_reply" />
 
         <ImageButton
             android:id="@+id/navigation_collection_btn"
@@ -53,8 +52,7 @@
             android:layout_toLeftOf="@+id/navigation_reply_btn"
             android:background="@color/transparent"
             android:onClick="onClick"
-            android:src="@drawable/icon_sc_d"
-            android:visibility="invisible"/>
+            android:src="@drawable/icon_collection" />
 
         <ImageButton
             android:id="@+id/navigation_down_btn"

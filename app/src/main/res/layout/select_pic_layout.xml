@@ -2,58 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/transparent_gray"
-    android:gravity="bottom" >
+    android:orientation="vertical"
+    android:padding="@dimen/global_padding_little">
+
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/global_padding_little" >
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_white_round"
-            android:orientation="vertical" >
-
-            <Button
-                android:id="@+id/btn_take_photo"
-                android:layout_width="fill_parent"
-                android:layout_height="@dimen/dialog_list_item_height"
-                android:background="@drawable/btn_tran_selector"
-                android:gravity="center"
-                android:text="牌照"
-                android:textColor="@color/text_blue"
-                android:textSize="@dimen/dialog_list_item_text_size" />
-
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="@dimen/global_line_size"
-                android:background="@color/line_color" />
-
-            <Button
-                android:id="@+id/btn_pick_photo"
-                android:layout_width="fill_parent"
-                android:layout_height="@dimen/dialog_list_item_height"
-                android:background="@drawable/btn_tran_selector"
-                android:gravity="center"
-                android:text="选择照片"
-                android:textColor="@color/text_blue"
-                android:textSize="@dimen/dialog_list_item_text_size" />
-
-        </LinearLayout>
+        android:background="@drawable/bg_white_round"
+        android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_cancel"
+            android:id="@+id/btn_take_photo"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/dialog_list_item_height"
-            android:background="@drawable/bg_white_round"
-            android:layout_marginTop="@dimen/global_padding_mid"
+            android:background="@drawable/btn_tran_selector"
             android:gravity="center"
-            android:text="取消"
+            android:text="拍照"
             android:textColor="@color/text_blue"
             android:textSize="@dimen/dialog_list_item_text_size" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/global_line_size"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/btn_pick_photo"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dialog_list_item_height"
+            android:background="@drawable/btn_tran_selector"
+            android:gravity="center"
+            android:text="选择照片"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/dialog_list_item_text_size" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dialog_list_item_height"
+        android:layout_marginTop="@dimen/global_padding_mid"
+        android:background="@drawable/bg_white_round"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/dialog_list_item_text_size" />
 
 </LinearLayout>

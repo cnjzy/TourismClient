@@ -44,4 +44,9 @@ dependencies {
     compile files('libs/baidumapapi_base_v3_7_3.jar')
     compile files('libs/baidumapapi_map_v3_7_3.jar')
     compile files('libs/dragsortlistviewlibrary.jar')
+    compile files('libs/umeng_social_sdk.jar')
+    compile files('libs/umeng-analytics-v5.6.4.jar')
+    compile files('libs/pushservice-5.0.0.66.jar')
+    compile 'com.android.support:recyclerview-v7:22.2.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
 }

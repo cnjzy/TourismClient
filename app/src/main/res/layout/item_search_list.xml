@@ -18,7 +18,7 @@
             android:layout_width="fill_parent"
             android:layout_height="@dimen/search_item_bg_height"
             android:layout_marginLeft="@dimen/global_padding_little"
-            android:scaleType="fitXY" />
+            android:scaleType="centerCrop" />
 
         <ImageView
             android:id="@+id/item_new_iv"

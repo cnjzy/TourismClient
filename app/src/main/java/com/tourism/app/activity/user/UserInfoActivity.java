@@ -95,6 +95,7 @@ public class UserInfoActivity extends BaseActivity{
 
 	@Override
 	public void initValue() {
+		setNavigationTitle("设置个人资料");
 		requestUserInfo();
 	}
 	

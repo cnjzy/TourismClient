@@ -1,9 +1,5 @@
 package com.tourism.app.activity.user;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.view.View;
@@ -12,9 +8,7 @@ import android.widget.RadioButton;
 
 import com.google.gson.reflect.TypeToken;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
-import com.tencent.connect.UserInfo;
 import com.tourism.app.R;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.common.Constants;
@@ -23,6 +17,9 @@ import com.tourism.app.procotol.BaseResponseMessage;
 import com.tourism.app.util.PhotoManager;
 import com.tourism.app.vo.FileVO;
 import com.tourism.app.vo.UserInfoVO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserIdEditActivity extends BaseActivity {
 
@@ -88,8 +85,7 @@ public class UserIdEditActivity extends BaseActivity {
 
 	@Override
 	public void initValue() {
-		// TODO Auto-generated method stub
-
+		setNavigationTitle("实名认证");
 	}
 
 	@Override

@@ -40,10 +40,10 @@ public class StrategyVO extends BaseVO{
     private String type;
     private String description;
     private StrategyVO photo;
-    private int width;
-    private int height;
+    private String width;
+    private String height;
     private String size;
-    private int like_count;
+    private String like_count = "0";
     private String url;
 
     private boolean isDate = false;
@@ -260,19 +260,19 @@ public class StrategyVO extends BaseVO{
         this.photo = photo;
     }
 
-    public int getWidth() {
+    public String getWidth() {
         return width;
     }
 
-    public void setWidth(int width) {
+    public void setWidth(String width) {
         this.width = width;
     }
 
-    public int getHeight() {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
@@ -284,11 +284,11 @@ public class StrategyVO extends BaseVO{
         this.size = size;
     }
 
-    public int getLike_count() {
+    public String getLike_count() {
         return like_count;
     }
 
-    public void setLike_count(int like_count) {
+    public void setLike_count(String like_count) {
         this.like_count = like_count;
     }
 

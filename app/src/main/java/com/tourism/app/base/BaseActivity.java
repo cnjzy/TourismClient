@@ -37,6 +37,7 @@ import com.tourism.app.util.preference.Preferences;
 import com.tourism.app.util.preference.PreferencesUtils;
 import com.tourism.app.vo.UserInfoVO;
 import com.tourism.app.widget.dialog.CustomLoadingDialog;
+import com.umeng.analytics.MobclickAgent;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -195,6 +196,7 @@ public abstract class BaseActivity extends FragmentActivity implements ThreadCal
     
     public void onResume() {
         super.onResume();
+        MobclickAgent.onResume(this);
     }
 
     /*
@@ -209,6 +211,7 @@ public abstract class BaseActivity extends FragmentActivity implements ThreadCal
             DeviceUtil.hideIMM(context, getCurrentFocus());
         }
         super.onPause();
+        MobclickAgent.onPause(this);
     }
 
     /*

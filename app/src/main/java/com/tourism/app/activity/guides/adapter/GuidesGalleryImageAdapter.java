@@ -40,7 +40,7 @@ public class GuidesGalleryImageAdapter extends ETSBaseAdapter {
         final ImageFolder vo = (ImageFolder) getItem(position);
 
         if(vo != null){
-            LoadLocalImageUtil.getInstance().displayFromSDCard(vo.getPath(), item_icon_iv, null);
+            LoadLocalImageUtil.getInstance().displayFromSDCard(vo.getPath(), item_icon_iv, options);
             if(vo.isSelected()){
                 item_mask_iv.setVisibility(View.VISIBLE);
                 item_selected_iv.setVisibility(View.VISIBLE);

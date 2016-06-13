@@ -173,5 +173,4 @@
             android:background="@color/line_color" />
     </LinearLayout>
 
-    <include layout="@layout/view_guides_add_reply" />
 </RelativeLayout>

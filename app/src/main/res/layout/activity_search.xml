@@ -24,7 +24,7 @@
             android:drawableLeft="@drawable/ico_cz"
             android:drawablePadding="@dimen/global_padding_little"
             android:gravity="center|left"
-            android:hint="搜索攻略"
+            android:hint="搜索攻略或游记"
             android:paddingLeft="@dimen/global_padding_small"
             android:singleLine="true"
             android:textColor="@color/text_black"
@@ -40,6 +40,37 @@
             android:textColor="@color/text_white"
             android:textSize="@dimen/sp_15" />
     </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/global_padding_small" >
+
+        <RadioButton
+            android:id="@+id/tab_left_rb"
+            style="@style/navigation_radio_button_style"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/event_tab_bg_color"
+            android:checked="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="攻略"
+            android:textColor="@color/event_tab_text_color" />
+
+        <RadioButton
+            android:id="@+id/tab_right_rb"
+            style="@style/navigation_radio_button_style"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/event_tab_bg_color"
+            android:onClick="onClick"
+            android:text="活动"
+            android:textColor="@color/event_tab_text_color" />
+    </RadioGroup>
 
     <com.tourism.app.widget.view.PullToRefreshView
         android:id="@+id/pull_refresh_view"

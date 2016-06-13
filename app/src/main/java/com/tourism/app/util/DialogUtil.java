@@ -33,8 +33,11 @@ import android.widget.TextView;
 
 import com.tourism.app.MyApp;
 import com.tourism.app.R;
+import com.tourism.app.activity.guides.adapter.DialogGuidesLocationListAdapter;
 import com.tourism.app.base.BaseActivity;
-import com.tourism.app.widget.view.CustomRoundProgress;
+import com.tourism.app.db.dao.GuidesNotedDao;
+import com.tourism.app.vo.GuidesLocationVO;
+import com.tourism.app.vo.GuidesNotedVO;
 import com.tourism.app.widget.wheel.OnWheelChangedListener;
 import com.tourism.app.widget.wheel.WheelView;
 import com.tourism.app.widget.wheel.adapter.ArrayWheelAdapter;
@@ -81,7 +84,9 @@ public class DialogUtil {
 	 */
 	public static void showTipDialog(final BaseActivity act, String title, String content, final OnCallbackListener onCallbackListener) {
 		View view = act.getLayoutInflater().inflate(R.layout.dialog_tip, null);
-		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+		final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
 
 		final TextView dialog_title_tv = (TextView) view.findViewById(R.id.dialog_title_tv);
 		final TextView dialog_content_tv = (TextView) view.findViewById(R.id.dialog_content_tv);
@@ -104,7 +109,7 @@ public class DialogUtil {
 		});
 
 		// set a large value put it in bottom
-		setDilaogBottomStyle(dialog);
+		setDilaogCenterStyle(dialog);
 		dialog.setContentView(view);
 
 		dialog.show();
@@ -116,7 +121,10 @@ public class DialogUtil {
 	public static void showCategoryMakeDialog(final BaseActivity act, final OnCallbackListener onCallbackListener) {
 		View view = act.getLayoutInflater().inflate(R.layout.dialog_category_make, null);
 		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
 
+		View body_view = view.findViewById(R.id.body_view);
 		ImageButton close_btn = (ImageButton) view.findViewById(R.id.close_btn);
 		final EditText user_name_et = (EditText) view.findViewById(R.id.user_name_et);
 		final EditText user_phone_et = (EditText) view.findViewById(R.id.user_phone_et);
@@ -155,6 +163,8 @@ public class DialogUtil {
 		setDilaogBottomStyle(dialog);
 		dialog.setContentView(view);
 
+		ViewUtil.controlKeyboardLayout(view, body_view);
+
 		dialog.show();
 	}
 
@@ -164,7 +174,10 @@ public class DialogUtil {
 	public static void showCategorySignedUpDialog(final BaseActivity act, String price, String amount, final OnCallbackListener onCallbackListener) {
 		View view = act.getLayoutInflater().inflate(R.layout.dialog_category_signed_up, null);
 		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
 
+		View body_view = view.findViewById(R.id.body_view);
 		ImageButton close_btn = (ImageButton) view.findViewById(R.id.close_btn);
 		final EditText user_name_et = (EditText) view.findViewById(R.id.user_name_et);
 		final EditText user_phone_et = (EditText) view.findViewById(R.id.user_phone_et);
@@ -208,6 +221,8 @@ public class DialogUtil {
 		setDilaogBottomStyle(dialog);
 		dialog.setContentView(view);
 
+		ViewUtil.controlKeyboardLayout(view, body_view);
+
 		dialog.show();
 	}
 
@@ -216,7 +231,9 @@ public class DialogUtil {
 	 */
 	public static void showGuidesListDialog(final Activity act, final OnCallbackListener onCallbackListener) {
 		View view = act.getLayoutInflater().inflate(R.layout.dialog_guides_list, null);
-		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+		final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
 
 		Button btn1 = (Button) view.findViewById(R.id.btn1);
 		Button btn2 = (Button) view.findViewById(R.id.btn2);
@@ -274,7 +291,9 @@ public class DialogUtil {
 	 */
 	public static void showGuidesReplyDialog(final BaseActivity act, Handler handler, final OnCallbackListener onCallbackListener) {
 		View view = act.getLayoutInflater().inflate(R.layout.view_guides_add_reply, null);
-		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+		final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
 
 		final EditText guides_reply_et = (EditText) view.findViewById(R.id.guides_reply_et);
 		TextView guides_reply_count_tv = (TextView) view.findViewById(R.id.guides_reply_count_tv);
@@ -282,7 +301,6 @@ public class DialogUtil {
 		guides_reply_et.setOnKeyListener(new OnKeyListener() {
 			public boolean onKey(View v, int keyCode, KeyEvent event) {
 				if (keyCode == KeyEvent.KEYCODE_ENTER) {
-					System.err.println("11111111");
 					dialog.cancel();
 				}
 				return false;
@@ -308,7 +326,9 @@ public class DialogUtil {
 	 */
 	public static void showGuidesCameraDialog(final BaseActivity act, final OnCallbackListener onCallbackListener) {
 		View view = act.getLayoutInflater().inflate(R.layout.select_pic_layout, null);
-		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+		final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
 
 		Button btn_take_photo = (Button) view.findViewById(R.id.btn_take_photo);
         Button btn_pick_photo = (Button) view.findViewById(R.id.btn_pick_photo);
@@ -353,7 +373,9 @@ public class DialogUtil {
 	 */
 	public static void showUserMoreDialog(final Activity act, final OnCallbackListener onCallbackListener) {
 		View view = act.getLayoutInflater().inflate(R.layout.dialog_user_more, null);
-		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+		final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
 
 		Button btn1 = (Button) view.findViewById(R.id.btn1);
 		Button btn5 = (Button) view.findViewById(R.id.btn5);
@@ -385,10 +407,12 @@ public class DialogUtil {
 	 */
 	public static void showGuidesNotedDialog(final Activity act, final OnCallbackListener onCallbackListener) {
 		View view = act.getLayoutInflater().inflate(R.layout.dialog_guides_noted_action, null);
-		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+		final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
 
 		Button btn1 = (Button) view.findViewById(R.id.btn1);
-		Button btn2 = (Button) view.findViewById(R.id.btn1);
+		Button btn2 = (Button) view.findViewById(R.id.btn2);
 		Button btn5 = (Button) view.findViewById(R.id.btn5);
 
 		btn1.setOnClickListener(new View.OnClickListener() {
@@ -425,14 +449,76 @@ public class DialogUtil {
 	/**
 	 * 游记文本操作Dialog
 	 */
-	public static void showReplyDialog(final BaseActivity act, final OnCallbackListener onCallbackListener) {
+	public static void showGuidesImageDialog(final Activity act, final OnCallbackListener onCallbackListener) {
+		View view = act.getLayoutInflater().inflate(R.layout.dialog_guides_image_action, null);
+		final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
+
+		Button btn2 = (Button) view.findViewById(R.id.btn2);
+		Button btn3 = (Button) view.findViewById(R.id.btn3);
+		Button btn4 = (Button) view.findViewById(R.id.btn4);
+		Button btn5 = (Button) view.findViewById(R.id.btn5);
+
+		btn2.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+				if (onCallbackListener != null) {
+					onCallbackListener.onClick(0, null);
+				}
+			}
+		});
+		btn3.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+				if (onCallbackListener != null) {
+					onCallbackListener.onClick(1, null);
+				}
+			}
+		});
+
+		btn4.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+				if (onCallbackListener != null) {
+					onCallbackListener.onClick(2, null);
+				}
+			}
+		});
+
+		btn5.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+			}
+		});
+
+		// set a large value put it in bottom
+		setDilaogBottomStyle(dialog);
+		dialog.setContentView(view);
+
+		dialog.show();
+	}
+
+	/**
+	 * 游记文本操作Dialog
+	 */
+	public static void showReplyDialog(final BaseActivity act, final OnCallbackListener onCallbackListener){
+		showReplyDialog(act, onCallbackListener, "");
+	}
+	public static void showReplyDialog(final BaseActivity act, final OnCallbackListener onCallbackListener, String hint) {
 		View view = act.getLayoutInflater().inflate(R.layout.view_guides_add_reply, null);
 		view.setVisibility(View.VISIBLE);
 		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
 
 		View reply_bottom_ll = view.findViewById(R.id.reply_bottom_ll);
 		final EditText guides_reply_et = (EditText) view.findViewById(R.id.guides_reply_et);
 		final TextView guides_reply_count_tv = (TextView) view.findViewById(R.id.guides_reply_count_tv);
+
+		if(!TextUtils.isEmpty(hint)){
+			guides_reply_et.setHint(hint);
+		}
 
 		view.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
@@ -466,7 +552,7 @@ public class DialogUtil {
 						dialog.cancel();
 						return true;
 					} else {
-						MyApp.showToast("评论内容不能为空");
+						MyApp.showToast("内容不能为空");
 					}
 				}
 				return false;
@@ -484,20 +570,173 @@ public class DialogUtil {
 	}
 
 	/**
-	 * 游记文本操作Dialog
+	 * 游记图片、文本编辑操作Dialog
 	 */
-	public static void showCustomProgressDialog(final BaseActivity act, final OnCallbackListener onCallbackListener, Handler handler) {
-		View view = act.getLayoutInflater().inflate(R.layout.dialog_image_sync, null);
+	public static void showGuidesImageOrNotedEditDialog(final BaseActivity act, String type, final OnCallbackListener onCallbackListener) {
+		View view = act.getLayoutInflater().inflate(R.layout.dialog_guides_edit_action, null);
 		view.setVisibility(View.VISIBLE);
-		final Dialog dialog = new Dialog(act, R.style.custom_dialog);
+		final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
 
-		CustomRoundProgress sync_progress_rg = (CustomRoundProgress) view.findViewById(R.id.sync_progress_rg);
+		Button btn1 = (Button) view.findViewById(R.id.btn1);
+		Button btn2 = (Button) view.findViewById(R.id.btn2);
+		Button btn5 = (Button) view.findViewById(R.id.btn5);
 
+		if (type.equals("pic")){
+			btn1.setText("编辑图片");
+		}else{
+			btn1.setText("编辑日记");
+		}
 
+		btn1.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				if (onCallbackListener != null)
+					onCallbackListener.onClick(0, null);
+				dialog.cancel();
+			}
+		});
+		btn2.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				if (onCallbackListener != null)
+					onCallbackListener.onClick(1, null);
+				dialog.cancel();
+			}
+		});
+		btn5.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+			}
+		});
 
 		// set a large value put it in bottom
-//		setDilaogBottomStyle(dialog);
+		setDilaogBottomStyle(dialog);
 		dialog.setContentView(view);
+
+		dialog.show();
+	}
+
+	/**
+	 * 删除游记地点dialog
+	 */
+	public static void showGuidesRemoveLocationDialog(final BaseActivity act, final OnCallbackListener onCallbackListener) {
+		View view = act.getLayoutInflater().inflate(R.layout.dialog_guides_remove_location, null);
+		view.setVisibility(View.VISIBLE);
+		final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
+
+		Button btn4 = (Button) view.findViewById(R.id.btn4);
+		Button btn5 = (Button) view.findViewById(R.id.btn5);
+
+
+		btn4.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				if (onCallbackListener != null)
+					onCallbackListener.onClick(0, null);
+				dialog.cancel();
+			}
+		});
+		btn5.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				dialog.cancel();
+			}
+		});
+
+		// set a large value put it in bottom
+		setDilaogBottomStyle(dialog);
+		dialog.setContentView(view);
+
+		dialog.show();
+	}
+
+	/**
+	 * 同步游记dialog
+	 */
+	public static void showGuidesSyncDialog(final BaseActivity act, final OnCallbackListener onCallbackListener) {
+		View view = act.getLayoutInflater().inflate(R.layout.dialog_guides_sync_list, null);
+		view.setVisibility(View.VISIBLE);
+		final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet);
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
+
+		Button btn1 = (Button) view.findViewById(R.id.btn1);
+		Button btn2 = (Button) view.findViewById(R.id.btn2);
+		Button btn5 = (Button) view.findViewById(R.id.btn5);
+
+
+		btn1.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				if (onCallbackListener != null)
+					onCallbackListener.onClick(0, null);
+				dialog.cancel();
+			}
+		});
+
+		btn2.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				if (onCallbackListener != null)
+					onCallbackListener.onClick(1, null);
+				dialog.cancel();
+			}
+		});
+
+		btn5.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				if (onCallbackListener != null)
+					onCallbackListener.onClick(-1, null);
+				dialog.cancel();
+			}
+		});
+
+		// set a large value put it in bottom
+		Window w = dialog.getWindow();
+		WindowManager.LayoutParams lp = w.getAttributes();
+		lp.x = 0;
+		final int cMakeBottom = -1000;
+		lp.y = cMakeBottom;
+		lp.gravity = Gravity.BOTTOM;
+		w.setWindowAnimations(R.style.DataSheetAnimation);
+		dialog.onWindowAttributesChanged(lp);
+		dialog.setCanceledOnTouchOutside(false);
+
+		dialog.setContentView(view);
+
+		dialog.show();
+	}
+
+	/**
+	 * 游记地点列表dialog
+	 */
+	public static void showGuidesLocationListDialog(final BaseActivity act, List<GuidesLocationVO> dataList, final GuidesNotedVO notedVO, final OnCallbackListener onCallbackListener) {
+		View view = act.getLayoutInflater().inflate(R.layout.dialog_guides_location_list, null);
+		view.setVisibility(View.VISIBLE);
+		final Dialog dialog = new Dialog(act, R.style.MMTheme_DataSheet);
+
+		final int cFullFillWidth = 10000;
+		view.setMinimumWidth(cFullFillWidth);
+		dialog.setContentView(view);
+
+		final ListView listView = (ListView) view.findViewById(R.id.listView);
+
+		DialogGuidesLocationListAdapter adapter = new DialogGuidesLocationListAdapter(act, listView);
+		adapter.addLast(dataList, false);
+		listView.setAdapter(adapter);
+		listView.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				GuidesLocationVO locationVO = (GuidesLocationVO) listView.getItemAtPosition(position);
+				if (locationVO != null) {
+					GuidesNotedDao dao = new GuidesNotedDao(act);
+					dao.updateNotedByLocation(locationVO, notedVO);
+					if (onCallbackListener != null){
+						onCallbackListener.onClick(0, null);
+					}
+				}
+				dialog.cancel();
+			}
+		});
+
+		setDilaogCenterStyle(dialog);
 
 		dialog.show();
 	}
@@ -512,6 +751,13 @@ public class DialogUtil {
 		lp.gravity = Gravity.BOTTOM;
 		w.setWindowAnimations(R.style.DataSheetAnimation);
 		dialog.onWindowAttributesChanged(lp);
+		dialog.setCanceledOnTouchOutside(true);
+	}
+
+	private static void setDilaogCenterStyle(Dialog dialog) {
+		// set a large value put it in bottom
+		Window w = dialog.getWindow();
+		w.setWindowAnimations(R.style.DataSheetAnimation);
 		dialog.setCanceledOnTouchOutside(true);
 	}
 
@@ -563,7 +809,7 @@ public class DialogUtil {
 
 		// year
 		int curYear = calendar.get(Calendar.YEAR) - 1;
-		year.setViewAdapter(new DateNumericAdapter(context, 1, 3000, curYear));
+		year.setViewAdapter(new DateNumericAdapter(context, 1, 3000, curYear, "年"));
 		year.setCurrentItem(curYear);
 		year.addChangingListener(listener);
 
@@ -766,7 +1012,7 @@ public class DialogUtil {
 		calendar.set(Calendar.MONTH, month.getCurrentItem());
 
 		int maxDays = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
-		day.setViewAdapter(new DateNumericAdapter(context, 1, maxDays, calendar.get(Calendar.DAY_OF_MONTH) - 1));
+		day.setViewAdapter(new DateNumericAdapter(context, 1, maxDays, calendar.get(Calendar.DAY_OF_MONTH) - 1, "日"));
 		int curDay = Math.min(maxDays, day.getCurrentItem() + 1);
 		day.setCurrentItem(curDay - 1, true);
 	}
@@ -783,9 +1029,10 @@ public class DialogUtil {
 		/**
 		 * Constructor
 		 */
-		public DateNumericAdapter(Context context, int minValue, int maxValue, int current) {
+		public DateNumericAdapter(Context context, int minValue, int maxValue, int current, String format) {
 			super(context, minValue, maxValue);
 			this.currentValue = current;
+			this.format = format;
 			setTextSize(16);
 		}
 
@@ -793,7 +1040,7 @@ public class DialogUtil {
 		protected void configureTextView(TextView view) {
 			super.configureTextView(view);
 			if (currentItem == currentValue) {
-				view.setTextColor(0xFF0000F0);
+//				view.setTextColor(0xFF0000F0);
 			}
 			view.setTypeface(Typeface.SANS_SERIF);
 		}
@@ -827,7 +1074,7 @@ public class DialogUtil {
 		protected void configureTextView(TextView view) {
 			super.configureTextView(view);
 			if (currentItem == currentValue) {
-				view.setTextColor(0xFF0000F0);
+//				view.setTextColor(0xFF0000F0);
 			}
 			view.setTypeface(Typeface.SANS_SERIF);
 		}
@@ -842,4 +1089,5 @@ public class DialogUtil {
 	public interface OnDateSelectedListener {
 		public void onSelected(int year, int month, int day);
 	}
+
 }

@@ -73,4 +73,9 @@
 
 
     <dimen name="search_item_bg_height">140dp</dimen>
+
+
+    <!--  -->
+    <dimen name="header_height">48dp</dimen>
+    <dimen name="header_padding">16dp</dimen>
 </resources>

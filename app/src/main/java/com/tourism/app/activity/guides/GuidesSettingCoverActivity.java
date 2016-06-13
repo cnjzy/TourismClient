@@ -1,6 +1,7 @@
 package com.tourism.app.activity.guides;
 
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -51,11 +52,11 @@ public class GuidesSettingCoverActivity extends BaseActivity{
     @Override
     public void init() {
         vo = (GuidesVO) getIntent().getExtras().getSerializable("vo");
-
         guidesDao = new GuidesDao(context);
         guidesDayDao = new GuidesDayDao(context);
         guidesLocationDao = new GuidesLocationDao(context);
         guidesNotedDao = new GuidesNotedDao(context);
+        vo = guidesDao.getById(vo.getLocal_id());
     }
 
     @Override
@@ -74,14 +75,10 @@ public class GuidesSettingCoverActivity extends BaseActivity{
                 GuidesNotedVO notedVO = (GuidesNotedVO) gridView.getItemAtPosition(position);
                 if (notedVO != null){
                     LoadLocalImageUtil.getInstance().displayFromSDCard(notedVO.getPath(), guides_vover_iv, null);
-                    for (int i = 0; i < dataList.size(); i++){
-                        vo.setFront_cover_photo_id(notedVO.getLocal_id());
-                        vo.setPhotoVO(notedVO);
-
-                        guidesDao.update(vo);
-
-                        gridView.invalidateViews();
-                    }
+                    vo.setFront_cover_photo_id(notedVO.getLocal_id());
+                    vo.setPhotoVO(notedVO);
+                    guidesDao.update(vo);
+                    gridView.invalidateViews();
                 }
             }
         });
@@ -132,6 +129,25 @@ public class GuidesSettingCoverActivity extends BaseActivity{
                 dataList.addAll(guidesNotedDao.getByParams(params));
             }
         }
+    }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.navigation_left_btn:
+                finish();
+                setResult(RESULT_OK);
+                break;
+        }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+            setResult(RESULT_OK);
+            finish();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

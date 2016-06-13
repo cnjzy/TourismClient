@@ -60,16 +60,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/global_padding_small"
             android:background="@drawable/btn_sina"
-            android:onClick="onClick"
-            android:visibility="invisible" />
+            android:onClick="onClick" />
 
         <com.tourism.app.widget.view.CustomButton
             android:id="@+id/login_weixin_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_weixin"
-            android:onClick="onClick"
-            android:visibility="invisible" />
+            android:onClick="onClick" />
     </LinearLayout>
 
     <LinearLayout

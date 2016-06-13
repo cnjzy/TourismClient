@@ -20,11 +20,9 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.tourism.app.R;
-import com.tourism.app.activity.poolfriend.StrategyInfoActivity;
 import com.tourism.app.base.BaseActivity;
 import com.tourism.app.base.ETSBaseAdapter;
 import com.tourism.app.util.ViewHolderUtil;
-import com.tourism.app.util.ViewUtil;
 import com.tourism.app.vo.StrategyVO;
 import com.tourism.app.widget.imageloader.CircleBitmapDisplayer;
 
@@ -145,43 +143,43 @@ public class StrategyListAdapter extends ETSBaseAdapter {
                     item_bottom_location_name_tv.setText(vo.getLocation_name());
                 }
 
-                if (vo.getPhoto() == null) {
-                    item_like_btn.setVisibility(View.GONE);
-                } else {
-                    item_like_btn.setVisibility(View.VISIBLE);
-                    item_like_btn.setText(vo.getPhoto().getLike_count() + "");
-                    ViewUtil.setViewLeftDrawableAndTextColor(context, item_like_btn, strategyVO.getCurrent_user_favorite() == 0 ? R.drawable.icon_xh_d : R.drawable.icon_xh_e, R.color.text_black);
-
-                    item_like_btn.setOnClickListener(new View.OnClickListener() {
-                        public void onClick(View v) {
-                            if (context instanceof StrategyInfoActivity) {
-                                String action = "";
-                                if (likeMap.get(vo.getPhoto().getId()) == null) {
-                                    action = "on";
-                                    vo.getPhoto().setLike_count(vo.getPhoto().getLike_count() + 1);
-                                    likeMap.put(vo.getPhoto().getId(), vo.getPhoto().getId());
-                                    ViewUtil.setViewLeftDrawableAndTextColor(context, item_like_btn, R.drawable.icon_xh_e, R.color.text_black);
-                                } else {
-                                    action = "off";
-                                    vo.getPhoto().setLike_count(vo.getPhoto().getLike_count() - 1);
-                                    likeMap.put(vo.getPhoto().getId(), null);
-                                    ViewUtil.setViewLeftDrawableAndTextColor(context, item_like_btn, R.drawable.icon_xh_d, R.color.text_black);
-                                }
-
-                                ((StrategyInfoActivity) context).requestLikePhoto(vo.getPhoto().getId() + "", action);
-                                item_like_btn.setText(vo.getPhoto().getLike_count() + "");
-                            }
-                        }
-                    });
-                }
+//                if (vo.getPhoto() == null) {
+//                    item_like_btn.setVisibility(View.GONE);
+//                } else {
+//                    item_like_btn.setVisibility(View.VISIBLE);
+//                    item_like_btn.setText(vo.getPhoto().getLike_count() + "");
+//                    ViewUtil.setViewLeftDrawableAndTextColor(context, item_like_btn, strategyVO.getCurrent_user_favorite() == 0 ? R.drawable.icon_xh_d : R.drawable.icon_xh_e, R.color.text_black);
+//
+//                    item_like_btn.setOnClickListener(new View.OnClickListener() {
+//                        public void onClick(View v) {
+//                            if (context instanceof StrategyInfoActivity) {
+//                                String action = "";
+//                                if (likeMap.get(vo.getPhoto().getId()) == null) {
+//                                    action = "on";
+//                                    vo.getPhoto().setLike_count(vo.getPhoto().getLike_count() + 1);
+//                                    likeMap.put(vo.getPhoto().getId(), vo.getPhoto().getId());
+//                                    ViewUtil.setViewLeftDrawableAndTextColor(context, item_like_btn, R.drawable.icon_xh_e, R.color.text_black);
+//                                } else {
+//                                    action = "off";
+//                                    vo.getPhoto().setLike_count((Integer.parseInt(vo.getPhoto().getLike_count()) - 1) + "");
+//                                    likeMap.put(vo.getPhoto().getId(), null);
+//                                    ViewUtil.setViewLeftDrawableAndTextColor(context, item_like_btn, R.drawable.icon_xh_d, R.color.text_black);
+//                                }
+//
+//                                ((StrategyInfoActivity) context).requestLikePhoto(vo.getPhoto().getId() + "", action);
+//                                item_like_btn.setText(vo.getPhoto().getLike_count() + "");
+//                            }
+//                        }
+//                    });
+//                }
 
                 item_day_content_tv.setText("");
                 item_day_content_tv.setVisibility(View.GONE);
 
-                if (vo.getPhoto() != null) {
+                if (vo.getPhoto() != null && !TextUtils.isEmpty(vo.getPhoto().getWidth()) && !TextUtils.isEmpty(vo.getPhoto().getHeight())) {
                     item_icon_iv.setVisibility(View.VISIBLE);
-                    float scale = screenWidth / vo.getPhoto().getWidth();
-                    float height = vo.getPhoto().getHeight() * scale;
+                    float scale = screenWidth / Integer.parseInt(vo.getPhoto().getWidth());
+                    float height = Integer.parseInt(vo.getPhoto().getHeight()) * scale;
                     imageParams.height = (int) height;
                     item_icon_iv.setLayoutParams(imageParams);
                     ImageLoader.getInstance().displayImage(vo.getPhoto().getUrl(), item_icon_iv, options, animateFirstListener);

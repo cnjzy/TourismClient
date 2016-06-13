@@ -22,6 +22,7 @@ public class BaseDBVO extends BaseVO {
      * 0 未上传过
      * 1 正在上传
      * 2 上传成功
+     * 4 上传修改
      */
     @DatabaseField(defaultValue = "0")
     private int is_upload;

@@ -15,6 +15,7 @@ import com.tourism.app.db.dao.GuidesLocationDao;
 import com.tourism.app.db.dao.GuidesNotedDao;
 import com.tourism.app.net.utils.RequestParameter;
 import com.tourism.app.procotol.BaseResponseMessage;
+import com.tourism.app.util.DialogUtil;
 import com.tourism.app.util.LogUtil;
 import com.tourism.app.util.json.StrategyJson;
 import com.tourism.app.vo.GuidesDayVO;
@@ -108,13 +109,33 @@ public class GuidesSyncActivity extends BaseActivity {
 
         sync_progress_rg.setMaxProgress(vo.getPhotos_count());
 
-        initData();
-        if (vo.is_upload() == 0) {
-            requesSyncData();
-        } else if (vo.is_upload() == 1) {
-            if (notedList.size() > 0)
-                requesSyncImage(notedList.get(0));
-        }
+        DialogUtil.showGuidesSyncDialog(context, new DialogUtil.OnCallbackListener() {
+            public void onClick(int whichButton, Object o) {
+                switch (whichButton){
+                    case 0:
+                        initData();
+                        if (vo.is_upload() == 0) {
+                            requesSyncData();
+                        } else if (vo.is_upload() == 1) {
+                            if (notedList.size() > 0)
+                                requesSyncImage(notedList.get(0));
+                        }
+                        break;
+                    case 1:
+                        initData();
+                        if (vo.is_upload() == 0) {
+                            requesSyncData();
+                        } else if (vo.is_upload() == 1) {
+                            if (notedList.size() > 0)
+                                requesSyncImage(notedList.get(0));
+                        }
+                        break;
+                    case 2:
+                        finish();
+                        break;
+                }
+            }
+        });
     }
 
     /**
@@ -139,6 +160,15 @@ public class GuidesSyncActivity extends BaseActivity {
                 params.put(key, vo.getTrip_days().get(i).getLocations().get(j).getLocal_id());
                 vo.getTrip_days().get(i).getLocations().get(j).setNotes(guidesNotedDao.getByParams(params));
                 notedList.addAll(vo.getTrip_days().get(i).getLocations().get(j).getNotes());
+
+                // 设置排序，文字排在最上面
+                for (int m = vo.getTrip_days().get(i).getLocations().get(j).getNotes().size()-1; m >= 0; m--){
+                    if (vo.getTrip_days().get(i).getLocations().get(j).getNotes().get(m).getType().equals("txt")){
+                        GuidesNotedVO notedVO = vo.getTrip_days().get(i).getLocations().get(j).getNotes().get(m);
+                        vo.getTrip_days().get(i).getLocations().get(j).getNotes().remove(m);
+                        vo.getTrip_days().get(i).getLocations().get(j).getNotes().add(0, notedVO);
+                    }
+                }
             }
         }
 
@@ -285,6 +315,8 @@ public class GuidesSyncActivity extends BaseActivity {
                             guidesDao.update(vo);
                             sync_progress_rg.setProgress(vo.getPhotos_count());
                             sync_content_tv.setText("上传完成");
+                            setResult(RESULT_OK);
+                            finish();
                         }
                     }
                     break;

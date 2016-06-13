@@ -39,6 +39,9 @@ public class Constants {
     public static final int LOCATION_SCAN_SPAN = 30 * 1000;
     public static BDLocation location = null;
 
+    /******************************** 微信 *******************************/
+    public static String WEICHAT_CODE = "";
+
     /******************************** API ************************************/
     // 登陆
     public static final String URL_ACCOUNT_LOGIN = BASE_URL + "v1/user/login";
@@ -120,4 +123,19 @@ public class Constants {
 
     // 拼友分类列表
     public static final String URL_GUIDES_CATEGORY = BASE_URL + "v1/user/categorys";
+
+    // 添加评论
+    public static final String URL_ADD_REPLY = BASE_URL + "v1/friend/commentAdd";
+
+    // 斯巴鲁VIP认证
+    public static final String URL_SET_USER_VIP = BASE_URL + "v1/user/setUserVIP";
+
+    // 微博登录
+    public static final String URL_SINA_LOGIN = BASE_URL + "v1/user/weiboLogin";
+
+    // 微信登录
+    public static final String URL_WEICHAT_LOGIN = BASE_URL + "v1/user/wechatLogin";
+
+    // 版本信息
+    public static final String URL_VERSION = BASE_URL + "v1/index/getVersion";
 }
