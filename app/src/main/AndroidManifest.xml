@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.tourism.app"
-    android:versionCode="221"
-    android:versionName="2.2.1" >
+    android:versionCode="223"
+    android:versionName="2.2.3" >
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -332,7 +332,7 @@
         <!-- 在百度开发者中心查询应用的API Key -->
         <meta-data
             android:name="api_key"
-            android:value="9kMlKzXQsaPYo0wbF5ObcjkV" />
+            android:value="x7Uh5hrZD6GjkDOm10QEEcSH" />
     </application>
 
 </manifest>

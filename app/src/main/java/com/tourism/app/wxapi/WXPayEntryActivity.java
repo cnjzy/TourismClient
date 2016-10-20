@@ -1,11 +1,8 @@
 package com.tourism.app.wxapi;
 
-import java.util.HashMap;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.tencent.mm.sdk.constants.ConstantsAPI;
 import com.tencent.mm.sdk.modelbase.BaseReq;
@@ -14,10 +11,9 @@ import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
 import com.tourism.app.MyApp;
-import com.tourism.app.R;
-import com.tourism.app.util.preference.Preferences;
-import com.tourism.app.util.preference.PreferencesUtils;
-import com.tourism.app.weixinpay.Constants;
+import com.tourism.app.util.LogUtil;
+
+import java.util.HashMap;
 
 public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
 
@@ -45,7 +41,7 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler {
 
 	@Override
 	public void onResp(BaseResp resp) {
-		Log.d(TAG, "onPayFinish, errCode = " + resp.errCode);
+		LogUtil.d(TAG, "onPayFinish, errCode = " + resp.errCode);
 		if (resp.getType() == ConstantsAPI.COMMAND_PAY_BY_WX) {
 			String payResult = "";
 			switch (resp.errCode) {

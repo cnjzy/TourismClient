@@ -7,10 +7,14 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 
 import com.baidu.android.pushservice.PushMessageReceiver;
+import com.tourism.app.activity.poolfriend.CategoryInfoActivity;
+import com.tourism.app.activity.poolfriend.StrategyInfoActivity;
+import com.tourism.app.util.LogUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -76,7 +80,6 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
             Log.d(TAG, "绑定成功");
         }
         // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
-        updateContent(context, responseString);
     }
 
     /**
@@ -92,8 +95,7 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
     @Override
     public void onMessage(Context context, String message,
             String customContentString) {
-        String messageString = "透传消息 onMessage=\"" + message
-                + "\" customContentString=" + customContentString;
+        String messageString = "透传消息 onMessage=\"" + message + "\" customContentString=" + customContentString;
         Log.d(TAG, messageString);
 
         // 自定义内容获取方式，mykey和myvalue对应透传消息推送时自定义内容中设置的键和值
@@ -112,7 +114,6 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
         }
 
         // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
-        updateContent(context, messageString);
     }
 
     /**
@@ -131,21 +132,21 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
     @Override
     public void onNotificationArrived(Context context, String title,
             String description, String customContentString) {
-
-        String notifyString = "通知到达 onNotificationArrived  title=\"" + title
-                + "\" description=\"" + description + "\" customContent="
-                + customContentString;
-        Log.d(TAG, notifyString);
-
+        LogUtil.d("============ onNotificationArrived", "title:" + title + " description:" + description + " customContentString:" + customContentString);
         // 自定义内容获取方式，mykey和myvalue对应通知推送时自定义内容中设置的键和值
         if (!TextUtils.isEmpty(customContentString)) {
             JSONObject customJson = null;
             try {
                 customJson = new JSONObject(customContentString);
-                String myvalue = null;
-                if (!customJson.isNull("mykey")) {
-                    myvalue = customJson.getString("mykey");
+                int type = -1;
+                String url = "";
+                if (!customJson.isNull("type")) {
+                    type = customJson.getInt("type");
                 }
+                if (!customJson.isNull("url")){
+                    url = customJson.getString("url");
+                }
+
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -153,7 +154,6 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
         }
         // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
         // 你可以參考 onNotificationClicked中的提示从自定义内容获取具体值
-        updateContent(context, notifyString);
     }
 
     /**
@@ -171,13 +171,45 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
     @Override
     public void onNotificationClicked(Context context, String title,
             String description, String customContentString) {
+        LogUtil.d("============ onNotificationClicked", "title:" + title + " description:" + description + " customContentString:" + customContentString);
 
-        if (isTourism(context)) {
-            Intent intent = new Intent();
-            intent.setClass(context.getApplicationContext(), MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.getApplicationContext().startActivity(intent);
+        if (!TextUtils.isEmpty(customContentString)) {
+            JSONObject customJson = null;
+            try {
+                customJson = new JSONObject(customContentString);
+                int type = -1;
+                String url = "";
+                if (!customJson.isNull("type")) {
+                    type = customJson.getInt("type");
+                }
+                if (!customJson.isNull("url")){
+                    url = customJson.getString("url");
+                }
+
+                Bundle data = new Bundle();
+                data.putString("url", url);
+                Intent intent = new Intent();
+                if (type == 1) {
+                    intent.setClass(context.getApplicationContext(), CategoryInfoActivity.class);
+                } else if(type == 2){
+                    intent.setClass(context.getApplicationContext(), StrategyInfoActivity.class);
+                }
+                intent.putExtras(data);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.getApplicationContext().startActivity(intent);
+
+            } catch (JSONException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
+
+//        if (isTourism(context)) {
+//            Intent intent = new Intent();
+//            intent.setClass(context.getApplicationContext(), MainActivity.class);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            context.getApplicationContext().startActivity(intent);
+//        }
     }    
     
     /**
@@ -187,7 +219,6 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
      *            上下文
      * @param errorCode
      *            错误码。0表示某些tag已经设置成功；非0表示所有tag的设置均失败。
-     * @param successTags
      *            设置成功的tag
      * @param failTags
      *            设置失败的tag
@@ -203,7 +234,6 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
         Log.d(TAG, responseString);
 
         // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
-        updateContent(context, responseString);
     }
 
     /**
@@ -213,7 +243,6 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
      *            上下文
      * @param errorCode
      *            错误码。0表示某些tag已经删除成功；非0表示所有tag均删除失败。
-     * @param successTags
      *            成功删除的tag
      * @param failTags
      *            删除失败的tag
@@ -229,7 +258,6 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
         Log.d(TAG, responseString);
 
         // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
-        updateContent(context, responseString);
     }
 
     /**
@@ -252,7 +280,6 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
         Log.d(TAG, responseString);
 
         // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
-        updateContent(context, responseString);
     }
 
     /**
@@ -276,14 +303,6 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
             Log.d(TAG, "解绑成功");
         }
         // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
-        updateContent(context, responseString);
-    }
-
-    private void updateContent(Context context, String content) {
-//        Intent intent = new Intent();
-//        intent.setClass(context.getApplicationContext(), MainActivity.class);
-//        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//        context.getApplicationContext().startActivity(intent);
     }
 
     /**

@@ -218,7 +218,6 @@ public class MainActivity extends BaseActivity {
 
         @Override
         public void onReceiveLocation(BDLocation location) {
-            LogUtil.i("location", "========================result" + location );
             // map view 销毁后不在处理新接收的位置
             if (location == null || TextUtils.isEmpty(location.getCity())) {
                 return;

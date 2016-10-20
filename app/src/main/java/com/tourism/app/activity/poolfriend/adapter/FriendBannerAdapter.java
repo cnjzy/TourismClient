@@ -1,8 +1,5 @@
 package com.tourism.app.activity.poolfriend.adapter;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -13,13 +10,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.tourism.app.MyApp;
 import com.tourism.app.R;
-import com.tourism.app.activity.brand.BrandInfoActivity;
 import com.tourism.app.activity.poolfriend.CategoryInfoActivity;
 import com.tourism.app.activity.web.WebViewActivity;
 import com.tourism.app.base.BaseActivity;
@@ -29,6 +24,9 @@ import com.tourism.app.vo.NewsVO;
 import com.tourism.app.widget.view.ChildViewPager;
 import com.tourism.app.widget.view.ChildViewPager.OnSingleTouchListener;
 import com.tourism.app.widget.view.PointWidget;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 首页轮播adpter
@@ -122,7 +120,6 @@ public class FriendBannerAdapter extends PagerAdapter {
 						WebViewActivity.show(context, vo.getLink(), vo.getTitle());
 					}else if(vo.getType() == 2){
 						// 活动
-						// 攻略
 						Bundle data = new Bundle();
 						data.putSerializable("vo", vo);
 						BaseActivity.showActivity(context, CategoryInfoActivity.class, data);
